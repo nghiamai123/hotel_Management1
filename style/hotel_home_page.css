@@ -180,6 +180,16 @@ i{
     text-align: center;
     font-size: 20px;
 }
+.about-us__our_rooms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us__our_rooms hr{
+    color: #FF3FA4;
+    width: 100px;
+    height: 2px;
+}
 .about-rooms, .about-staffs, .about-users{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
