@@ -266,3 +266,20 @@ i{
     color: #FF3FA4 !important;
     font-size: xx-large;
 }
+/* thay đổi vị trí about us */
+#img1{
+    position: relative;
+    top: -9.9%;
+}
+.row.about--introduce{
+    margin: 10rem 5rem ;
+}
+.overviews{
+    margin-left: 6rem;
+    gap: 6rem;
+}
+/* ảnh avata thay đổi */
+#avata{
+    display: none;
+    margin-right: 40px;
+}

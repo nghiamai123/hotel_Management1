@@ -30,10 +30,12 @@
                     search
                 </button> 
             </div>
+            <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
             <div class="nav_log nav_text">
-                <div class="nav_log_text"><a href="form_sign_in.html">SIGN IN</a></div>
-                <div class="nav_log_text"><a href="form_register.html">REGISTER</a></div>
+                <div class="nav_log_text" id="sign" onclick="dangnhap()"><a href="#">SIGN IN</a></div>
+                <div class="nav_log_text" id="regis" onclick="dangnhap()"><a href="form_register.html">REGISTER</a></div>
             </div>
+            <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
         </div>
         <div class="row container--body">
             <h1>WELCOM TO <span>YAWN YAWN</span></h1>
@@ -208,5 +210,6 @@
             </div>
         </div>
     </div>
+    <script src="./js/hotel_home_page.js"></script>
 </body>
 </html>
