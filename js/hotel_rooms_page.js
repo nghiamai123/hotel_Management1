@@ -429,6 +429,7 @@ function daydl(){
     console.log(rooms[i].room_image[0]);
     document.getElementById("pp").innerHTML = room;
 }
+// thay thế avata khi đăng nhập
 function dangnhap(){
     document.getElementById("sign").style.display = 'none';
     document.getElementById("regis").style.display = 'none';
