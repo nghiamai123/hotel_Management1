@@ -3,8 +3,7 @@ body{
     padding: 0;
     /* box-sizing: border-box; */
     /* position: relative; */
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;   
 }
 .logo{
     margin-left: 10px;
@@ -106,11 +105,8 @@ h1{
     align-items: center;
     align-items: center;
     font-size: 4.5rem;
-}
-h1:hover{
-    flex-direction: column;
-    gap: 20px;
     letter-spacing: 17px;
+    flex-direction: column;
 }
 
 h1 > span{
@@ -144,11 +140,11 @@ p{
 .navbar-search{
     padding: 8px;
 }
-#search{
+/* #search{
     border-radius: 20px;
     padding: 7px;
     outline: none;
-}
+} */
 .fa-user{
     color: #FF3FA4;
     width: 50px;
@@ -282,4 +278,36 @@ i{
 #avata{
     display: none;
     margin-right: 40px;
+}
+.col-md-6.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section-title.text-white.text-uppercase.mb-4 {
+    width: 268px;
+    height: 48px;
+    color: #FF3FA4 !important;
+    font-size: xx-large;
+}
+#footer{
+    /* padding: 50px; */
+    background-color: #0F172B
+}
+.section-title{
+    color: #FF3FA4 !important;
+}
+
+.nav_text:hover{
+    color: #FF3FA4;
+}
+#search{
+    border-radius: 20px;
+    padding: 7px;
+    outline: none;
+}
+#search{
+    background-color: black;
+    color: white;
+    border: none;
 }
