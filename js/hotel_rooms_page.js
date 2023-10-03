@@ -391,6 +391,17 @@ let rooms = [
         reviews: "review",
         room_image: ["./assets/imgroom108.png", "./assets/imgroom108b.png", "./assets/imgroom1082.png", "./assets/imgroom1083.png", "./assets/imgroom1084.png", "./assets/imgroom1085.png"],
     },
+    {
+        type: ["5 bed", "3 bath", "wifi"],
+        nameroom: "1040",
+        price: 700,
+        availability: stat,  
+        convenient: ["air-conditioner", "wifi"],
+        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        evaluate: 5,
+        reviews: "review",
+        room_image: ["./assets/imgroom108.png", "./assets/imgroom108b.png", "./assets/imgroom1082.png", "./assets/imgroom1083.png", "./assets/imgroom1084.png", "./assets/imgroom1085.png"],
+    },
     
 ]
 
