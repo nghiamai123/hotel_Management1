@@ -1,18 +1,16 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     window.addEventListener('scroll', function() {
-//         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         var targetDiv = document.querySelector('.moving-div');
-//         var distanceFromTop = targetDiv.offsetTop;
-//         console.log(distanceFromTop);
-//         var scrollLimit = 100; 
-
-//         if (scrollTop > distanceFromTop - scrollLimit && scrollTop < distanceFromTop + scrollLimit) {
-//             var scrollPercent = (scrollTop - (distanceFromTop - scrollLimit)) / (2 * scrollLimit);
-//             var translateY = -150 + scrollPercent * 50;
-//             targetDiv.style.transform = 'translate(-50%, ' + translateY + '%)';
-//         }
-//     });
-// });
+window.addEventListener('scroll',function() {
+    var moving = document.getElementById("moving-div");
+    var scrollXPosition = window.scrollX;
+    var scrollYPosition = window.scrollY;
+    console.log('Vị trí cuộn theo trục x:', scrollXPosition);
+    console.log('Vị trí cuộn theo trục y:', scrollYPosition);
+    if (scrollYPosition > 1148){
+        moving.style.display = "none";
+    }
+    else{
+        moving.style.display = "block";
+    }
+})
 // tính và trả ra số Ngày
 
 function calculateDateDifference() {

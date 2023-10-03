@@ -1,8 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-    /* position: relative; */
     font-family: 'Roboto', sans-serif;
     
 }
@@ -59,7 +57,6 @@ a{
     text-decoration: none;
 }
 .container--body{
-    /* position: relative; */
     width: 100%;
     height: 700PX;
     background-image: url('../assets/Rectangle 10.png');
@@ -76,11 +73,6 @@ h1{
     align-items: center;
     font-size: 4.5rem;
 }
-/* h1:hover{
-    flex-direction: column;
-    gap: 20px;
-    letter-spacing: 17px;
-} */
 
 h1 > span{
     color: #FF3FA4;
@@ -108,16 +100,15 @@ p{
 .row-navbar{
     background-color: black;
     padding: 5px;
-    /* margin: 150px 0px; */
 }
 .navbar-search{
     padding: 8px;
 }
-#search{
+/* #search{
     border-radius: 20px;
     padding: 7px;
     outline: none;
-}
+} */
 .fa-user{
     color: #FF3FA4;
     width: 50px;
@@ -134,12 +125,13 @@ i{
 /* booking thân trang booking ------- */
 .container2 {
     display: flex;
+    column-gap: 100px;
 }
   
 .left-pane, .right-pane {
     display: flex;
     flex: 1;
-    text-align: end;
+    text-align: center;
     justify-content: end;
     align-items: end;
 }
@@ -152,18 +144,22 @@ i{
 
 /* vùng này của những ô input */
 .left-pane>.left-pane__takedata, .left-pane__takedata1{
-    /* background-color: #FF3FA4; */
-    width: 754px; height: 765px;
+    width: 754px; height: 630px;
 }
 .left-pane__takedata1{
     height: 605px !important;
 }
-#infirst, #infirst1{
+#infirst, #in, #infirst1{
     width: 100%;
     height: 56px;
-    border-radius: 20rem;
+    border-radius: 5px;
     font-size: larger;
-    margin-top: 20px;
+    padding-left: 50px;
+    margin-top: 40px;
+}
+#in{
+    margin-top: 0px !important;
+    border-radius: 5px;
 }
 /* ... */
 .total_div_date{
@@ -174,7 +170,6 @@ i{
 .left-pane__takedata>.total_div_date>.div_date{
     width: 40%;
     border-radius: 3rem;
-    background-color: #EC9999;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -184,9 +179,9 @@ i{
     font-size: 150%;
 }
 .left-pane__takedata>.total_div_date>.div_date>input{
-    width: 70%;
+    width: 100%;
     padding: 10px;
-    margin-left: calc(15%);
+    /* margin-left: calc(15%); */
     border-radius: 10px;
 }
 #SpecialR_Request{
@@ -194,33 +189,40 @@ i{
     height: 148px;
     border-radius: 20px;
     font-size: 20px;
+    padding-left: 50px;
 }
 #update_money, #Revervation_required{
-    margin-left: 70%;
-    width: 10rem;
+    width: 47rem;
     height: 5rem;
     border-radius: 2rem;
     font-size: larger;
     background-color: #FF2966;
-    margin-top: 25%;
+    margin-top: 10%;
 }
 .textp{
     font-size: 30px;
     text-align: start;
     position: relative;
+    margin-top: 100px;
+    font-weight: bold;
 }
 .boder-in>.in1{
     width: 100%;
     height: 86px;
 }
+.in1{
+    border-radius: 1px !important;
+    padding-left: 50px;
+}
 .in2{
     width: 50%;
     height: 86px;
+    border-top: 2px;
+    padding-left: 50px;
 }
 .boder-in{
-    border: 3px solid black;
-    border-radius: 10px;
-    margin-top: 20px;
+    border: 2px solid black;
+    margin-top: 40px;
 }
 .total_div_date2, .in1{
     display: flex;
@@ -229,9 +231,7 @@ i{
 .right-pane {
     flex: 1;
 }
-/* input:not(#SpecialR_Request:not(.div_date)){
-    background-color: #EC9999;
-} */
+
 #fiximgbooking{
     width: 300px;
     height: 243.063px;
@@ -239,6 +239,7 @@ i{
 }
 h3:not(#roo){
     margin-left: -60%;
+    display: inline;
 }
 #moving-div{
     position: fixed;
@@ -248,4 +249,39 @@ h3:not(#roo){
     background-color: white;
     transform: translate(20%, 20%);
     transition: transform 1s ease;
+    margin-left:70px;
+
+}
+/* css footer */
+.col-md-6.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section-title.text-white.text-uppercase.mb-4 {
+    width: 268px;
+    height: 48px;
+    color: #FF3FA4 !important;
+    font-size: xx-large;
+}
+#footer{
+    /* padding: 50px; */
+    background-color: #0F172B
+}
+.section-title{
+    color: #FF3FA4 !important;
+}
+
+.nav_text:hover{
+    color: #FF3FA4;
+}
+#search{
+    border-radius: 20px;
+    padding: 7px;
+    outline: none;
+}
+#search{
+    background-color: black;
+    color: white;
+    border: none;
 }
