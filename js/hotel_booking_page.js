@@ -18,12 +18,12 @@
 function calculateDateDifference() {
     var date1Input = document.getElementById('date1');
     var date2Input = document.getElementById('date2');
-    console.log(date1Input)
-    if (isNaN(parseInt(date1Input)) || isNaN(parent(date2Input))) {
+    console.log(date1Input.value)
+    var pleselement = document.getElementById("tinhngay");
+    var tongelement = document.getElementById("tong");
+    if (isNaN(parseInt(date1Input.value)) || isNaN(parseInt(date2Input.value))) {
         var ples = "Please enter date !";
         var tong = "0";
-        var pleselement = document.getElementById("tinhngay");
-        var tongelement = document.getElementById("tong");
         pleselement.style.color = "red";
         tongelement.style.color = "red";
         pleselement.innerHTML = ples;
