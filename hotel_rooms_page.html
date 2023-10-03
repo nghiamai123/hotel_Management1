@@ -17,23 +17,26 @@
     <link rel="stylesheet" href="style/hotel_rooms_page.css">
 </head>
 <body onload="daydl()">
-    <div class="container-fluid">
-        <!-- sửa nav3 -->
+    <div class="container-fluid" style="padding: 0%;">
         <div class="nav">
             <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo"></a></div>
             <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
             <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
             <div class="nav_text"><a href="rooms.html">ROOM</a></div>
             <div class="nav_text">
-                <input type="text" name="nav_input" id="nav_input" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
-                <button class="material-symbols-outlined" id="search" style="color: #f45cad; border-radius: 50px; ">
+                <input type="text" name="nav_input" id="nav_input" style="padding-left: 20px;" placeholder="Seach">
+                <button class="material-symbols-outlined" id="search" style="border-radius: none; ">
                     search
-                </button> 
+                </button>
             </div>
             <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
             <div class="nav_log nav_text">
-                <div class="nav_log_text" id="sign" onclick="dangnhap()"><a href="#">SIGN IN</a></div>
-                <div class="nav_log_text" id="regis" onclick="dangnhap()"><a href="form_register.html">REGISTER</a></div>
+                <div class="nav_log_text" id="sign">
+                    <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#modal-login" data-bs-whatever="@mdo">SIGN IN</button>
+                </div>
+                <div class="nav_log_text" id="register">
+                    <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#modal-register" data-bs-whatever="@mdo">REGISTER</button>
+                </div>
             </div>
             <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
         </div>
@@ -145,30 +148,45 @@
             </div>
         </div>
         <!-- footer -->
-        <div class="row container-fluid bg-dark" id="footer">
-            <div class=" row justify-content-around py-4">
+        <div class="row container-fluid footer" id="footer">
+            <div class=" row justify-content-around  p-lg-4 ">
                 <!-- cột 1 -->
             
-                <div class="contact-item col-md-12 col-lg-6">
+                <div class="contact-item col-md-12 col-lg-4">
                     <a href=""><img src="assets/logo_big.png" alt="logo"></a>
                 </div>
                 
                 <!-- cột 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <h6 class="section-title text-white text-uppercase mb-4">Contact</h6>
+                <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <a class="nav_text" href="hotel_home_page.html">Home</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-address-card"></i>
+                        <a class="nav_text" href="hotel_about_us_page.html">About us</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-bed"></i>
+                        <a class="nav_text" href="rooms.html">Rooms</a>
+                    </div>
+                </div>
+                <!-- cột 3 -->
+                <div class="col-md-6 col-lg-4 ">
+                    <h6 class="section-title text-white text-uppercase">Contact</h6>
                     <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
                     <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
                     <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn  btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn  btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn  btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn  btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
     <script src="./js/hotel_rooms_page.js"></script>
 </body>
 </html>

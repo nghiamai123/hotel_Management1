@@ -102,17 +102,12 @@ a{
   /* đóng */
 h1{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
     font-size: 4.5rem;
+    letter-spacing: 13px;
 }
-h1:hover{
-    flex-direction: column;
-    gap: 20px;
-    letter-spacing: 17px;
-}
-
 h1 > span{
     color: #FF3FA4;
 }
@@ -292,4 +287,37 @@ h6,.col-lg-4.col-md-6{
 @keyframes example {
     25%   {top:0px; right:0px;}
     0%  {top:400px; right:0px;}
+}
+/* css footer and header */
+.col-md-6.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section-title.text-white.text-uppercase.mb-4 {
+    width: 268px;
+    height: 48px;
+    color: #FF3FA4 !important;
+    font-size: xx-large;
+}
+#footer{
+    /* padding: 50px; */
+    background-color: #0F172B
+}
+.section-title{
+    color: #FF3FA4 !important;
+}
+
+.nav_text:hover{
+    color: #FF3FA4;
+}
+#search{
+    border-radius: 20px;
+    padding: 7px;
+    outline: none;
+}
+#search{
+    background-color: black;
+    color: white;
+    border: none;
 }
