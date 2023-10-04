@@ -58,17 +58,16 @@ let rooms = [
 ]
 
 function search() { 
-    let inputvalue = document.getElementById("nav_input").value;
+    document.getElementById("pp").innerHTML = " ";
+    let inputvalue1 = document.getElementById("nav_input").value;
     let searchresults = [];
     for (let i = 0; i < rooms.length; i++) {
-        if (rooms[i].type.includes(inputvalue) || rooms[i].convenient.includes(inputvalue) || rooms[i].nameroom.includes(inputvalue)) {
+        if (rooms[i].type.includes(inputvalue1) || rooms[i].convenient.includes(inputvalue1) || rooms[i].nameroom.includes(inputvalue1)) {
             searchresults.push(rooms[i]);
         }
     }
-    console.log(searchresults);
     let room = "";
     for (i in searchresults){
-        room +=  "<div class='row g-4'>"
         room += "<div class= 'col-lg-4 col-md-6' >";
         room += '<div class="room-item shadow rounded overflow-hidden">';
         room +=    '<div class="position-relative">';
@@ -95,7 +94,6 @@ function search() {
         room +=            '<h4 style="color: #f45cad;">$'+ searchresults[i].price+'/night</h4>';
         room +=        '</div>';
         room +=    '</div>';
-        room += '</div>';
         room += '</div>';
         room += '</div>';
     }
