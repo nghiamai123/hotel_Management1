@@ -1,0 +1,146 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.modal__body{
+    display: flex;
+}
+.auth-form__register{
+    border: 1px solid #ff3fa4;
+    border-radius: 7px;
+    background-image: url("../assets/image/logo-register.png");
+    background-repeat: no-repeat;
+    background-position: center calc(50px + 10%);
+    background-size: 400px;
+}
+.nav-text-signin{
+    color: white;
+    background-color: black;
+    border: none;
+}
+.nav-text-signin:hover{
+    color: #ff3fa4;
+
+}
+.auth-form__input{
+    padding: 8px;
+    width: 100%;
+    width: 400px;
+    margin-bottom:8px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ff3fa4  ;
+}
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.auth-form__heading{
+    font-size: 30px;
+    font-weight: 300;
+    color: #ff3fa4;
+}
+.auth-form__swith{
+    font-size: 20px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    /* color: black; */
+}
+.auth-form__group.login{
+    margin-top: 40px;
+}
+.auth-form__group>.auth-form__input{
+    margin-left: 30px;
+} 
+.auth-form__forgot-password{
+    margin-left: 50%;
+}
+.btn-primary.login{
+    margin-bottom: 30px;
+}
+.auth-form__input:focus{
+    border-color: #ff3fa4;
+}
+.date-gender{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#auth-form__date , #auth-form__gender{
+    width: 80%;
+
+}
+#auth-form__date{
+    margin-left: 30px;
+}
+
+#auth-form__gender{
+    margin-left: 100px;
+    margin-right: 36px;
+
+}
+#auth-form__policy-link{
+    font-size: small;
+    text-decoration: underline;
+}
+.auth-form__aside{
+    text-align:center;
+    /* mar
+    gin-left: 50px; */
+}
+.auth-form__or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth-form__or hr{
+    width: 100px;
+}
+.auth-form__aside a{
+    color: #ff3fa4;
+}
+.auth-form__social{
+    margin-top: 9px
+    
+}
+.btn:hover{
+    background-color:#ff3fa4;
+    
+}
+.btn.btn--with-icon{
+    margin-top: 10px;
+}
+.btn--with-icon{       
+    padding:8px ;
+    min-width:400px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    font-weight: 1000;
+    cursor: pointer;
+}
+.btn{
+    background-color:#f4b0b0;
+}
+.auth-form__control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth-form__social{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px ;
+}
+.btn--with-icon{
+    margin-bottom: 15px;
+}
+
+/* Log in */
+.control-login-continue{
+    min-width: 400PX;
+}
