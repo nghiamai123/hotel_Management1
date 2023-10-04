@@ -1,52 +1,97 @@
-function dangnhap(){
-     document.getElementById("sign").style.display = 'none';
-     document.getElementById("regis").style.display = 'none';
-     document.getElementById("avata").style.display = 'block';
+var nameArray = [];
+var emailArray=[];
+var passwordArray=[];
+var dateArray=[];
+var genderArray =[];
+var phoneArray =[];
+
+function register(){
+    var name = document.getElementById("registerName").value;
+    var email = document.getElementById("registerEmail").value;
+    var date = document.getElementById("auth-form__date").value;
+    var password = document.getElementById("registerPassword").value;
+    var passwordConfirm = document.getElementById("registerConfirmPassword").value;
+    if (name == ""){
+      alert("Name required.");
+      return ;
+    }
+    else if (email == ""){
+        alert("Email required.");
+        return ;
+    }
+    else if (password == ""){
+        alert("Password required.");
+        return ;
+    }
+    else if (passwordConfirm == ""){
+        alert("Password required.");
+        return ;
+    }
+    else if ( password != passwordConfirm ){
+        alert("Password don't match retype your Password.");
+        return;
+    }
+    else if(emailArray.indexOf(email) == -1){
+        emailArray.push(email);
+        passwordArray.push(password);
+        localStorage.setItem('listEmail',JSON.stringify(emailArray) );
+        localStorage.setItem('listPassword',JSON.stringify(passwordArray) );
+        alert(email + "  Thanks for registration. \nTry to login Now");
+
+        document.getElementById("re").value ="";
+        document.getElementById("rp").value="";
+        document.getElementById("rrp").value="";
+    }
+    else{
+        alert(email + " is already register.");
+        return ;
+    }
 }
+function login(){
+    var email = document.getElementById("loginEmail").value;
+    var password = document.getElementById("loginPassword").value;
 
-function toggleModal() {
-	var modalContainer = document.getElementById('modalContainer');
-  var modalContainerDisplay = window.getComputedStyle(modalContainer).display;
-	
-  modalContainer.style.display = modalContainerDisplay === 'block' ? 'none' : 'block';
+    var i = emailArray.indexOf(email);
+
+    if(emailArray.indexOf(email) == -1){
+        if (email == ""){
+            alert("Email required.");
+            return ;
+        }
+        alert("Email does not exist.");
+        return ;
+    }
+    else if(passwordArray[i] != password){
+        if (password == ""){
+            alert("Password required.");
+            return ;
+        }
+        alert("Password does not match.");
+        return ;
+    }
+    else {
+        alert(email + " yor are login Now \n welcome to our website.");
+
+        document.getElementById("se").value ="";
+        document.getElementById("sp").value="";
+        return ;
+    }
+
 }
+function forgot(){
+    event.preventDefault();
 
-function hideModal() {
-	modalContainer.style.display = 'none';
+    var email = document.getElementById("fe").value;
+
+    if(emailArray.indexOf(email) == -1){
+        if (email == ""){
+            alert("Email required.");
+            return ;
+        }
+        alert("Email does not exist.");
+        return ;
+    }
+
+    alert("email is send to your email check it in 24hr. \n Thanks");
+    document.getElementById("fe").value ="";
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  var loginModal = document.getElementById('loginModal');
-  var registerModal = document.getElementById('registerModal');
-  var loginToRegisterButton = document.getElementById('loginToRegister');
-  var registerToLoginButton = document.getElementById('registerToLogin');
-
-  // Function to show the login modal and hide the register modal
-  function showLoginModal() {
-    var loginToRegisterButton = document.getElementById('loginToRegister');
-    var registerToLoginButton = document.getElementById('registerToLogin');
-    var loginModal = document.getElementById('loginModal');
-    var registerModal = document.getElementById('registerModal');
-    loginModal.style.display = 'block';
-    registerModal.style.display = 'none';
-  }
-
-  // Function to show the register modal and hide the login modal
-  function showRegisterModal() {
-    var loginModal = document.getElementById('loginModal');
-    var registerModal = document.getElementById('registerModal');
-    var loginToRegisterButton = document.getElementById('loginToRegister');
-    var registerToLoginButton = document.getElementById('registerToLogin');
-    loginModal.style.display = 'none';
-    registerModal.style.display = 'block';
-  }
-
-  // Add click event listeners to the buttons
-  loginToRegisterButton.addEventListener('click', showRegisterModal);
-  registerToLoginButton.addEventListener('click', showLoginModal);
-
-  // Show the login modal initially
-  showLoginModal();
-});
-
-              
