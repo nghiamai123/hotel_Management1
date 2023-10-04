@@ -1,10 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-    /* position: relative; */
     font-family: 'Roboto', sans-serif;
-    
 }
 .logo{
     margin-left: 10px;
@@ -105,8 +102,9 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 4.5rem;
+    font-size: 5rem;
     letter-spacing: 13px;
+    color: black;
 }
 h1 > span{
     color: #FF3FA4;
