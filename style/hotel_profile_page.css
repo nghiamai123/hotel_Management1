@@ -69,9 +69,6 @@ a{
     padding: 7px;
     outline: none;
 }
-input{
-    margin-top: 30px;
-}
 
 i {
     color: #FF2966 !important;
@@ -141,8 +138,6 @@ h1 > span{
 }
 .content_profile-username-email-password{
     display: grid;
-    /* justify-content: center; */
-    gap: 10px;
 }
 .content_profile-username-email-password>input{
     height: 60%;
@@ -155,14 +150,17 @@ h1 > span{
 .profile-back-edit button{
     border: 5px;
     padding: 10px;
-    width: 100px;
+    width: 30%;
     border-radius: 7px;
 }
-#profile-back{
+.profile-back-edit>#profile-back{
     background-color: rgb(154, 152, 152);
+    margin-right: 10%;
+    width: 30%;
 }
 #profile-edit{
     background-color: #EC9999;
+    
 }
 /* Modal-edit */
 .modal-title{
