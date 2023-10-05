@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* css header and footer */
+
+
+/* CSS ảnh */
+.details_room{
+    /* overflow: hidden; */
+    margin: 20px 10px;
+}
+.picture{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "right right left-top1 left-top2 " 
+    "right right left-bottom1 left-bottom2 ";
+    grid-row-gap:20px;
+    grid-column-gap:20px ;
+    /* padding: 0px 40px; */
+    /* margin:10px 0px; */
+}
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.img1{
+    grid-area: right;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.img2{
+    grid-area: left-top1;
+}
+.img3{
+    grid-area: left-top2;
+    border-top-right-radius: 15px;
+}
+.img4{
+    grid-area: left-bottom1;
+}
+.img5{
+    grid-area: left-bottom2;
+    border-bottom-right-radius: 15px;
+}
+
+.content-text{
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.context__icon{
+    text-align: end;
+    align-items: center;
+   /* padding: 0 px; */
+   font-size: 36px;
+    /* outline:none; */
+}
+#icon_heart_detail{
+    padding-right: 20px;
+    
+}
+#name_room_detail{
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+#price_room_detail{
+    font-family: 'Roboto' ;
+    font-weight: bold;
+    color:#FF2966;
+    font-size: larger; 
+}
+
+/* row 2 of row */
+.content-icon{
+    text-align: center;
+    
+}
+.icon__room{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius:10px;
+    background-color: #FFE2E9;
+}
+.content-description{
+    margin-top: 50px;
+}
+.content-review{
+    margin-top: 50px;
+}
+.avata__review{
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+}
+.content_comment-detail{
+    margin-top: 20px;
+}
+
+/* hieuj ứng button */
+.button_booking {
+    padding: 0.6em 0.9em;
+    font-size: 1em;
+    box-shadow: 0 0 5px #FF2966, 0 0 25px #FF2966;
+    background-color: transparent;
+    border: 0.2em solid;
+    /* border-color: #ff0022 #04ff00 #0051ff #d400ff; */
+    border-radius: 1.5em;
+    margin: 40px 50px;
+    color: #FF2966;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-radius 0.2s ease, color 0.2s ease,
+      border-shadow 0.2s ease, border-style 0.2s ease;
+  }
+  
+  
+  
+  .button_booking:hover {
+    transform: scale(1.3);
+    border-radius: 1.5em;
+    animation: btn-animation 0.4s 0.2s linear infinite;
+    color: #020d0e;
+    
+  }
+  
+  @keyframes btn-animation {
+    0% {
+      border-color: #ff0022 #04ff00 #0051ff #d400ff;
+      transform: rotate(5deg) scale(1.3);
+    }
+  
+    25% {
+      border-color: #d41e51 #e9f905 #2ebaf2 #b21bdc;
+      transform: rotate(-5deg) scale(1.3);
+    }
+  
+    50% {
+      border-color: #b21bdc #d41e51 #e9f905 #2ebaf2;
+      transform: rotate(5deg) scale(1.3);
+    }
+  
+    75% {
+      border-color: #2ebaf2 #b21bdc #d41e51 #e9f905;
+      transform: rotate(-5deg) scale(1.3);
+    }
+  
+    100% {
+      border-color: #e9f905 #2ebaf2 #b21bdc #d41e51;
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+
+
