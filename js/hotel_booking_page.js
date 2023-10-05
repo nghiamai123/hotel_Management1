@@ -1,3 +1,4 @@
+
 window.addEventListener('scroll',function() {
     var moving = document.getElementById("moving-div");
     var scrollXPosition = window.scrollX;
@@ -51,8 +52,14 @@ function calculateDateDifference() {
         document.getElementById("tongcoban").innerHTML = 0
         tongelement.innerHTML = 0
     }
-    
 }
+let date = new Date();
+let datenow = date.getDate();
+let monthnow = date.getMonth();
+let yearnow = date.getFullYear();
+// let datetotal 
+// document.getElementById("datepicker1").value = monthnow + datenow + yearnow;
+// document.getElementById("datepicker2").value = datenow + 5;
 // hàm tự động nhập ngày mặc định & update input date
 $( function() {
     $("#datepicker1").datepicker();
