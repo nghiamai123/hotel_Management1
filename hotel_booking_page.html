@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAWN YAWN - HOMEPAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style/hotel_booking_page.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- sửa nav3 -->
+        <div class="nav">
+            <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo"></a></div>
+            <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+            <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
+            <div class="nav_text"><a href="rooms.html">ROOM</a></div>
+            <div class="nav_text">
+                <input type="text" name="nav_input" id="nav_input" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
+                <button class="material-symbols-outlined" id="search" style="color: #f45cad; border-radius: 50px; ">
+                    search
+                </button> 
+            </div>
+            <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+            <div class="nav_log nav_text">
+                <div class="nav_log_text" id="sign" onclick="dangnhap()"><a href="#">SIGN IN</a></div>
+                <div class="nav_log_text" id="regis" onclick="dangnhap()"><a href="form_register.html">REGISTER</a></div>
+                
+            </div>
+            <!-- avata khách sau khi đăng nhập # -->
+            <div class="nav_text" id="avata"><img src="#" alt=""></div>
+        </div>
+       
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-us__our_rooms">
+                        <div style="height: 100px;"><hr></div>
+                        <div></div>
+                        <div><hr style="color: #EC9999;"></div>
+                    </div>
+                    <h1 class="mb-5" >BOOKING <span class="text-danger text-uppercase">ROOM</span></h1>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container2">
+            <div class="left-pane">
+                <div class="left-pane__takedata" style="text-align: center;">
+                    <span style="font-size: 36px; text-align: center;">NAME</span>
+                    <input type="text" id="infirst" placeholder="PLEASE! ENTER YOUR NAME IN HERE" required>
+                    <div class="total_div_date">
+                        <div class="div_date">
+                            <span>Check in</span>
+                            <input type="date" class="insecon" id="date1" required>
+                        </div>
+                        <div class="div_date">
+                            <span>Check out</span>
+                            <input type="date" class="insecon" id="date2" required>
+                        </div>
+                    </div>
+                    <input type="text" id="SpecialR_Request" placeholder="Special Request" required>
+                    <button id="update_money" onclick="calculateDateDifference()">Save</button>
+                    <hr style="height: 3px; margin-top: 50px;">
+                </div>
+                <div class="left-pane__takedata1">
+                    <p class="textp" style="margin-top: 40px;"><b>Payment By</b></p>
+                    <!-- <div style="height: 20px;"></div> -->
+                    <select id="infirst1">
+                        <option disabled selected value>Credit or Debit card</option>
+                        <option value="Credit">Credit</option>
+                        <option value="debit card">Debit card</option>
+                    </select>
+                    <div style="height: 180px;" class="boder-in">
+                        <input class="in1" type="text" placeholder="Number card" style="border-top: none; border-right: none; border-left: none;">
+                        <div class="total_div_date2" >
+                            <input class="in2" type="text" style="border-bottom: none; border-left: none;" placeholder="Expiration date"><input class="in2" type="text" style="border-bottom: none; border-right: none;" placeholder="CVV">
+                        </div>
+                    </div>
+                    <input type="text" id="infirst" placeholder="Postal cde" style="margin-top: 20px;" required>
+                    <select id="infirst1">
+                        <option disabled selected value>Country/region</option>
+                        <option value="American">American</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Thai Lan">Thai Lan</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Lao">Lao</option>
+                    </select>
+                    <hr style="height: 4px; margin-top: 50px;">
+                </div>
+                
+                <div class="left-pane__takedata1">
+                    <p class="textp"><b>General standards</b></p>
+                    <p >
+                    <pre style="width: 600px; font-size: 20px; "> 
+    We ask all guests to remember a few simple rules to be a great guest.
+    (.) Comply with house rules
+    (.) Maintain the house as if it were your home
+                    </pre>
+                    </p>
+                    <button id="Revervation_required">Revervation required</button>
+                </div>
+            </div>
+            <div class="right-pane">
+                <div id="moving-div" style="padding: 30px; border: 1px solid black; border-radius: 20px;">
+                    <div style="display: flex; text-align: center; align-items: center;">
+                        <div>
+                            <img id="fiximgbooking" src="./assets/Rectangle 7.png" alt="hình ảnh room">
+                        </div>
+
+                        <div >
+                            <h3 id="roo">Room 101</h3>
+                            <p style="width: 250px;">Quis autem vel eum iure reprehenderit qui in ea </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="text-align: center;">
+                        <h3>Prices Detail</h3>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div>
+                                <p id="tinhngay">$50 x 1 đêm</p>
+                                <p>Cleaning fee</p>
+                                <p>Tax</p>
+                            </div>
+                            <div>
+                                <p>$20</p>
+                                <p>$3</p>
+                                <p>$10</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="display: flex; justify-content: space-around; text-align: center;">
+                        <div><h3>Total (USD)</h3></div>
+                        <div><h6 id="tong">$00</h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="row container-fluid bg-dark" id="footer" style="position:absolute; z-index: 1;">
+            <div class=" row justify-content-around py-4">
+                <!-- cột 1 -->
+                <div class="contact-item col-md-12 col-lg-6">
+                    <a href=""><img src="assets/logo_big.png" alt="logo"></a>
+                </div>
+                
+                <!-- cột 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="section-title text-white text-uppercase mb-4">Contact</h6>
+                    <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+                    <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+                    <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn  btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn  btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn  btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn  btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/hotel_booking_page.js"></script>
+</body>
+</html>
