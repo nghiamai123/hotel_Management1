@@ -298,3 +298,13 @@ input[type="date"] {
 input[type="date"]::-webkit-calendar-picker-indicator {
     color: #ff0000; /* Màu chỉ mục */
 }
+
+/* test css input date */
+/* ::-webkit-datetime-edit,
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field,
+::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator */
