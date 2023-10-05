@@ -14,8 +14,8 @@ window.addEventListener('scroll',function() {
 // tính và trả ra số Ngày
 
 function calculateDateDifference() {
-    var date1Input = document.getElementById('date1');
-    var date2Input = document.getElementById('date2');
+    var date1Input = document.getElementById('datepicker1');
+    var date2Input = document.getElementById('datepicker2');
     console.log(date1Input.value)
     var pleselement1 = document.getElementById("tinhngay1");
     var pleselement = document.getElementById("tinhngay");
@@ -43,7 +43,7 @@ function calculateDateDifference() {
         pleselement.style.display = "none";
         pleselement1.style.display = "inline";
         // n.style.display = "inline";
-        pleselement1.innerHTML = dayDifference + " night";
+        pleselement1.innerHTML = "$50 x " + dayDifference + " night";
         tongelement.innerHTML = 3 +10 + (dayDifference * 50);
         document.getElementById("tongcoban").innerHTML = (dayDifference * 50);
     }
@@ -53,4 +53,8 @@ function calculateDateDifference() {
     }
     
 }
-// hàm tự động nhập ngày mặc định
+// hàm tự động nhập ngày mặc định & update input date
+$( function() {
+    $("#datepicker1").datepicker();
+    $("#datepicker2").datepicker();
+  } );

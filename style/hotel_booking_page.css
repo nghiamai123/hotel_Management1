@@ -208,7 +208,7 @@ i{
 }
 .boder-in>.in1{
     width: 100%;
-    height: 86px;
+    height: 90px;
 }
 .in1{
     border-radius: 1px !important;
@@ -286,25 +286,9 @@ h3:not(#roo){
     border: none;
 }
 /* css cho input// ô input date */
-input[type="date"] {
-    background-color: #f2f2f2;
-    color: #333333;
+.insecon{
+    width: 100%;
+    height: 56px;
+    font-size: large;
+    padding-left: 50px;
 }
-
-input[type="date"] {
-    width: 500px;
-    height: 40px;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-    color: #ff0000; /* Màu chỉ mục */
-}
-
-/* test css input date */
-/* ::-webkit-datetime-edit,
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-year-field,
-::-webkit-inner-spin-button,
-::-webkit-calendar-picker-indicator */
