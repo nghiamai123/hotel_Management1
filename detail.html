@@ -25,7 +25,28 @@
 </head>
 <body>
     <!-- header -->
-    
+    <div class="nav">
+        <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a></div>
+        <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+        <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
+        <div class="nav_text"><a href="rooms.html">ROOMS</a></div>
+        <div class="nav_text">
+          <input type="text" name="nav_input" id="nav_input_search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
+          <button class="material-symbols-outlined" id="search" style="border-radius: none; ">
+            search
+          </button>
+        </div>
+        <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+        <div class="nav_log nav_text">
+          <div class="nav_log_text" id="sign">
+            <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+          </div>
+          <div class="nav_log_text" id="register">
+            <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+          </div>
+        </div>
+        <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
+      </div>
     <!-- body -->
     
     <div class="row details_room">
@@ -166,6 +187,43 @@
     </div>
     
     <!-- footer -->
-    
+    <div class="row container-fluid footer" id="footer">
+        <div class=" row justify-content-around  p-lg-4 ">
+            <!-- cột 1 -->
+        
+            <div class="contact-item col-md-12 col-lg-4">
+                <a href=""><img src="assets/logo_big.png" alt="logo"></a>
+            </div>
+            
+            <!-- cột 2 -->
+            <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <a class="nav_text" href="hotel_home_page.html">Home</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-address-card"></i>
+                    <a class="nav_text" href="hotel_about_us_page.html">About us</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bed"></i>
+                    <a class="nav_text" href="rooms.html">Rooms</a>
+                </div>
+            </div>
+            <!-- cột 3 -->
+            <div class="col-md-6 col-lg-4 ">
+                <h6 class="section-title text-white text-uppercase" style="font-size: larger;">Contact</h6>
+                <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+                <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+                <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
