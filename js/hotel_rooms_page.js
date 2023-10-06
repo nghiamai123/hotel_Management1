@@ -513,7 +513,7 @@ fetch(baserooms)
 .then((res) => res.json())
 .then((data)=> {
     console.log(data)
-    var a = data.map((data1) => {
+    var a = data.map((data1) => { 
         return `
         <div class="col-lg-4 col-md-6" >
         <div class="room-item shadow rounded overflow-hidden">
