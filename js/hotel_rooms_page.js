@@ -405,61 +405,61 @@ let rooms = [
     
 ]
 
-function save(){
-    localStorage.setItem('listrooms', JSON.stringify(rooms)); 
-}
+// function save(){
+//     localStorage.setItem('listrooms', JSON.stringify(rooms)); 
+// }
 
-function load(){
-    var rooms1 = JSON.parse(localStorage.getItem('listrooms'));
-}
+// function load(){
+//     var rooms1 = JSON.parse(localStorage.getItem('listrooms'));
+// }
 
-if (localStorage.getItem('listrooms') != null) {
-    load();
-}
+// if (localStorage.getItem('listrooms') != null) {
+//     load();
+// }
 
-function daydl(){
-    let room = "";
-    for (i in rooms){
-        var data = JSON.parse(JSON.stringify(rooms[i]))
-        room += "<div class= 'col-lg-4 col-md-6' >";
-        room += '<div class="room-item shadow rounded overflow-hidden">';
-        room +=    '<div class="position-relative">';
-        room +=        '<a href="detail.html">';
-        room +=            '<img class="img-fluid" src="'+ data.room_image[0] +'"alt="">';
-        room +=        '</a>';
-        room +=    '</div>';
-        room +=    '<div class="p-4 mt-2">'
-        room +=        '<div class="d-flex justify-content-between mb-3">';
-        room +=            '<h5 class="mb-0">'+ data.nameroom +'</h5>';
-        room +=            '<div class="ps-2">';
-        room +=                "<img src='assets/star.svg' alt='star'> " + data.evaluate;
-        room +=            '</div>';
-        room +=        '</div>';
-        room +=        '<div class="d-flex mb-3">';
-        room +=            '<small class="border-end me-3 pe-3"><i class="fa fa-bed text-secondary me-2">';
-        room +=            '</i>'+ data.type[0]+'</small>';
-        room +=            '<small class="border-end me-3 pe-3"><i class="fa fa-bath text-secondary me-2">';
-        room +=            '</i>'+ data.type[1]+'</small>';
-        room +=            '<small><i class="fa fa-wifi text-secondary me-2">';
-        room +=            '</i>'+ data.type[2]+'</small>';
-        room +=        '</div>';
-        room +=        '<div class="d-flex justify-content-between">';
-        room +=            '<h4 style="color: #f45cad;">$'+ data.price+'/night</h4>';
-        room +=        '</div>';
-        room +=    '</div>';
-        room += '</div>';
-        room += '</div>';
-    }
-    console.log(typeof rooms[i].room_image[0]);
-    document.getElementById("pp").innerHTML = room;
-    save()
-}
-// thay thế avata khi đăng nhập
-function dangnhap(){
-    document.getElementById("sign").style.display = 'none';
-    document.getElementById("regis").style.display = 'none';
-    document.getElementById("avata").style.display = 'block';
-}
+// function daydl(){
+//     let room = "";
+//     for (i in rooms){
+//         var data = JSON.parse(JSON.stringify(rooms[i]))
+//         room += "<div class= 'col-lg-4 col-md-6' >";
+//         room += '<div class="room-item shadow rounded overflow-hidden">';
+//         room +=    '<div class="position-relative">';
+//         room +=        '<a href="detail.html">';
+//         room +=            '<img class="img-fluid" src="'+ data.room_image[0] +'"alt="">';
+//         room +=        '</a>';
+//         room +=    '</div>';
+//         room +=    '<div class="p-4 mt-2">'
+//         room +=        '<div class="d-flex justify-content-between mb-3">';
+//         room +=            '<h5 class="mb-0">'+ data.nameroom +'</h5>';
+//         room +=            '<div class="ps-2">';
+//         room +=                "<img src='assets/star.svg' alt='star'> " + data.evaluate;
+//         room +=            '</div>';
+//         room +=        '</div>';
+//         room +=        '<div class="d-flex mb-3">';
+//         room +=            '<small class="border-end me-3 pe-3"><i class="fa fa-bed text-secondary me-2">';
+//         room +=            '</i>'+ data.type[0]+'</small>';
+//         room +=            '<small class="border-end me-3 pe-3"><i class="fa fa-bath text-secondary me-2">';
+//         room +=            '</i>'+ data.type[1]+'</small>';
+//         room +=            '<small><i class="fa fa-wifi text-secondary me-2">';
+//         room +=            '</i>'+ data.type[2]+'</small>';
+//         room +=        '</div>';
+//         room +=        '<div class="d-flex justify-content-between">';
+//         room +=            '<h4 style="color: #f45cad;">$'+ data.price+'/night</h4>';
+//         room +=        '</div>';
+//         room +=    '</div>';
+//         room += '</div>';
+//         room += '</div>';
+//     }
+//     console.log(typeof rooms[i].room_image[0]);
+//     document.getElementById("pp").innerHTML = room;
+//     save()
+// }
+// // thay thế avata khi đăng nhập
+// function dangnhap(){
+//     document.getElementById("sign").style.display = 'none';
+//     document.getElementById("regis").style.display = 'none';
+//     document.getElementById("avata").style.display = 'block';
+// }
 
 function search() { 
     document.getElementById("pp").innerHTML = " ";
@@ -478,7 +478,7 @@ function search() {
         room += "<div class= 'col-lg-4 col-md-6' >";
         room += '<div class="room-item shadow rounded overflow-hidden">';
         room +=    '<div class="position-relative">';
-        room +=        '<a href="hotel_detail_page.html">';
+        room +=        '<a href="hotel_detail_page.html?id='+ searchresults[i].id +'" >';
         room +=            '<img class="img-fluid" src="'+ searchresults[i].room_image[0] +'"alt="">';
         room +=        '</a>';
         room +=    '</div>';
@@ -507,3 +507,44 @@ function search() {
         document.getElementById("pp").innerHTML = room;
     }
 }
+
+const baserooms = "http://localhost:3000/rooms"
+fetch(baserooms)
+.then((res) => res.json())
+.then((data)=> {
+    console.log(data)
+    var a = data.map((data1) => {
+        return `
+        <div class="col-lg-4 col-md-6" >
+        <div class="room-item shadow rounded overflow-hidden">
+          <div class="position-relative">
+              <a href="/detail.html?id=${data1.id}">
+                  <img class="img-fluid" src="${data1.room_image[0]}" alt="">
+              </a>
+          </div>
+          <div class="p-4 mt-2">
+              <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">${data1.nameroom} </h5>
+                  <div class="ps-2">
+                      <img src="assets/star.svg" alt="star">
+                  </div>
+              </div>
+              <div class="d-flex mb-3">
+                  <small class="border-end me-3 pe-3"><i class="fa fa-bed text-secondary me-2">
+                  </i>${data1.type[0]}</small>
+                  <small class="border-end me-3 pe-3"><i class="fa fa-bath text-secondary me-2">
+                  </i>${data1.type[1]}</small>
+                  <small><i class="fa fa-wifi text-secondary me-2">
+                  </i>${data1.type[2]}</small>
+              </div>
+              
+              <div class="d-flex justify-content-between">
+                  <h4 style="color: #f45cad;">$${data1.price}/night</h4>
+              </div>
+          </div>
+      </div>
+      </div>
+        `
+    })
+    document.getElementById("pp").innerHTML = ` ${a.join("")}`
+})

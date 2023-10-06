@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="./style/hotel_home_auth.css">
     <link rel="stylesheet" href="style/hotel_rooms_page.css">
 </head>
-<body onload="daydl()">
+<body>
     <!-- modal -->
-    <div class="modalContainer" id="modalContainer">
+    <div class="modalContainer" id="modalContainer" onload="daydl()">
         <!-- modal-login -->
         <div class="modal fade form-auth" id="loginModal">
           <div class="modal-dialog">
@@ -210,10 +210,10 @@
                     <h1 class="mb-5" >Explore Our <span class="text-danger text-uppercase">Rooms</span></h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6" >
+                    <!-- <div class="col-lg-4 col-md-6" >
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <a href="detail.html">
+                                <a href="hotel_detail_page.html">
                                     <img class="img-fluid" src="./assets/Room101.jpg" alt="">
                                 </a>
                             </div>
@@ -242,7 +242,7 @@
                     <div class="col-lg-4 col-md-6" >
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <a href="detail.html">
+                            <a href="hotel_detail_page.html">
                                 <img class="img-fluid" src="assets/Room102.jpg">
                             </a>
                         </div>
@@ -271,7 +271,7 @@
                         <div class="col-lg-4 col-md-6" >
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <a href="detail.html">
+                                <a href="hotel_detail_page.html">
                                     <img class="img-fluid" src="assets/Room103.jpg" alt="">
                                 </a>
                             </div>
@@ -297,8 +297,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </div> -->
                 <div id="pp" class="row g-4" style="margin-top: 10px;"></div> 
             </div>
             </div>
@@ -324,7 +323,7 @@
                     </div>
                     <div>
                         <i class="fa-solid fa-bed"></i>
-                        <a class="nav_text" href="rooms.html">Rooms</a>
+                        <a class="nav_text" href="hotel_rooms_page.html">Rooms</a>
                     </div>
                 </div>
                 <!-- cột 3 -->
@@ -344,7 +343,6 @@
             </div>
         </div>
     <script src="./js/hotel_rooms_page.js"></script>
-    <script src="js/hotel_home_page.js"></script>
     <script src="js/looking_errer_page.js"></script>
 </body>
 </html>
