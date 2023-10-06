@@ -1,72 +1,30 @@
-let stat = true;
-let rooms = [
-    {   
-        type: ["2 bed", "2 bath", "wifi"],
-        nameroom: "104",
-        price: 70,
-        availability: stat,  
-        convenient: ["air-conditioner", "wifi"],
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        evaluate: 5,
-        reviews: "sakdlsadlk",
-        room_image: ["./assets/Room101.jpg", "./assets/imgroom101b.jpg", "./assets/imgroom1012.png", "./assets/imgroom1013.png", "./assets/imgroom1014.png", "./assets/imgroom1015.png"],
-    },
-    {   
-        type: ["2 bed", "2 bath", "wifi"],
-        nameroom: "105",
-        price: 70,
-        availability: stat,  
-        convenient: ["air-conditioner", "wifi"],
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        evaluate: 5,
-        reviews: "sakdlsadlk",
-        room_image: ["./assets/Room101.jpg", "./assets/imgroom101b.jpg", "./assets/imgroom1012.png", "./assets/imgroom1013.png", "./assets/imgroom1014.png", "./assets/imgroom1015.png"],
-    },
-    {   
-        type: ["2 bed", "2 bath", "wifi"],
-        nameroom: "106",
-        price: 70,
-        availability: stat,  
-        convenient: ["air-conditioner", "wifi"],
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        evaluate: 5,
-        reviews: "sakdlsadlk",
-        room_image: ["./assets/Room101.jpg", "./assets/imgroom101b.jpg", "./assets/imgroom1012.png", "./assets/imgroom1013.png", "./assets/imgroom1014.png", "./assets/imgroom1015.png"],
-    },
-    {   
-        type: ["2 bed", "2 bath", "wifi"],
-        nameroom: "107",
-        price: 70,
-        availability: stat,  
-        convenient: ["air-conditioner", "wifi"],
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        evaluate: 5,
-        reviews: "sakdlsadlk",
-        room_image: ["./assets/Room101.jpg", "./assets/imgroom101b.jpg", "./assets/imgroom1012.png", "./assets/imgroom1013.png", "./assets/imgroom1014.png", "./assets/imgroom1015.png"],
-    },
-    {
-        type: ["4 bed", "2 bath", "wifi"],
-        nameroom: "108",
-        price: 450,
-        availability: stat,  
-        convenient: ["air-conditioner", "wifi"],
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        evaluate: 5,
-        reviews: "review",
-        room_image: ["./assets/imgroom102.png", "./assets/imgroom102b.png", "./assets/imgroom1022.png", "./assets/imgroom1023.png", "./assets/imgroom1024.png", "./assets/imgroom1025.png"],
-    }
-]
+var rooms1;
+function save(){
+    localStorage.setItem('listrooms', JSON.stringify(rooms)); 
+}
+
+function load(){
+    rooms = JSON.parse(localStorage.getItem('listrooms'));
+}
+
+if (localStorage.getItem('listrooms') != null) {
+    load();
+    // window.location.href = "http://127.0.0.1:5500/looking_errer_page.html";
+}
 
 function search() { 
     document.getElementById("pp").innerHTML = " ";
-    let inputvalue1 = document.getElementById("nav_input").value;
+    let inputvalue1 = document.getElementById("nav_input_search").value;
     let searchresults = [];
     for (let i = 0; i < rooms.length; i++) {
         if (rooms[i].type.includes(inputvalue1) || rooms[i].convenient.includes(inputvalue1) || rooms[i].nameroom.includes(inputvalue1)) {
             searchresults.push(rooms[i]);
         }
     }
-    let room = "";
+    if (searchresults.length === 0) {
+        window.location.href = "http://127.0.0.1:5500/looking_errer_page.html";
+      } else {
+        let room = "";
     for (i in searchresults){
         room += "<div class= 'col-lg-4 col-md-6' >";
         room += '<div class="room-item shadow rounded overflow-hidden">';
@@ -97,5 +55,7 @@ function search() {
         room += '</div>';
         room += '</div>';
     }
-    document.getElementById("pp").innerHTML = room;
+        document.getElementById("pp").innerHTML = room;
+    }
+    
 }

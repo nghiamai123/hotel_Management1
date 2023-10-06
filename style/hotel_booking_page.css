@@ -38,7 +38,7 @@ body{
 .nav_text>.material-symbols-outlined{
     display: inline-block;
     position: absolute;
-    top: 33%;
+    top: 29%;
 }
 .nav_text:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) a:hover {
     color: #FF3FA4 ;
@@ -104,11 +104,15 @@ p{
 .navbar-search{
     padding: 8px;
 }
-/* #search{
+#search{
     border-radius: 20px;
     padding: 7px;
     outline: none;
-} */
+    background-color: black;
+    color: white;
+    border: none;
+    margin-left: 2px;
+}
 .fa-user{
     color: #FF3FA4;
     width: 50px;
@@ -275,16 +279,7 @@ h3:not(#roo){
 .nav_text:hover{
     color: #FF3FA4;
 }
-#search{
-    border-radius: 20px;
-    padding: 7px;
-    outline: none;
-}
-#search{
-    background-color: black;
-    color: white;
-    border: none;
-}
+
 /* css cho input// ô input date */
 .insecon{
     width: 100%;

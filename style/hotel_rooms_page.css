@@ -38,6 +38,7 @@ body{
     display: inline-block;
     position: absolute;
     top: 33%;
+    padding-bottom: 20px;
 }
 .nav_text:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) a:hover {
     color: #FF3FA4 ;
@@ -76,24 +77,24 @@ a{
     animation: changeBackgroundImage 12s infinite;
   }
   
-  @keyframes changeBackgroundImage {
+@keyframes changeBackgroundImage {
     0% {
-      background-image: url(/assets/img-background.jpg);
+        background-image: url(../assets/background2.jpg);
     }
     22% {
-      background-image: url(/assets/imgintroction1.png);
+        background-image: url(../assets/background3.jpg);
     }
     44% {
-      background-image: url(/assets/imgintroction2.png);
+        background-image: url(../assets/background3.jpg);
     }
     66% {
-        background-image: url(/assets/Rectangle\ 10.png);
+        background-image: url(../assets/background4.webp);
     }
-    88% {
-        background-image: url(/assets/imgintroction.png);
+    80% {
+        background-image: url(../assets/img-background.jpg);
     }
     100% {
-        background-image: url(/assets/img-background.jpg);
+        background-image: url(../assets/about-img.jpg);
     }
 }
   /* đóng */
@@ -139,8 +140,11 @@ p{
 }
 #search{
     border-radius: 20px;
-    padding: 7px;
     outline: none;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-left: 2px;
 }
 .fa-user{
     color: #FF3FA4;
@@ -308,14 +312,4 @@ h6,.col-lg-4.col-md-6{
 
 .nav_text:hover{
     color: #FF3FA4;
-}
-#search{
-    border-radius: 20px;
-    padding: 7px;
-    outline: none;
-}
-#search{
-    background-color: black;
-    color: white;
-    border: none;
 }

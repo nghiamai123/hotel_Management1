@@ -143,56 +143,10 @@ h1{
     align-items: center;
     align-items: center;
     font-size: 4.5rem;
-    flex-direction: column;
-    gap: 20px;
-    letter-spacing: 17px;
-    font-size: 110px;
-    font-weight: 1000;
     letter-spacing: 17px;
     flex-direction: column;
 }
 
-
-h1 > span{
-    color: #FF3FA4;
-}
-h2{
-    color: #FF3FA4;
-}
-p{
-    color: black;
-}
-#contact--yawnyawn-mail-text ,#contact--yawnyawn-phone-text, #navbar--user{
-    padding: 20px;
-}
-.row--contact{
-    padding: 20px;
-}
-#contact--yawnyawn-mail-icon,#contact--yawnyawn-phone-icon{
-    color: #FF3FA4;
-}
-
-
-
-.row-navbar{
-    background-color: black;
-    padding: 5px;
-    /* margin: 150px 0px; */
-}
-.navbar-search{
-    padding: 8px;
-}
-/* #search{
-    border-radius: 20px;
-    padding: 7px;
-    outline: none;
-} */
-
-.fa-user{
-    color: #FF3FA4;
-    width: 50px;
-    /* height: 50px; */
-}
 
 i{
     color: #FF2966!important; 
@@ -309,9 +263,6 @@ i{
     display: none;
     margin-right: 40px;
 }
-
-/* css footer */
-
 .col-md-6.col-lg-4 {
     display: flex;
     flex-direction: column;
@@ -331,21 +282,6 @@ i{
     color: #FF3FA4 !important;
 }
 
-
-
-
-
 .nav_text:hover{
     color: #FF3FA4;
-}
-
-#search{
-    border-radius: 20px;
-    padding: 7px;
-    outline: none;
-}
-#search{
-    background-color: black;
-    color: white;
-    border: none;
 }
