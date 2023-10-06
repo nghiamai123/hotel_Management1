@@ -167,7 +167,13 @@ h1 > span{
     text-align: center;
 }
 .modal-save{
-    background-color: #EC9999;
+    background-color: #eeeeee;
+    border: 1px solid #FF2966;
+    color: black;
+    font-weight: bold;
+}
+.modal-save:hover{
+    background-color: #FF2966;
 }
 #recipient-name{
     background-color: #FFE2E9;
