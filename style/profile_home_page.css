@@ -24,7 +24,6 @@ body{
 }
 
 .list--profile{
-    
     border: 1px solid #FF2966 ;
     border-radius: 12px;
     padding: 15px;
@@ -35,5 +34,7 @@ body{
 }
 .list--profile>p{
     margin: 0;
-
+}
+.list--profile>a{
+    color: black !important;
 }
