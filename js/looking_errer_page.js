@@ -1,61 +1,57 @@
-var rooms1;
-function save(){
-    localStorage.setItem('listrooms', JSON.stringify(rooms)); 
-}
-
-function load(){
-    rooms = JSON.parse(localStorage.getItem('listrooms'));
-}
-
-if (localStorage.getItem('listrooms') != null) {
-    load();
-    // window.location.href = "http://127.0.0.1:5500/looking_errer_page.html";
-}
+const listRooms = "http://localhost:3000/rooms";
 
 function search() { 
-    document.getElementById("pp").innerHTML = " ";
-    let inputvalue1 = document.getElementById("nav_input_search").value;
-    let searchresults = [];
-    for (let i = 0; i < rooms.length; i++) {
-        if (rooms[i].type.includes(inputvalue1) || rooms[i].convenient.includes(inputvalue1) || rooms[i].nameroom.includes(inputvalue1)) {
-            searchresults.push(rooms[i]);
+    fetch(listRooms)
+    .then((res) => res.json())
+    .then((data) => {
+        let checkroom = document.getElementById("nav_input_search").value;
+        if(checkroom == ""){
+            alert("you must enter search");
+            return;
         }
-    }
-    if (searchresults.length === 0) {
-        window.location.href = "http://127.0.0.1:5500/looking_errer_page.html";
-      } else {
-        let room = "";
-    for (i in searchresults){
-        room += "<div class= 'col-lg-4 col-md-6' >";
-        room += '<div class="room-item shadow rounded overflow-hidden">';
-        room +=    '<div class="position-relative">';
-        room +=        '<a href="hotel_detail_page.html">';
-        room +=            '<img class="img-fluid" src="'+ searchresults[i].room_image[0] +'"alt="">';
-        room +=        '</a>';
-        room +=    '</div>';
-        room +=    '<div class="p-4 mt-2">'
-        room +=        '<div class="d-flex justify-content-between mb-3">';
-        room +=            '<h5 class="mb-0">'+ searchresults[i].nameroom +'</h5>';
-        room +=            '<div class="ps-2">';
-        room +=                "<img src='assets/star.svg' alt='star'> " + searchresults[i].evaluate;
-        room +=            '</div>';
-        room +=        '</div>';
-        room +=        '<div class="d-flex mb-3">';
-        room +=            '<small class="border-end me-3 pe-3"><i class="fa fa-bed text-secondary me-2">';
-        room +=            '</i>'+ searchresults[i].type[0]+'</small>';
-        room +=            '<small class="border-end me-3 pe-3"><i class="fa fa-bath text-secondary me-2">';
-        room +=            '</i>'+ searchresults[i].type[1]+'</small>';
-        room +=            '<small><i class="fa fa-wifi text-secondary me-2">';
-        room +=            '</i>'+ searchresults[i].type[2]+'</small>';
-        room +=        '</div>';
-        room +=        '<div class="d-flex justify-content-between">';
-        room +=            '<h4 style="color: #f45cad;">$'+ searchresults[i].price+'/night</h4>';
-        room +=        '</div>';
-        room +=    '</div>';
-        room += '</div>';
-        room += '</div>';
-    }
-        document.getElementById("pp").innerHTML = room;
-    }
-    
+        document.getElementById("pp").innerHTML = "";
+        data.forEach(element => {
+            if (element.type.includes(checkroom) || element.nameroom.includes(checkroom) || element.price == checkroom){
+                document.getElementById("pp").innerHTML += `
+                <div class="col-lg-4 col-md-6" >
+                <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                    <a href="/detail.html?id=${element.id}">
+                        <img class="img-fluid" src="${element.room_image[0]}" alt="">
+                    </a>
+                </div>
+                <div class="p-4 mt-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="mb-0">${element.nameroom} </h5>
+                        <div class="ps-2">
+                            <img src="assets/star.svg" alt="star">
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <small class="border-end me-3 pe-3"><i class="fa fa-bed text-secondary me-2">
+                        </i>${element.type[0]}</small>
+                        <small class="border-end me-3 pe-3"><i class="fa fa-bath text-secondary me-2">
+                        </i>${element.type[1]}</small>
+                        <small><i class="fa fa-wifi text-secondary me-2">
+                        </i>${element.type[2]}</small>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <h4 style="color: #f45cad;">$${element.price}/night</h4>
+                    </div>
+                </div>
+            </div>
+            </div>` 
+            }
+            else if (document.getElementById("pp").innerHTML.length == 0) {
+                window.location.href = "looking_errer_page.html";
+            }
+            else if(checkroom == ""){
+                alert("you must enter search");
+                return;
+            }
+        }) 
+    })
 }
+
+

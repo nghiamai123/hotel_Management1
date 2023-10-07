@@ -4,7 +4,14 @@ var passwordArray=[];
 var dateArray=[];
 var genderArray =[];
 var phoneArray =[];
-
+let currentloign = true;
+if(currentloign )
+function dangnhap(){
+    document.getElementById("sign").style.display = 'none';
+    document.getElementById("register").style.display = 'none';
+    document.getElementById("avata").style.display = 'block';
+}
+    
 function register(){
     var name = document.getElementById("registerName").value;
     var email = document.getElementById("registerEmail").value;
@@ -37,10 +44,10 @@ function register(){
         localStorage.setItem('listEmail',JSON.stringify(emailArray) );
         localStorage.setItem('listPassword',JSON.stringify(passwordArray) );
         alert(email + "  Thanks for registration. \nTry to login Now");
-
-        document.getElementById("re").value ="";
-        document.getElementById("rp").value="";
-        document.getElementById("rrp").value="";
+        dangnhap();
+        // document.getElementById("re").value ="";
+        // document.getElementById("rp").value="";
+        // document.getElementById("rrp").value="";
     }
     else{
         alert(email + " is already register.");
@@ -71,9 +78,9 @@ function login(){
     }
     else {
         alert(email + " yor are login Now \n welcome to our website.");
-
-        document.getElementById("se").value ="";
-        document.getElementById("sp").value="";
+        dangnhap();
+        // document.getElementById("se").value ="";
+        // document.getElementById("sp").value="";
         return ;
     }
 

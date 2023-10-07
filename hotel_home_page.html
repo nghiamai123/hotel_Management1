@@ -15,8 +15,164 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style/hotel_home_page.css">
     <link rel="stylesheet" href="style/hotel_home_auth.css  ">
+    <link rel="stylesheet" href="style/personal_information.css">
   </head>
   <body>
+
+     <!-- modal -->
+     <div class="modalContainer" id="modalContainer" onload="daydl()">
+      <!-- modal-login -->
+      <div class="modal fade form-auth" id="loginModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="auth-form__header">
+                  <h4 class="auth-form__heading">Log in</h4>
+                  <button style="border: none; background-color: white;" type="button" class="auth-form_swith" id="loginToRegister" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register</button>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group login">
+                    <input id="loginEmail" type="tel" class="auth-form__input" placeholder="Phone number/Email/Name">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group login">
+                    <input id="loginPassord" type="password" class="auth-form__input" placeholder="Password">
+                  </div>
+                </div>
+                <div class="auth-form__control">
+                  <button class="btn control-login-continue" id="btn-login" id="loginToRegister">Log in</button>
+                </div>
+                <div class="auth-form__or login">
+                  <div>
+                    <hr>
+                  </div>
+                  <div><span><i>OR</i></span></div>
+                  <div>
+                    <hr>
+                  </div>
+                </div>
+                <div class="auth-form__social login">
+                  <a href="" class="btn btn--with-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    Continue with facebook
+                  </a>
+                  <a href="" class="btn btn--with-icon">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                  </a>
+                  <a href="" class="btn btn--with-icon">
+                    <i class="fa-brands fa-apple"></i>
+                    Continue with Apple
+                  </a>
+                </div>
+            </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal-register -->
+      <div class="modal fade form-auth" id="registerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="auth-form__header">
+                  <h4 class="auth-form__heading">Register</h4>
+                  <button style="border: none; background-color: white;" type="button" class="auth-form_swith" data-bs-toggle="modal" id="registerToLogin" data-bs-target="#loginModal" data-bs-dismiss="modal">Log in</button>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerName" type="text" class="auth-form__input" placeholder="Name">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerEmail" type="email" class="auth-form__input" placeholder="Email">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group date-gender">
+                    <div class="auth-form__date">
+                      <input type="date" id="auth-form__date" class="auth-form__input " placeholder="Date of birth">
+                    </div>
+                    <select name="gender" id="auth-form__gender" class="auth-form__input">
+                      <option disabled >Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerPhone" type="tel" class="auth-form__input" placeholder="Phone number">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerPassword" type="password" class="auth-form__input" placeholder="Password">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerConfirmPassword" type="password" class="auth-form__input" placeholder="Confirm password">
+                  </div>
+                </div>
+                <div class="auth-form__aside">
+                  <p class="auth-form__inform"><input type="checkbox"> We will call or text you to confirm the phone number.
+                    <a id="auth-form__policy-link" href="#">Privacy policy</a>
+                  </p>
+                </div>
+                <div class="auth-form__control">
+                  <!-- <button class="button">BACK</button> -->
+                  <button onclick="register(); return false;" class="btn control-login-continue">Continue</button>
+                </div>
+                <div class="auth-form__or login">
+                  <div>
+                    <hr>
+                  </div>
+                  <div><span><i>OR</i></span></div>
+                  <div>
+                    <hr>
+                  </div>
+                </div>
+                <!-- <hr> -->
+                <div class="auth-form__social login">
+                  <a href="" class="btn btn--with-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    Continue with facebook
+                  </a>
+                  <a href="" class="btn btn--with-icon">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                  </a>
+                  <a href="" class="btn btn--with-icon">
+                    <i class="fa-brands fa-apple"></i>
+                    Continue with Apple
+                  </a>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="container-fluid">
       <div class="nav">
         <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo"></a></div>
@@ -25,7 +181,7 @@
         <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
         <div class="nav_text">
           <input type="text" name="nav_input" id="nav_input_search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
-          <button class="material-symbols-outlined" id="search" onclick="search()" style="border-radius: none; ">
+          <button class="material-symbols-outlined" id="search" onclick="search(); return false" style="border-radius: none;">
             search
           </button>
         </div>
@@ -38,8 +194,23 @@
             <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
           </div>
         </div>
-        <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
+        <div class="nav_log nav_text nav-item dropdown" id="avata">
+          <!-- <li class="nav-item dropdown"> -->
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Log out</a></li>
+            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li> 
+          </ul>
+          <!-- </li> -->
+          <!-- <div class="nav_log_text"><a href="form_sign_in.html">SIGN IN</a></div>
+                  <div class="nav_log_text"><a href="form_register.html">REGISTER</a></div> -->
+          <!-- <img id="nav-avata" src="./assets/avata-profile.jpg" alt=""> -->
+        </div>
       </div>
+
       <div class="row container--body">
         <h1>WELCOM TO <span>YAWN YAWN</span></h1>
       </div>
@@ -106,7 +277,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <a href="hotel_detail_page.html">
+                  <a href="detail.html">
                     <img class="img-fluid" src="assets/Room101.jpg" alt="">
                   </a>
                 </div>
@@ -135,7 +306,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <a href="hotel_detail_page.html">
+                  <a href="detail.html">
                     <img class="img-fluid" src="assets/Room102.jpg">
                   </a>
                 </div>
@@ -164,7 +335,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <a href="hotel_detail_page.html">
+                  <a href="detail.html">
                     <img class="img-fluid" src="assets/Room103.jpg" alt="">
                   </a>
                 </div>
@@ -236,6 +407,7 @@
     </div>
     <script src="./js/hotel_home_page.js"></script>
     <script src="js/looking_errer_page.js"></script>
+    <script src="js/User.js"></script>
   </body>
 
 </html>

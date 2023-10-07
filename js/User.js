@@ -65,15 +65,74 @@
 // if (localStorage.getItem('listUser') != null) {
 //     load();
 // }
-const user1 = "http://localhost:3000/user"
+let nextId = 1;
 
-fetch(baserooms)
-.then((res) => res.json())
-.then((data) => {
-    console.log(data)
-var a = data.map((data1) => {
-    return `
-        
-    `
-  });
-});
+function generateId() {
+  const id = nextId;
+  nextId++;
+  return id;
+}
+// const searchParams = new URLSearchParams(window.location.search);
+// const usercustomer = searchParams.get("id");
+// const user1 = "http://localhost:3000/user"
+function addUser() {
+const name = document.getElementById('registerName').value;
+const avata = "https://tip.edu.vn/wp-content/uploads/2022/02/Hinh-Anh-Avatar-Dep-Cho-Con-Gai-Cute-De-Thuong.jpg";
+const password = document.getElementById('registerPassword').value;
+console.log(password)
+const phone = document.getElementById('registerPhone').value;
+const email = document.getElementById('registerEmail').value;
+const age = document.getElementById('auth-form__date').value;
+const gender = document.getElementById('auth-form__gender').value;
+const newData = {
+    id: generateId(),
+    name: name,
+    avata: avata,
+    password: password,
+    phone: phone,
+    email: email,
+    age: age,
+    gender: gender
+};
+
+fetch('http://localhost:3000/users', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newData)
+})
+    .then(response => response.json())
+    .then(data => {
+    console.log('Dữ liệu đã được thêm vào:', data);
+    })
+    .catch(error => {
+    console.error('Lỗi:', error);
+    });
+}
+
+// function updateUser() {
+// const id = ; // Lấy ID của người dùng cần cập nhật
+// const name = document.getElementById('nameInput').value;
+// const age = document.getElementById('ageInput').value;
+
+// const updatedData = {
+//     name: name,
+//     age: age
+// };
+
+// fetch(`http://localhost:3000/users/${id}`, {
+//     method: 'PUT',
+//     headers: {
+//     'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(updatedData)
+// })
+//     .then(response => response.json())
+//     .then(data => {
+//     console.log('Dữ liệu đã được cập nhật:', data);
+//     })
+//     .catch(error => {
+//     console.error('Lỗi:', error);
+//     });
+// }

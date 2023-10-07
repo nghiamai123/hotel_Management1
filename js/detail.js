@@ -1,15 +1,14 @@
 const searchParams = new URLSearchParams(window.location.search);
 const productId = searchParams.get("id");
 
-const baserooms = "http://localhost:3000/rooms"
-const baseuser = "http://localhost:3000/user"
+const baserooms = "http://localhost:3000/rooms";
 
 fetch(baserooms)
 .then((res) => res.json())
-.then((data)=> {
+.then((data) => {
     console.log(data)
     // var check = false;
-    var list = data.forEach(element => {
+    data.forEach(element => {
         console.log(element.nameroom)
         if (productId == element.id){
             document.getElementById("name_room_detail").innerHTML = element.nameroom;
