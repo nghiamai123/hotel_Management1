@@ -1,8 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif; 
 }
 .logo{
     margin-left: 50px;
@@ -56,51 +55,6 @@ a{
     line-height: normal;
     text-decoration: none;
 }
-.container--body{
-    width: 100%;
-    height: 700PX;
-    background-image: url('../assets/Rectangle 10.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom:100px ;
-    margin: 0px !important;
-    padding: 0px;
-}
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    font-size: 4.5rem;
-}
-
-h1 > span{
-    color: #FF3FA4;
-}
-h2{
-    color: #FF3FA4;
-}
-p{
-    color: black;
-}
-
-.navbar_logo{
-    background-color: #D9D9D9;
-}
-
-#contact--yawnyawn-mail-text ,#contact--yawnyawn-phone-text, #navbar--user{
-    padding: 20px;
-}
-.row--contact{
-    padding: 20px;
-}
-#contact--yawnyawn-mail-icon,#contact--yawnyawn-phone-icon{
-    color: #FF3FA4;
-}
-.row-navbar{
-    background-color: black;
-    padding: 5px;
-}
 .navbar-search{
     padding: 8px;
 }
@@ -113,149 +67,230 @@ p{
     border: none;
     margin-left: 2px;
 }
-.fa-user{
-    color: #FF3FA4;
-    width: 50px;
-    /* height: 50px; */
-}
+/* end navbar */
+
 i{
     color: #FF2966!important; 
     font-size: 20px;
     margin: 0px 10px;
 }
-.nav-link{
-    margin-right:100px ;
-}
-/* booking thân trang booking ------- */
-.container2 {
-    display: flex;
-    column-gap: 100px;
-}
-  
-.left-pane, .right-pane {
-    display: flex;
-    flex: 1;
-    text-align: center;
-    justify-content: end;
-    align-items: end;
-}
-  
-.left-pane {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+
+
+
+/* BODY */
+    .body--content{
+        margin-left: 100px;
+        margin-right: 100px;
+        /* border-bottom: 50px; */
+    }
+    .content__text{
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 50px; 
+    }
+    /* Tieu de */
+        .title{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .title-booking-room{
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: gradient_Booking 8s ease-in-out infinite;
+        }
+        @keyframes gradient_Booking {
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 2% 50%;
+            }
+        }
+    /* nhập name */
+/* edit body */
+.left-content{
+    margin: 0;
+    padding: 0;
 }
 
-/* vùng này của những ô input */
-.left-pane>.left-pane__takedata, .left-pane__takedata1{
-    width: 754px; height: 630px;
+.input--group{
+    margin: 15px 0px;
 }
-.left-pane__takedata1{
-    height: 605px !important;
-}
-#infirst, #in, #infirst1{
-    width: 100%;
-    height: 56px;
-    border-radius: 5px;
-    font-size: larger;
-    padding-left: 50px;
-    margin-top: 40px;
-}
-#in{
-    margin-top: 0px !important;
-    border-radius: 5px;
-}
-/* ... */
-.total_div_date{
-    display: flex;
-    justify-content: space-between;
-    width: 753px;
-}
-.left-pane__takedata>.total_div_date>.div_date{
-    width: 40%;
-    border-radius: 3rem;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.left-pane__takedata>.total_div_date>.div_date>span{
-    font-size: 150%;
-}
-.left-pane__takedata>.total_div_date>.div_date>input{
-    width: 100%;
-    padding: 10px;
-    /* margin-left: calc(15%); */
-    border-radius: 10px;
-}
-#SpecialR_Request{
-    width: 100%;
-    height: 148px;
-    border-radius: 20px;
+.label{
+    display: block;
+    font-weight: 500;
     font-size: 20px;
-    padding-left: 50px;
+    /* margin: 10px 0px; */
 }
-#update_money, #Revervation_required{
-    width: 47rem;
-    height: 5rem;
-    border-radius: 2rem;
-    font-size: larger;
-    background-color: #FF2966;
-    margin-top: 10%;
+.name-booking{
+    margin: 0 12px;
+    width: 96.4%;
+    padding: 10px 12px;
 }
-.textp{
-    font-size: 30px;
-    text-align: start;
+.input__check-date{
+    width: 100%;
+    padding: 10px 12px;
+}
+.input-request{
+    border-radius: 12px;
+    margin: 0 12px;
+    width: 96.4%;
+    height: 100px;
+    padding: 0 15px;
+}
+/* EDIT PAYMENT BY */
+    .payment{
+        margin: 0 12px;
+        padding: 0;
+    }
+    .title-small{
+        font-size: 28px;
+        font-weight: 500;
+    }
+    .select-option{
+        padding: 10px 12px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    /* edit phần mã thẻ & CVV */
+    .form-number--card{
+        border: 0.7px solid rgb(112, 111, 111);
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .form-number--card>hr{
+        margin: 0;
+        color: 0.6 solid;
+    }
+    
+    .input-number-card{
+        margin: 0;
+        width: 100%;
+        border: none;
+        padding: 10px 12px;
+    }
+    .div-expiration{
+        padding-right: 0;
+        border-right:0.7px solid gray;
+    }
+    .div-CVV{
+        padding-left: 0;
+    }
+    .general-standard{
+        margin: 0 12px;
+        margin-bottom: 25px;
+    }
+    .div-postal{
+        border: 1px solid black ;
+        margin-bottom: 15px;
+    }
+/* edit button */
+.button {
+    margin: 12px ;
+    width:95.4%;
     position: relative;
-    margin-top: 100px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(250, 81, 157);
+    
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #000000;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    background:#FFE2E9;
+  }
+  
+  .button:hover {
+    background: #FF2966;
+    box-shadow: 0 0 30px 5px rgba(243, 44, 104, 0.815);
+    
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  .button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+/* RIGHT CONTENT */
+.div-right{
+    height: auto !important;
+    border:1px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+}
+.img--infor{
+    height: 172px;
+    border-radius: 15px;
+}
+.price{
+    font-size: 24px;
     font-weight: bold;
+    color: #FF2966;
+    letter-spacing: 2px;
 }
-.boder-in>.in1{
-    width: 100%;
-    height: 90px;
-}
-.in1{
-    border-radius: 1px !important;
-    padding-left: 50px;
-}
-.in2{
-    width: 50%;
-    height: 86px;
-    border-top: 2px;
-    padding-left: 50px;
-}
-.boder-in{
-    border: 2px solid black;
-    margin-top: 40px;
-}
-.total_div_date2, .in1{
-    display: flex;
-    font-size: 20px;
-}
-.right-pane {
-    flex: 1;
-}
+/* END BODY */
 
-#fiximgbooking{
-    width: 300px;
-    height: 243.063px;
-    flex-shrink: 0;
-}
-h3:not(#roo){
-    margin-left: -60%;
-    display: inline;
-}
-#moving-div{
-    position: fixed;
-    z-index: 0;
-    top: 25%;
-    left: 50%;
-    background-color: white;
-    transform: translate(20%, 20%);
-    transition: transform 1s ease;
-    margin-left:70px;
 
-}
 /* css footer */
 .col-md-6.col-lg-4 {
     display: flex;
@@ -270,7 +305,8 @@ h3:not(#roo){
 }
 #footer{
     /* padding: 50px; */
-    background-color: #0F172B
+    background-color: #000000;
+    
 }
 .section-title{
     color: #FF3FA4 !important;

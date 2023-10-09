@@ -15,10 +15,13 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <link rel="stylesheet" href="style/hotel_booking_page.css">
+    
+    <link rel="stylesheet" href="style/hotel_home_auth.css">
+    <link rel="stylesheet" href="/style/hotel_booking_page.css">
 </head>
 <body>
     <div class="container-fluid">
+        <!-- header -->
         <div class="nav">
             <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo"></a></div>
             <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
@@ -40,121 +43,134 @@
             <div class="nav_text" id="avata"><img src="#" alt=""></div>
         </div>
         
-       
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="about-us__our_rooms">
-                        <div style="height: 100px;"><hr></div>
-                        <div></div>
-                        <div><hr style="color: #EC9999;"></div>
-                    </div>
-                    <h1 class="mb-5" style="margin-top: 30px;" >BOOKING <span class="text-danger text-uppercase"> ROOM</span></h1>
-                </div>
-                </div>
+       <!-- Body -->
+        <div class="row body--content">
+            <!-- EDIT TITLE -->
+            
+            <div class="title">     
+                <p class="title-booking-room">BOOKING ROOM</p>
             </div>
-        </div>
-        </div>
-        <div class="container2">
-            <div class="left-pane">
-                <div class="left-pane__takedata" style="text-align: start;">
-                    <span style="font-size: 36px;">NAME</span>
-                    <input type="text" id="in" placeholder="PLEASE! ENTER YOUR NAME IN HERE" required>
-                    <div class="total_div_date">
-                        <div class="div_date">
-                            <span>Check in</span>
-                            <p><input type="text" id="datepicker1" class="insecon"></p>
+            
+            
+            <div class="content__text row">
+                <div class="left-content col-6">
+                    <div class="infor">
+                        <div class="input--group row">
+                            <label for="" class="label">Name</label>
+                            <input type="text" id="in" placeholder="Your name" class="name-booking">
                         </div>
-                        <div class="div_date">
-                            <span>Check out</span>
-                            <p><input type="text" id="datepicker2" class="insecon"></p>
+                        <div class="input--group row">
+                            <div class="check-date  col-6 ">
+                                <label for="" class="label">Check in</label>
+                                <input type="text" name="" class="input__check-date" id="datepicker1">
+                            </div>
+                            <div class="check-date col-6">
+                                <label for="" class="label">Check out</label>
+                                <input type="text" name="" class="input__check-date"id="datepicker2">
+                            </div>
                         </div>
-                    </div>
-                    <input type="text" id="SpecialR_Request" placeholder="Special Request" required>
-                    <button id="update_money" onclick="calculateDateDifference()">Save</button>
-                    <hr style="height: 3px; margin-top: 50px;">
-                </div>
-                <div class="left-pane__takedata1">
-                    <p class="textp" style="margin-top: 70px;"><b>Payment By</b></p>
-                    <select id="infirst1">
-                        <option disabled selected value>Credit or Debit card</option>
-                        <option value="Credit">Credit</option>
-                        <option value="debit card">Debit card</option>
-                    </select>
-                    <div style="height: 180px;" class="boder-in">
-                        <input class="in1" type="text" placeholder="Number card" style="border-top: none; border-right: none; border-left: none;">
-                        <div class="total_div_date2" >
-                            <input class="in2" type="text" style="border-bottom: none; border-left: none;" placeholder="Expiration date"><input class="in2" type="text" style="border-bottom: none; border-right: none; border-left: none;" placeholder="CVV">
+                        <div class="input--group">
+                            <input type="text" class="input-request" id="SpecialR_Request" placeholder="Special Request">
                         </div>
-                    </div>
-                    <input type="text" id="infirst" placeholder="Postal cde" required>
-                    <select id="infirst1">
-                        <option disabled selected value>Country/region</option>
-                        <option value="American">American</option>
-                        <option value="Viet Nam">Viet Nam</option>
-                        <option value="Thai Lan">Thai Lan</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Lao">Lao</option>
-                    </select>
-                    <hr style="height: 4px; margin-top: 50px;">
-                </div>
-                
-                <div class="left-pane__takedata1">
-                    <p class="textp">General standards</p>
-                    <div style="text-align: start; font-size: large;">
-                        <p>
-                            We ask all guests to remember a few simple rules to be a great guest.
-                        </p>
-                        <p style="margin-left: 20px;"> 
-                            (.) Comply with house rules
-                        </p>
-                        <p style="margin-left: 20px;">
-                            (.) Maintain the house as if it were your home
-                        </p>
-                    </div>
-                    <button id="Revervation_required">Revervation required</button>
-                </div>
-            </div>
-            <div class="right-pane">
-                <div id="moving-div" style="padding: 30px; border: 1px solid black; border-radius: 20px;">
-                    <div style="display: flex; text-align: center; align-items: center;">
                         <div>
-                            <img id="fiximgbooking" src="./assets/Rectangle 7.png" alt="hình ảnh room">
+                            <button type="button" class="button" id="update_money" onclick="calculateDateDifference()">SAVE</button>
                         </div>
-
-                        <div >
-                            <h3 id="roo">Room 101</h3>
-                            <p style="width: 250px;">Quis autem vel eum iure reprehenderit qui in ea </p>
-                        </div>
+                        <hr>
                     </div>
-                    <hr>
-                    <div style="text-align: center;">
-                        <h3>Prices Detail</h3>
-                        <div style="display: flex; justify-content: space-around;">
-                            <div>
-                                <p id="tinhngay" style="display: inline;">$50 x</p><span style="display: inline-block;" id="tinhngay1">1 <span id="n">night</span></span>
-                                <p>Cleaning fee</p>
-                                <p>Tax</p>
+                    <div class="payment">
+                        <p class="title-small">Payment By</p>
+                        <select id="infirst1" class="select-option">
+                            <option disabled selected value>Credit or Debit card</option>
+                            <option value="Credit">Credit</option>
+                            <option value="Debit card">Debit card</option>
+                        </select>
+                        <div class="form-number--card">
+                            <!-- TRÊN -->
+                            <div class="number-card">
+                                <input type="text" placeholder="Number card" class="input-number-card" id="">
                             </div>
-                            <div>
-                                <p id="tongcoban">$50</p>
-                                <p></p>
-                                <p>$3</p>
-                                <p>$10</p>
+                            <hr>
+                            <!-- DƯỚI -->
+                            <div class="number-date-card row ">
+                                <div class="col div-expiration">
+                                    <input type="text" class="input-number-card"placeholder="Expiration date">
+                                </div>
+                                
+                                <div class="col div-CVV">
+                                    <input class="input-number-card"type="text"placeholder="CVV" >
+                                </div>
                             </div>
                         </div>
+                        <div class="div-postal">
+                            <input type="text" placeholder="Postal cde" class="input-number-card">
+                        </div> 
+                        <div>
+                            <select id="infirst1" class="select-option">
+                                <option disabled selected value>Country/region</option>
+                                <option value="American">American</option>
+                                <option value="Viet Nam">Viet Nam</option>
+                                <option value="Thai Lan">Thai Lan</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Lao">Lao</option>
+                            </select>
+                        </div> 
+                        <hr>
+                    </div> 
+                    <div class="general-standard">
+                        <p class="title-small">General standards</p>
+                        <p>We ask all guests to remember a few simple rules to be a great guest.</p>
+                        <ul>
+                            <li>Comply with house rules</li>
+                            <li>Maintain the house as if it were your home</li>
+                        </ul>
                     </div>
-                    <hr>
-                    <div style="display: flex; justify-content: space-around; text-align: center;">
-                        <div><h3>Total (USD)</h3></div>
-                        <div><h6 id="tong">$00</h6></div>
+                    <div>
+                        <button id="Revervation_required" type="button" class="button">Revervation required</button>
                     </div>
+                </div>
+                <div class="col"></div>
+                <!-- total price -->
+                <div class="right-content col-5">
+                    <div class="div-right">
+                        <div class="div-infor--room row d-flex justify-content-center align-items-center">
+                            <img src="https://seanahotel.com/wp-content/uploads/2019/09/Deluxe-Sea-view-2-1.jpg" alt="" class="col-7 img--infor">
+                            <div class="col-5 ">
+                                <p id="name-room" class="title-small ">Room 101</p>
+                                <p class="describe ">Quis autem vel eum iure reprehenderit qui in ea</p>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="div-price-detail">
+                            <p class="title-small">Prices Detail</p>
+                            <div class="row  d-flex justify-content-center align-items-center">
+                                <div class="col-7">
+                                    <div class="d-flex ">
+                                        <p id="tinhngay">$50 x</p><span id="tinhngay1"> 1 <span id="n">night</span></span>
+                                    </div>
+                                    <p>Cleaning fee</p>
+                                    <p>Tax</p>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <p id="tongcoban">$50</p>
+                                    <p>$3</p>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="div-total-price d-flex justify-content-between align-content-center ">
+                            <p class="title-small">Total (USD)</p>
+                            <p id="tong" class="price">$00</p>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </div>
 
         <!-- footer -->
-        <div class="row container-fluid footer" id="footer">
+        <div class="row container-fluid" id="footer">
             <div class=" row justify-content-around  p-lg-4 ">
                 <!-- cột 1 -->
             
@@ -179,7 +195,7 @@
                 </div>
                 <!-- cột 3 -->
                 <div class="col-md-6 col-lg-4 ">
-                    <h6 class="section-title text-white text-uppercase">Contact</h6>
+                    <h6 class="section-title  text-uppercase">Contact</h6>
                     <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
                     <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
                     <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
@@ -192,6 +208,8 @@
                 </div>
             </div>
         </div>
+    </div>
     <script src="./js/hotel_booking_page.js"></script>
+    <script src="js/looking_errer_page.js"></script>
 </body>
 </html>
