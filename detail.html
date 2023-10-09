@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./style/detail.css">
     <!-- icon -->
     <link rel="website icon"  type="png" href="./assets/logo_big.png">
+    <link rel="stylesheet" href="style/personal_information.css">
 </head>
 <body>
     <!-- modal -->
@@ -199,7 +200,21 @@
             <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
           </div>
         </div>
-        <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
+        <div class="nav_log nav_text nav-item dropdown" id="avata">
+          <!-- <li class="nav-item dropdown"> -->
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li> 
+          </ul>
+          <!-- </li> -->
+          <!-- <div class="nav_log_text"><a href="form_sign_in.html">SIGN IN</a></div>
+                  <div class="nav_log_text"><a href="form_register.html">REGISTER</a></div> -->
+          <!-- <img id="nav-avata" src="./assets/avata-profile.jpg" alt=""> -->
+        </div>
       </div>
     <!-- body -->
   
@@ -380,6 +395,6 @@
         </div>
     </div>
     <script src="./js/detail.js"></script>
-    
+    <script src="js/looking_errer_page.js"></script>
 </body>
 </html>

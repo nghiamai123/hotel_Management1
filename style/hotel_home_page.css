@@ -39,7 +39,7 @@ body{
 .nav_text>.material-symbols-outlined{
     display: inline-block;
     position: absolute;
-    top: 33%;
+    top: 28% !important;
 }
 .nav_text:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) a:hover {
     color: #FF3FA4 ;

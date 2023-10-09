@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style/hotel_rooms_page.css">
     <link rel="stylesheet" href="style/hotel_home_auth.css">
+    <link rel="stylesheet" href="style/personal_information.css">
 </head>
 <body>
     <!-- modal -->
@@ -191,7 +192,21 @@
                 <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
               </div>
             </div>
-            <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
+            <div class="nav_log nav_text nav-item dropdown" id="avata">
+              <!-- <li class="nav-item dropdown"> -->
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+                <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+                <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li> 
+              </ul>
+              <!-- </li> -->
+              <!-- <div class="nav_log_text"><a href="form_sign_in.html">SIGN IN</a></div>
+                      <div class="nav_log_text"><a href="form_register.html">REGISTER</a></div> -->
+              <!-- <img id="nav-avata" src="./assets/avata-profile.jpg" alt=""> -->
+            </div>
         </div>
         <div class="row container--body">
             <h1>WE HAVE <span>MANY ROOMS</span></h1>

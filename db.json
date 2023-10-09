@@ -942,7 +942,7 @@
       "id": 1,
       "name": " Hồ Thị Xươm",
       "avata": "https://tip.edu.vn/wp-content/uploads/2022/02/Hinh-Anh-Avatar-Dep-Cho-Con-Gai-Cute-De-Thuong.jpg",
-      "password": "01042004",
+      "password": "1",
       "phone": "0326826518",
       "email": "xuom25@ho.com",
       "age": "19",
@@ -987,9 +987,6 @@
       "email": "hoang25@ho.com",
       "age": "23",
       "gender": "Nam"
-    },
-    {
-      "id": 6
     }
   ]
 }

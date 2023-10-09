@@ -1,5 +1,5 @@
 const listRooms = "http://localhost:3000/rooms";
-
+const listUser = "http://localhost:3000/user";
 function search() { 
     fetch(listRooms)
     .then((res) => res.json())
@@ -54,4 +54,109 @@ function search() {
     })
 }
 
+function dangnhap(){
+    document.getElementById("sign").style.display = 'none';
+    document.getElementById("register").style.display = 'none';
+    document.getElementById("avata").style.display = 'block';
+}
 
+var currentlylogin = false;
+function login(){
+    const loginData = {
+        email: document.getElementById("loginEmail").value,
+        password: document.getElementById("loginPassord").value
+    };
+    fetch(listUser)
+    .then(res => res.json())
+    .then(data => {
+        var a = data.some(function(user, index){
+            return user.email === loginData.email && user.password === loginData.password;
+        })
+        if (a) {
+            alert("Bạn đã đăng nhập thành công");
+            dangnhap();
+            //
+            currentlylogin = true;
+            localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
+            return;
+        } 
+        else {
+            alert("Đăng nhập không thành công");
+            return;
+        }       
+    }
+)}
+var takelogin = JSON.parse(localStorage.getItem("currentlylogin"));
+while(takelogin){
+    document.getElementById("sign").style.display = 'none';
+    document.getElementById("register").style.display = 'none';
+    document.getElementById("avata").style.display = 'block';
+    break;
+}
+
+/////
+function logout() {
+    currentlylogin = false;
+    localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
+}
+function register() { 
+    var name = document.getElementById("registerName").value;
+    var email = document.getElementById("registerEmail").value;
+    var date = document.getElementById("auth-form__date").value;
+    var phone = document.getElementById("registerPhone").value;
+    var password = document.getElementById("registerPassword").value;
+    var gender = document.getElementById("auth-form__gender").value;
+
+    // Tạo đối tượng chứa dữ liệu đăng ký
+    const formData = {
+        name: name,
+        email: email,
+        avata: "https://img4.thuthuatphanmem.vn/uploads/2020/08/27/anh-avatar-zalo-cute-nhat-cho-con-trai_052907656.jpg",
+        phone: phone,
+        age: date,
+        gender: gender,
+        password: password
+    };
+
+    // Gửi dữ liệu đăng ký lên server
+    fetch(listUser, { 
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            if (name == ""){
+                alert("Name required.");
+                return ;
+            }
+            else if (email == ""){
+                alert("Email required.");
+                return ;
+            }
+            else if (password == ""){
+                alert("Password required.");
+                return ;
+            }
+            else if (passwordConfirm == ""){
+                alert("Password required.");
+                return ;
+            }
+            else if ( password != passwordConfirm ){
+                alert("Password don't match retype your Password.");
+                return;
+            }
+            dangnhap();
+            currentlylogin = true;
+            localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
+            console.log('Đăng ký thành công');
+        } 
+        // else {
+        //     document.getElementById("sign").style.display = 'block';
+        //     document.getElementById("register").style.display = 'block';
+        //     document.getElementById("avata").style.display = 'none';
+        // }
+    })
+}

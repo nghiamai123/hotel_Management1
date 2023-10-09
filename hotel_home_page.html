@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,16 +35,16 @@
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group login">
-                    <input id="loginEmail" type="tel" class="auth-form__input" placeholder="Phone number/Email/Name">
+                    <input id="loginEmail" type="tel" class="auth-form__input" placeholder="Phone number/Email/Name" required>
                   </div>
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group login">
-                    <input id="loginPassord" type="password" class="auth-form__input" placeholder="Password">
+                    <input id="loginPassord" type="password" class="auth-form__input" placeholder="Password" required>
                   </div>
                 </div>
                 <div class="auth-form__control">
-                  <button class="btn control-login-continue" id="btn-login" id="loginToRegister">Log in</button>
+                  <button class="btn control-login-continue" id="btn-login" id="loginToRegister" onclick="login(); return false;">Log in</button>
                 </div>
                 <div class="auth-form__or login">
                   <div>
@@ -57,15 +56,15 @@
                   </div>
                 </div>
                 <div class="auth-form__social login">
-                  <a href="" class="btn btn--with-icon">
+                  <a href="https://m.facebook.com/login/?locale=vi_VN" class="btn btn--with-icon">
                     <i class="fa-brands fa-facebook"></i>
                     Continue with facebook
                   </a>
-                  <a href="" class="btn btn--with-icon">
+                  <a href="https://www.google.com.vn/?hl=en" class="btn btn--with-icon">
                     <i class="fa-brands fa-google"></i>
                     Continue with Google
                   </a>
-                  <a href="" class="btn btn--with-icon">
+                  <a href="https://www.icloud.com/" class="btn btn--with-icon">
                     <i class="fa-brands fa-apple"></i>
                     Continue with Apple
                   </a>
@@ -94,20 +93,20 @@
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group">
-                    <input id="registerName" type="text" class="auth-form__input" placeholder="Name">
+                    <input id="registerName" type="text" class="auth-form__input" placeholder="Name" required>
                   </div>
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group">
-                    <input id="registerEmail" type="email" class="auth-form__input" placeholder="Email">
+                    <input id="registerEmail" type="email" class="auth-form__input" placeholder="Email" required>
                   </div>
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group date-gender">
                     <div class="auth-form__date">
-                      <input type="date" id="auth-form__date" class="auth-form__input " placeholder="Date of birth">
+                      <input type="date" id="auth-form__date" class="auth-form__input " placeholder="Date of birth" required>
                     </div>
-                    <select name="gender" id="auth-form__gender" class="auth-form__input">
+                    <select name="gender" id="auth-form__gender" class="auth-form__input" required>
                       <option disabled >Gender</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
@@ -116,17 +115,17 @@
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group">
-                    <input id="registerPhone" type="tel" class="auth-form__input" placeholder="Phone number">
+                    <input id="registerPhone" type="tel" class="auth-form__input" placeholder="Phone number" required>
                   </div>
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group">
-                    <input id="registerPassword" type="password" class="auth-form__input" placeholder="Password">
+                    <input id="registerPassword" type="password" class="auth-form__input" placeholder="Password" required>
                   </div>
                 </div>
                 <div class="mb-3">
                   <div class="auth-form__group">
-                    <input id="registerConfirmPassword" type="password" class="auth-form__input" placeholder="Confirm password">
+                    <input id="registerConfirmPassword" type="password" class="auth-form__input" placeholder="Confirm password" required>
                   </div>
                 </div>
                 <div class="auth-form__aside">
@@ -136,7 +135,7 @@
                 </div>
                 <div class="auth-form__control">
                   <!-- <button class="button">BACK</button> -->
-                  <button onclick="register(); return false;" class="btn control-login-continue">Continue</button>
+                  <button class="btn control-login-continue" id="registrationForm" onclick="register();return false;">Continue</button>
                 </div>
                 <div class="auth-form__or login">
                   <div>
@@ -149,15 +148,15 @@
                 </div>
                 <!-- <hr> -->
                 <div class="auth-form__social login">
-                  <a href="" class="btn btn--with-icon">
+                  <a href="https://m.facebook.com/login/?locale=vi_VN" class="btn btn--with-icon" class="btn btn--with-icon">
                     <i class="fa-brands fa-facebook"></i>
                     Continue with facebook
                   </a>
-                  <a href="" class="btn btn--with-icon">
+                  <a href="https://www.google.com.vn/?hl=en" class="btn btn--with-icon">
                     <i class="fa-brands fa-google"></i>
                     Continue with Google
                   </a>
-                  <a href="" class="btn btn--with-icon">
+                  <a href="https://www.icloud.com/" class="btn btn--with-icon">
                     <i class="fa-brands fa-apple"></i>
                     Continue with Apple
                   </a>
@@ -201,7 +200,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
-            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Log out</a></li>
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
             <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li> 
           </ul>
           <!-- </li> -->
