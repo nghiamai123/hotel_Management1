@@ -1,17 +1,20 @@
 const listRooms = "http://localhost:3000/rooms";
 const listUser = "http://localhost:3000/user";
-function search() { 
-    fetch(listRooms)
-    .then((res) => res.json())
-    .then((data) => {
-        let checkroom = document.getElementById("nav_input_search").value;
-        if(checkroom == ""){
-            alert("you must enter search");
-            return;
-        }
-        document.getElementById("pp").innerHTML = "";
+let tang = 0;
+async function search() { 
+    let checkroom = document.getElementById("nav_input_search").value;
+    localStorage.setItem('inputValue', JSON.stringify(checkroom));
+    if(checkroom == ""){
+        alert("you must enter search");
+        return;
+    }
+    document.getElementById("pp").innerHTML = "";
+    try {
+        const res = await fetch(listRooms);
+        const data = await res.json();
         data.forEach(element => {
-            if (element.type.includes(checkroom) || element.nameroom.includes(checkroom) || element.price == checkroom){
+            if (element.type.includes(checkroom) || element.nameroom.includes(checkroom) || element.price == checkroom) {
+                tang = 1;
                 document.getElementById("pp").innerHTML += `
                 <div class="col-lg-4 col-md-6" >
                 <div class="room-item shadow rounded overflow-hidden">
@@ -43,15 +46,21 @@ function search() {
             </div>
             </div>` 
             }
-            else if (document.getElementById("pp").innerHTML.length == 0) {
-                window.location.href = "looking_errer_page.html";
-            }
-            else if(checkroom == ""){
-                alert("you must enter search");
-                return;
-            }
-        }) 
-    })
+        });
+        if (tang == 0) {
+            window.location.href = "looking_errer_page.html";
+            return;
+        } 
+        if (window.location.href != "http://127.0.0.1:5500/hotel_rooms_page.html") {
+            window.open("hotel_rooms_page.html", "_blank"); 
+            window.addEventListener('load', function() {
+                var savedValue = JSON.parse(localStorage.getItem('inputValue'));
+                document.getElementById("nav_input_search").value = savedValue;
+            });
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function dangnhap(){
@@ -62,6 +71,7 @@ function dangnhap(){
 
 var currentlylogin = false;
 function login(){
+    var a = true;
     const loginData = {
         email: document.getElementById("loginEmail").value,
         password: document.getElementById("loginPassord").value
@@ -69,23 +79,21 @@ function login(){
     fetch(listUser)
     .then(res => res.json())
     .then(data => {
-        var a = data.some(function(user, index){
-            return user.email === loginData.email && user.password === loginData.password;
-        })
-        if (a) {
-            alert("Bạn đã đăng nhập thành công");
-            dangnhap();
-            //
-            currentlylogin = true;
-            localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
-            return;
-        } 
-        else {
-            alert("Đăng nhập không thành công");
-            return;
-        }       
+        data.forEach( e =>{
+            if (e.email === loginData.email && e.password === loginData.password){
+                localStorage.setItem("listuser", JSON.stringify(e.id));
+                alert("Bạn đã đăng nhập thành công");
+                dangnhap();
+                currentlylogin = true;
+                localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
+                a = false;
+                return;
+            }
+        });
+        if (a){alert("Bạn đã đăng nhập thành công")};
     }
 )}
+
 var takelogin = JSON.parse(localStorage.getItem("currentlylogin"));
 while(takelogin){
     document.getElementById("sign").style.display = 'none';
@@ -99,6 +107,7 @@ function logout() {
     currentlylogin = false;
     localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
 }
+
 function register() { 
     var name = document.getElementById("registerName").value;
     var email = document.getElementById("registerEmail").value;
@@ -128,35 +137,10 @@ function register() {
     })
     .then(response => {
         if (response.ok) {
-            if (name == ""){
-                alert("Name required.");
-                return ;
-            }
-            else if (email == ""){
-                alert("Email required.");
-                return ;
-            }
-            else if (password == ""){
-                alert("Password required.");
-                return ;
-            }
-            else if (passwordConfirm == ""){
-                alert("Password required.");
-                return ;
-            }
-            else if ( password != passwordConfirm ){
-                alert("Password don't match retype your Password.");
-                return;
-            }
             dangnhap();
             currentlylogin = true;
             localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
             console.log('Đăng ký thành công');
         } 
-        // else {
-        //     document.getElementById("sign").style.display = 'block';
-        //     document.getElementById("register").style.display = 'block';
-        //     document.getElementById("avata").style.display = 'none';
-        // }
     })
 }

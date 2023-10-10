@@ -12,6 +12,8 @@ function dangnhap(){
     document.getElementById("avata").style.display = 'block';
 }
     
+
+
 // function register(){
 //     var name = document.getElementById("registerName").value;
 //     var email = document.getElementById("registerEmail").value;
