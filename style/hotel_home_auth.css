@@ -144,3 +144,7 @@ a{
 .control-login-continue{
     min-width: 400PX;
 }
+#nav-avata{
+    height: 50px;
+    border-radius: 50%;
+}

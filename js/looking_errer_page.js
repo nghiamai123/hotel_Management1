@@ -52,16 +52,19 @@ async function search() {
             return;
         } 
         if (window.location.href != "http://127.0.0.1:5500/hotel_rooms_page.html") {
-            window.open("hotel_rooms_page.html", "_blank"); 
-            window.addEventListener('load', function() {
-                var savedValue = JSON.parse(localStorage.getItem('inputValue'));
-                document.getElementById("nav_input_search").value = savedValue;
-            });
+            window.location.href = "hotel_rooms_page.html"; 
+            var savedValue = JSON.parse(localStorage.getItem('inputValue'));
+            document.getElementById("nav_input_search").value = savedValue;
         }
     } catch (error) {
         console.log(error);
-    }
+    } 
 }
+// gán lại giá trị input từ trang home page
+var savedValue = JSON.parse(localStorage.getItem('inputValue'));
+document.getElementById("nav_input_search").value = savedValue;
+let blank = "";
+localStorage.setItem('inputValue', JSON.stringify(blank));
 
 function dangnhap(){
     document.getElementById("sign").style.display = 'none';
@@ -82,7 +85,7 @@ function login(){
         data.forEach( e =>{
             if (e.email === loginData.email && e.password === loginData.password){
                 localStorage.setItem("listuser", JSON.stringify(e.id));
-                alert("Bạn đã đăng nhập thành công");
+                alert("Successful login");
                 dangnhap();
                 currentlylogin = true;
                 localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
@@ -90,7 +93,7 @@ function login(){
                 return;
             }
         });
-        if (a){alert("Bạn đã đăng nhập thành công")};
+        if (a){alert("You have failed to log in")};
     }
 )}
 
@@ -115,8 +118,25 @@ function register() {
     var phone = document.getElementById("registerPhone").value;
     var password = document.getElementById("registerPassword").value;
     var gender = document.getElementById("auth-form__gender").value;
-
-    // Tạo đối tượng chứa dữ liệu đăng ký
+    var passwordConfirm = document.getElementById("registerConfirmPassword").value;
+    if (name == ""){
+        alert("Name required.");
+        return ;
+    }
+    else if (email == ""){
+        alert("Email required.");
+        return ;
+    }
+    else if (password == ""){
+        alert("Password required.");
+        return ;
+    }
+    else if (passwordConfirm == ""){
+        alert("Password required.");
+        return ;
+    }
+    else if ( password == passwordConfirm ){
+        // Tạo đối tượng chứa dữ liệu đăng ký
     const formData = {
         name: name,
         email: email,
@@ -137,10 +157,14 @@ function register() {
     })
     .then(response => {
         if (response.ok) {
-            dangnhap();
-            currentlylogin = true;
-            localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
-            console.log('Đăng ký thành công');
+            alert("Please log in with the account you just registered !!!")
         } 
     })
+       return;
+    }
+    else {
+        alert("Password don't match retype your Password.");
+        return;
+    }
+    
 }

@@ -183,15 +183,18 @@
                         search
                     </button>
                 </div>
+                <div class="nav_log nav_text nav-item dropdown" id="avata">
                 <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
-                <div class="nav_log nav_text">
-                    <div class="nav_log_text" id="sign">
-                        <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
-                    </div>
-                    <div class="nav_log_text" id="register">
-                        <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
-                    </div>
-                </div>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+                  <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+                  <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li> 
+                </ul>
+              </div>
+            </div>
             </div>
         </div>
         <div class="hide"></div>

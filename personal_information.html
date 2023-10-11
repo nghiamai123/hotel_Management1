@@ -52,7 +52,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn modal-save">Save</button>
+          <button type="button" class="btn modal-save" onclick="change()">Save</button>
         </div>
       </div>
     </div>
@@ -65,8 +65,8 @@
       <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
       <div class="nav_text"><a href="hotel_rooms_page.html">ROOM</a></div>
       <div class="nav_text">
-        <input type="text" name="nav_input" id="nav_input" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
-        <button class="material-symbols-outlined" id="search" style="color: #f45cad;">
+        <input type="text" name="nav_input" id="nav_input_search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
+        <button class="material-symbols-outlined" id="search" style="color: #f45cad;" onclick="search()">
           search
         </button>
       </div>
@@ -79,10 +79,8 @@
           <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
           <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li> 
         </ul>
-        <!-- </li> -->
-        <!-- <div class="nav_log_text"><a href="form_sign_in.html">SIGN IN</a></div>
-                <div class="nav_log_text"><a href="form_register.html">REGISTER</a></div> -->
-        <!-- <img id="nav-avata" src="./assets/avata-profile.jpg" alt=""> -->
+        <div id="sign"></div>
+        <div id="register"></div>
       </div>
     </div>
     <!-- body -->
@@ -116,9 +114,9 @@
         <!--  -->
         <p>All required user information can be save here.</p>
         <div class="profile-back-edit">
-          <button id="profile-back">Back</button>
+          <button id="profile-back"><a href="profile_home_page.html">Back</a></button>
           <button id="profile-edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@mdo" onclick="change()">Edit</button>
+            data-bs-whatever="@mdo">Edit</button>
         </div>
 
       </div>
@@ -168,6 +166,7 @@
     </div>
   </div>
   <script src="js/personal_information.js"></script>
+  <script src="js/looking_errer_page.js"></script>
 </body>
 
 </html>
