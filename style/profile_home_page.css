@@ -38,3 +38,6 @@ body{
 .list--profile>a{
     color: black !important;
 }
+.text-white{
+    padding: 0px;
+}

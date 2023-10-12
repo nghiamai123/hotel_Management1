@@ -313,3 +313,6 @@ h6,.col-lg-4.col-md-6{
 .nav_text:hover{
     color: #FF3FA4;
 }
+.text-white{
+    padding: 0px;
+}

@@ -60,13 +60,13 @@
   <div class="container-fluid">
     <!-- header -->
     <div class="nav">
-      <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="90px"></a></div>
+      <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="78px" height="76"></a></div>
       <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
       <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
-      <div class="nav_text"><a href="hotel_rooms_page.html">ROOM</a></div>
+      <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
       <div class="nav_text">
-        <input type="text" name="nav_input" id="nav_input_search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
-        <button class="material-symbols-outlined" id="search" style="color: #f45cad;" onclick="search()">
+        <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
+        <button class="material-symbols-outlined" id="search" style="color: #ffffff; padding-bottom: 20px;" onclick="search()">
           search
         </button>
       </div>
@@ -90,8 +90,12 @@
     <p id="profile-date">July 2023</p>
     <div class="row content_profile-usernames">
       <div class="col-lg-4 content_profile-usernames-about">
-        <img id="avata-user" src="./assets/avata-profile.jpg" alt="ảnh đại diện"><br>
-        <button id="profile-edit-avata">Upload a photo</button>
+        <div class="edit-avata-user">
+          <img id="avata-user" src="./assets/avata-profile.jpg" alt="ảnh đại diện">
+        </div>
+        <div class="edit-avata-user">
+          <button id="profile-edit-avata">Upload a photo</button>
+        </div>
         <!-- tạo input khác ẩn và gọi một hàm đến sử lý -->
         <h4>Identify Verification</h4>
         <p style="padding-left: 30px; padding-right:30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cum veritatis quaerat ut reprehenderit architecto ipsa quos similique eveniet voluptates. Iste facere cumque, voluptatibus cum ut aut ipsam similique eaque?</p>
@@ -107,14 +111,14 @@
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-5 content_profile-username-email-password" style="margin-top: 30px;">
-        <input type="text" class="form-input" name="user-name" id="user_name" style="padding-left: 20px;"placeholder="User name" value="Việt Mỹ" readonly>
-        <input type="text" name="email" id="email11" style="padding-left: 20px;" placeholder="Email" value="Vietmy@gmail.com" readonly>
-        <input type="tel" name="phonenumber" id="user_phonenumber" style="padding-left: 20px;" placeholder="Phonenumber" value="0987654321" readonly>
-        <input type="password" name="password" id="user_password" style="padding-left: 20px;" placeholder="**********" value="hihimyne" readonly>
+        <input type="text" class="form-input-profile" name="user-name" id="user_name" style="padding-left: 20px;"placeholder="User name" value="Việt Mỹ" readonly>
+        <input type="text" class="form-input-profile" name="email" id="email11" style="padding-left: 20px;" placeholder="Email" value="Vietmy@gmail.com" readonly>
+        <input type="tel" class="form-input-profile" name="phonenumber" id="user_phonenumber" style="padding-left: 20px;" placeholder="Phonenumber" value="0987654321" readonly>
+        <input type="password" class="form-input-profile" name="password" id="user_password" style="padding-left: 20px;" placeholder="**********" value="hihimyne" readonly>
         <!--  -->
         <p>All required user information can be save here.</p>
         <div class="profile-back-edit">
-          <button id="profile-back"><a href="profile_home_page.html">Back</a></button>
+          <a href="profile_home_page.html"><button id="profile-back">Back</button></a>
           <button id="profile-edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="@mdo">Edit</button>
         </div>
@@ -130,11 +134,11 @@
       <!-- cột 1 -->
 
       <div class="contact-item col-md-12 col-lg-4">
-        <a href=""><img src="assets/logo_big.png" alt="logo" width="100%"></a>
+        <a href="hotel_home_page.html"><img src="assets/logo_big.png" alt="logo"></a>
       </div>
 
       <!-- cột 2 -->
-      <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+      <div class="col-md-6 col-lg-4  justify-content-around align-content-center ">
         <div>
           <i class="fa-solid fa-house"></i>
           <a class="nav_text" href="hotel_home_page.html">Home</a>
