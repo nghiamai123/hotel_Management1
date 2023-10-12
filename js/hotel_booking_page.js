@@ -12,6 +12,9 @@ window.addEventListener('scroll',function() {
         moving.style.display = "block";
     }
 })
+// hiện thị ảnh phòng trong booking
+
+
 // tính và trả ra số Ngày
 
 function calculateDateDifference() {
@@ -21,6 +24,7 @@ function calculateDateDifference() {
     var pleselement1 = document.getElementById("tinhngay1");
     var pleselement = document.getElementById("tinhngay");
     var tongelement = document.getElementById("tong");
+    currentlylogin = localStorage.getItem("currentlylogin");
     if (isNaN(parseInt(date1Input.value)) || isNaN(parseInt(date2Input.value))) {
         var ples = "Please enter date !";
         var tong = "0";
@@ -31,6 +35,11 @@ function calculateDateDifference() {
         tongelement.innerHTML = tong;
         pleselement1.style.display = "none";
         document.getElementById("tongcoban").innerHTML = 0
+        alert("booking not Successful !!!")
+        return;
+    }
+    else if (currentlylogin != "true"){
+        alert("you are need login now");
         return;
     }
     var date1 = new Date(date1Input.value);
@@ -47,21 +56,14 @@ function calculateDateDifference() {
         pleselement1.innerHTML = "$50 x " + dayDifference + " night";
         tongelement.innerHTML = 3 +10 + (dayDifference * 50);
         document.getElementById("tongcoban").innerHTML = (dayDifference * 50);
+        alert("booking Successful !!!")
     }
     else{
         document.getElementById("tongcoban").innerHTML = 0
         tongelement.innerHTML = 0
     }
 }
-let date = new Date();
-let datenow = date.getDate();
-let monthnow = date.getMonth();
-let yearnow = date.getFullYear();
-// let datetotal 
-// document.getElementById("datepicker1").value = monthnow + datenow + yearnow;
-// document.getElementById("datepicker2").value = datenow + 5;
-// hàm tự động nhập ngày mặc định & update input date
 $( function() {
     $("#datepicker1").datepicker();
     $("#datepicker2").datepicker();
-  } );
+});

@@ -317,4 +317,10 @@ i{
 .nav_text:hover{
     color: #FF3FA4;
 }
+#sign, #register{
+    display: block;
+}
+#avata{
+    display: none;
+}
 

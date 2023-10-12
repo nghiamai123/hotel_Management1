@@ -47,6 +47,7 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
+    gap: 0px;
 }
 
 .nav,.nav_log{
@@ -290,4 +291,10 @@ i{
     margin: 0px;
     color: #ff508e;
     text-transform: uppercase;
+}
+#sign, #register{
+    display: block;
+}
+#avata{
+    display: none;
 }

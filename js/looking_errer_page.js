@@ -74,7 +74,7 @@ function dangnhap(){
 
 var currentlylogin = false;
 function login(){
-    var a = true;
+    // var a = true;
     const loginData = {
         email: document.getElementById("loginEmail").value,
         password: document.getElementById("loginPassord").value
@@ -82,6 +82,7 @@ function login(){
     fetch(listUser)
     .then(res => res.json())
     .then(data => {
+        var error = true
         data.forEach( e =>{
             if (e.email === loginData.email && e.password === loginData.password){
                 localStorage.setItem("listuser", JSON.stringify(e.id));
@@ -89,15 +90,16 @@ function login(){
                 dangnhap();
                 currentlylogin = true;
                 localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
-                a = false;
+                error = false;
                 return;
             }
         });
-        if (a){alert("You have failed to log in")};
+        if (error){alert("You have failed to log in")};
     }
 )}
 
 var takelogin = JSON.parse(localStorage.getItem("currentlylogin"));
+console.log(takelogin)
 while(takelogin){
     document.getElementById("sign").style.display = 'none';
     document.getElementById("register").style.display = 'none';
