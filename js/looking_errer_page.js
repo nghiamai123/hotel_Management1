@@ -14,7 +14,6 @@ async function search() {
         const data = await res.json();
         data.forEach(element => {
             if (element.type.includes(checkroom) || element.nameroom.includes(checkroom) || element.price == checkroom) {
-                tang = 1;
                 document.getElementById("pp").innerHTML += `
                 <div class="col-lg-4 col-md-6" >
                 <div class="room-item shadow rounded overflow-hidden">
@@ -47,7 +46,8 @@ async function search() {
             </div>` 
             }
         });
-        if (tang == 0) {
+        console.log(document.getElementById("pp").innerHTML.length)
+        if (document.getElementById("pp").innerHTML.length == 0) {
             window.location.href = "looking_errer_page.html";
             return;
         } 
@@ -99,7 +99,6 @@ function login(){
 )}
 
 var takelogin = JSON.parse(localStorage.getItem("currentlylogin"));
-console.log(takelogin)
 while(takelogin){
     document.getElementById("sign").style.display = 'none';
     document.getElementById("register").style.display = 'none';
@@ -107,7 +106,6 @@ while(takelogin){
     break;
 }
 
-/////
 function logout() {
     currentlylogin = false;
     localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));

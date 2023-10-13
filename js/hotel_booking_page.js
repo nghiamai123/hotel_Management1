@@ -1,22 +1,25 @@
-
-window.addEventListener('scroll',function() {
-    var moving = document.getElementById("moving-div");
-    var scrollXPosition = window.scrollX;
-    var scrollYPosition = window.scrollY;
-    console.log('Vị trí cuộn theo trục x:', scrollXPosition);
-    console.log('Vị trí cuộn theo trục y:', scrollYPosition);
-    if (scrollYPosition > 1148){
-        moving.style.display = "none";
-    }
-    else{
-        moving.style.display = "block";
-    }
+// hàm thay đổi dao diện phòng.
+const searchParams = new URLSearchParams(window.location.search);
+const detailId = searchParams.get("id");
+const baserooms = "http://localhost:3000/rooms";
+fetch(baserooms)
+.then((res) => res.json())
+.then((data) => {
+    data.forEach(element => {
+        console.log(element.nameroom)
+        if (detailId == element.id){
+            document.getElementById("hinh").src = element.room_image[1];
+            document.getElementById("name-room1").innerHTML = element.nameroom;
+            document.getElementById("describe").innerHTML = element.description;
+            document.getElementById("tinhngay").innerHTML = element.price;
+            document.getElementById("tongcoban").innerHTML = element.price;
+            
+        }
+    });
 })
-// hiện thị ảnh phòng trong booking
 
 
-// tính và trả ra số Ngày
-
+// tính phí và trả ra số Ngày
 function calculateDateDifference() {
     var date1Input = document.getElementById('datepicker1');
     var date2Input = document.getElementById('datepicker2');
@@ -46,16 +49,17 @@ function calculateDateDifference() {
     var date2 = new Date(date2Input.value);
     console.log(date1)
     var timeDifference = Math.abs(date2.getTime() - date1.getTime());
-    var dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24)); // Chuyển đổi thành số ngày
+    var dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24)); 
+    // Chuyển đổi thành số ngày
     console.log("Khoảng cách giữa hai ngày là: " + dayDifference + " ngày");
     if (dayDifference > 0){
         // console.log(isnull(dayDifference))
         pleselement.style.display = "none";
         pleselement1.style.display = "inline";
         // n.style.display = "inline";
-        pleselement1.innerHTML = "$50 x " + dayDifference + " night";
-        tongelement.innerHTML = 3 +10 + (dayDifference * 50);
-        document.getElementById("tongcoban").innerHTML = (dayDifference * 50);
+        pleselement1.innerHTML = document.getElementById("tongcoban").innerHTML + " x " + dayDifference + " night";
+        tongelement.innerHTML = 3 + 10 + (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
+        document.getElementById("tongcoban").innerHTML = (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
         alert("booking Successful !!!")
     }
     else{
@@ -63,7 +67,10 @@ function calculateDateDifference() {
         tongelement.innerHTML = 0
     }
 }
+// hàm dành cho form input date thư viện js
 $( function() {
     $("#datepicker1").datepicker();
     $("#datepicker2").datepicker();
 });
+
+

@@ -1,7 +1,9 @@
 const searchParams = new URLSearchParams(window.location.search);
 const productId = searchParams.get("id");
-
 const baserooms = "http://localhost:3000/rooms";
+
+var bookingUrl = `<a href="hotel_booking_page.html?id=${productId}" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a>`
+document.getElementById('booking-btn').innerHTML = bookingUrl
 
 fetch(baserooms)
 .then((res) => res.json())
@@ -22,7 +24,5 @@ fetch(baserooms)
             document.getElementById("type1").innerHTML = element.type[1];
             document.getElementById("type1").innerHTML = element.type[2];
         }
-        
     });
-    
 })
