@@ -88,32 +88,32 @@ i{
         margin-top: 50px;
         margin-bottom: 50px; 
     }
-    /* Tieu de */
-        .title{
-            margin-top: 100px;
-            text-align: center;
+      /* Tieu de */
+      .title{
+        margin-top: 100px;
+        text-align: center;
+    }
+    .title-booking-room{
+        font-size: 36px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300% 300%;
+        animation: gradient_Booking 8s ease-in-out infinite;
+    }
+    @keyframes gradient_Booking {
+        0%{
+            background-position: 0% 50%;
         }
-        .title-booking-room{
-            font-size: 36px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
-            --webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 300% 300%;
-            animation: gradient_Booking 8s ease-in-out infinite;
+        50%{
+            background-position: 100% 50%;
         }
-        @keyframes gradient_Booking {
-            0%{
-                background-position: 0% 50%;
-            }
-            50%{
-                background-position: 100% 50%;
-            }
-            100%{
-                background-position: 2% 50%;
-            }
+        100%{
+            background-position: 2% 50%;
         }
+    }
     /* nhập name */
 /* edit body */
 .left-content{
