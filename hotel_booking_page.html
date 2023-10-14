@@ -28,7 +28,7 @@
             <div class="nav_text"><a href="hotel_rooms_page.html">ROOM</a></div>
             <div class="nav_text">
                 <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
-                <button class="material-symbols-outlined" id="search" style="border-radius: none; ">
+                <button class="material-symbols-outlined" id="search" style="border-radius: none;" onclick="search()">
                     search
                 </button>
             </div>
@@ -47,7 +47,7 @@
             <!-- EDIT TITLE -->
             
             <div class="title">     
-                <p class="title-booking-room">BOOKING ROOM</p>
+                <p class="title-booking-room" style="user-select: none;">BOOKING ROOM</p>
             </div>
             
             
@@ -163,9 +163,9 @@
                             <p id="tong" class="price">$00</p>
                         </div>
                     </div>
-        
                 </div>
             </div>
+            <div id="pp"></div>
         </div>
 
         <!-- footer -->

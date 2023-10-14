@@ -86,7 +86,9 @@ function login(){
         data.forEach( e =>{
             if (e.email === loginData.email && e.password === loginData.password){
                 localStorage.setItem("listuser", JSON.stringify(e.id));
+                localStorage.setItem("avata", JSON.stringify(e.avata));
                 alert("Successful login");
+                document.getElementById("nav-avata").src = e.avata;
                 dangnhap();
                 currentlylogin = true;
                 localStorage.setItem("currentlylogin", JSON.stringify(currentlylogin));
@@ -103,6 +105,8 @@ while(takelogin){
     document.getElementById("sign").style.display = 'none';
     document.getElementById("register").style.display = 'none';
     document.getElementById("avata").style.display = 'block';
+    document.getElementById("nav-avata").src = JSON.parse(localStorage.getItem("avata"));
+    document.getElementById("img-avt").src = JSON.parse(localStorage.getItem("avata"));
     break;
 }
 
