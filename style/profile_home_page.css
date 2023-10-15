@@ -41,3 +41,8 @@ body{
 .text-white{
     padding: 0px;
 }
+/* responsive */
+.list-navbar{
+    display: none;
+}
+/* responsive */

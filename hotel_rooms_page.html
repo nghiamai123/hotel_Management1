@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style/hotel_rooms_page.css">
     <link rel="stylesheet" href="style/hotel_home_auth.css">
     <link rel="stylesheet" href="style/personal_information.css">
+    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
 </head>
 <body>
     <!-- modal -->
@@ -173,11 +174,25 @@
       <!-- header -->
     <div class="container-fluid" style="padding: 0%;">
         <div class="nav">
+      <!-- tạo reponsive cho navbar -->
+          <div class="list-navbar"> 
+            <div class="nav_log nav-item dropdown" >
+              <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-list"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+                <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
+                <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">About us</a></li>
+              </ul>
+            </div>
+          </div>
+      <!-- end tạo reponsive cho navbar -->
             <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" ></a></div>
             <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
             <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
-            <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
-            <div class="nav_text">
+            <div class="nav_text"><a href="hotel_rooms_page.html" style="color: #f45cad;">ROOMS</a></div>
+            <div class="nav_text nav_text_search">
                 <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
                 <button class="material-symbols-outlined" id="search" onclick="search()" style="border-radius: none;">
                   search

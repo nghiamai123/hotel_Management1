@@ -16,17 +16,31 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link rel="stylesheet" href="style/hotel_home_auth.css">
-    <link rel="stylesheet" href="/style/hotel_booking_page.css">
+    <link rel="stylesheet" href="./style/hotel_booking_page.css">
 </head>
 <body>
     <div class="container-fluid">
         <!-- header -->
         <div class="nav">
+            <!-- tạo reponsive cho navbar -->
+            <div class="list-navbar"> 
+                <div class="nav_log nav-item dropdown" >
+                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-list"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+                    <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
+                    <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">About us</a></li>
+                    </ul>
+                </div>
+                </div>
+                <!-- end tạo reponsive cho navbar -->
             <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="78px" height="76"></a></div>
             <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
             <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
             <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
-            <div class="nav_text">
+            <div class="nav_text nav_text_search">
                 <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
                 <button class="material-symbols-outlined" id="search" style="border-radius: none;" onclick="search()">
                     search
