@@ -97,9 +97,9 @@ p{
 #contact--yawnyawn-mail-text ,#contact--yawnyawn-phone-text, #navbar--user{
     padding: 20px;
 }
-.row--contact{
+/* .row--contact{
     padding: 20px;
-}
+} */
 #contact--yawnyawn-mail-icon,#contact--yawnyawn-phone-icon{
     color: #FF3FA4;
 }
@@ -295,34 +295,21 @@ i{
 .text-white{
     padding: 0px;
 }
-
+.row{
+    margin-right: 0px;
+}
   /* CSS cho màn hình nhỏ hơn hoặc bằng 736px */
   @media screen and (max-width: 415px) {
-
-    @keyframes changeBackgroundImage {
-        0% {
-          background-image: url(../assets/background2.jpg) ;
-          background-size: 400px 303px;
-        }
-        22% {
-          background-image: url(../assets/background3.jpg);
-          background-size: 400px 303px;
-        }
-        44% {
-          background-image: url(../assets/background3.jpg);
-          background-size: 400px 303px;
-        }
-        66% {
-            background-image: url(../assets/background4.webp);
-            background-size: 400px 303px;
-        }
-        80% {
-            background-image: url(../assets/img-background.jpg);
-            background-size: 400px 303px;
-        }
-        100% {
-            background-image: url(../assets/about-img.jpg);
-            background-size: 400px 303px;
-        }
+    /* #img1 {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    #img1, #img2, #img3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    .container_body_aboutus{
+        display: none;
     }
   }
