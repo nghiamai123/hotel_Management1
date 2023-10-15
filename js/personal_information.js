@@ -29,3 +29,39 @@ function change() {
     // alert("change information success!!!")
 }
             
+// const uploadBtn = document.getElementById('profile-edit-avata');
+// const avatarInput = document.getElementById('avatar-input');
+
+// uploadBtn.addEventListener('click', function() {
+//   avatarInput.click();
+// });
+
+// avatarInput.addEventListener('change', function(event) {
+//   const file = event.target.files[0];
+//   // Xử lý tải lên file ở đây
+// });
+const uploadBtn = document.getElementById('profile-edit-avata');
+const avatarInput = document.getElementById('avatar-input');
+const previewImage = document.getElementById('preview-image');
+
+uploadBtn.addEventListener('click', function() {
+  avatarInput.click();
+});
+
+avatarInput.addEventListener('change', function(event) {
+  const file = event.target.files[0];
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const imageSrc = e.target.result;
+    previewImage.src = imageSrc;
+
+    // Hiển thị hộp thoại xem trước hình ảnh
+    // Ví dụ: sử dụng thư viện modal hoặc hiển thị một div overlay
+
+    // Ví dụ sử dụng Modal Bootstrap:
+    $('#imagePreviewModal').modal('show');
+  };
+
+  reader.readAsDataURL(file);
+});

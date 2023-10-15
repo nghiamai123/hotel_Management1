@@ -99,6 +99,9 @@ a{
 .auth-form__or hr{
     width: 100px;
 }
+.auth-form__or{
+    margin-top: 25px;
+}
 .auth-form__aside a{
     color: #ff3fa4;
 }
