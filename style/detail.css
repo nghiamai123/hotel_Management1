@@ -63,11 +63,9 @@ img{
     /* outline:none; */
 }
 #icon_share_detail{
-    cursor: pointer;
     font-size: 36px !important;
 }
 #icon_heart_detail{
-    cursor: pointer;
     padding-right: 20px;
     font-size: 36px;
 }
@@ -123,7 +121,7 @@ img{
     border: 0.2em solid;
     /* border-color: #ff0022 #04ff00 #0051ff #d400ff; */
     border-radius: 1.5em;
-    margin: 40px 50px;
+    margin: 20px 50px;
     color: #FF2966;
     font-weight: bolder;
     cursor: pointer;
@@ -229,6 +227,9 @@ a{
     line-height: normal;
     text-decoration: none;
 }
+#nav_input_search{
+    padding-left: 12px;
+}
 #search{
     border-radius: 20px;
     outline: none;
@@ -293,10 +294,19 @@ i{
     justify-content: center;
     align-items: center;
 }
-
+/* cmt customer */
+.comment-cus{
+    
+    border-radius: 12px;
+    margin: 12px;
+    padding-top: 12px;
+    box-shadow: 1px 5px 4px rgb(237, 125, 125);
+}
 #avata{
+    display: none;
     margin-right: 40px;
 }
+
 .col-md-6.col-lg-4 {
     display: flex;
     flex-direction: column;
@@ -319,13 +329,10 @@ i{
 .nav_text:hover{
     color: #FF3FA4;
 }
-#sign, #register{
-    display: block;
-}
-#avata{
-    display: none;
-}
 
+#logo_nav{
+    width: 90px;
+}
 /* responsive */
 .list-navbar{
     display: none;

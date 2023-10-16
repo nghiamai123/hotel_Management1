@@ -5,11 +5,7 @@ body{
     /* position: relative; */
     font-family: 'Roboto', sans-serif;   
 }
-/* responsive */
-.list-navbar{
-    display: none;
-}
-/* responsive */
+
 .logo{
     margin-left: 10px;
 }
@@ -298,6 +294,11 @@ i{
 .row{
     margin-right: 0px;
 }
+/* responsive */
+.list-navbar{
+    display: none;
+}
+/* responsive */
   /* CSS cho màn hình nhỏ hơn hoặc bằng 736px */
   @media screen and (max-width: 415px) {
     /* #img1 {

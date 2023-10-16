@@ -47,8 +47,7 @@ body{
 /* .nav_log_text a:hover{
     color: #FF3FA4 ;
 } */
-a{
-    color: var(--pink-2, #FF3FA4);
+/* a{
     color: #f9f5f7;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -56,6 +55,9 @@ a{
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
+} */
+a:hover{
+    color: #FF2966;
 }
 #search{
     border-radius: 20px;
@@ -82,7 +84,9 @@ a{
 .nav-link{
     margin-right:100px ;
 }
-
+.nav_text:hover{
+    color: #FF2966 !important;
+}
 i{
     color: #FF2966!important; 
     font-size: 20px;
@@ -147,4 +151,12 @@ i{
 
 #logo_nav{
     width: 90px;
+}
+/* footer */
+.nav_text_footer:hover{
+    color: #FF296f; 
+}
+.footer_contact{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
