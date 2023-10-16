@@ -22,9 +22,9 @@
     .nav_log.nav_text.nav-item.dropdown{
         margin-right: 0px;
     }
-    .nav_text {
-      display: none; /* Ẩn các thành phần nav_text */
-    }
+    .nav_text { 
+       display: none; /* Ẩn các thành phần nav_text */
+    } 
     .nav_text_search{
         display: block;
     } 
@@ -37,9 +37,7 @@
         margin: 0px;
         padding: 0px;
     } */
-   
     .container--body>h1{
         font-size: 50px;
     }
-    
   }
