@@ -98,7 +98,7 @@ i{
         font-weight: 900;
         letter-spacing: 2px;
         background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
-        --webkit-background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 300% 300%;
         animation: gradient_Booking 8s ease-in-out infinite;
