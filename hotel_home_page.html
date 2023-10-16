@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style/hotel_home_page.css">
     <link rel="stylesheet" href="style/hotel_home_auth.css  ">
     <link rel="stylesheet" href="style/personal_information.css">
+    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
   </head>
   <body>
 
@@ -171,15 +172,32 @@
         </div>
       </div>
     </div>
-    
+    <div class="container-fluid" style="padding: 0%;">
     <div class="nav">
-      <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a></div>
-      <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+      <!-- tạo reponsive cho navbar -->
+      <div class="list-navbar"> 
+        <div class="nav_log nav-item dropdown" >
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-list"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+            <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
+            <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">About us</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- end tạo reponsive cho navbar -->
+
+      <div class="logo nav_text">
+        <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+      </div>
+      <div class="nav_text"><a href="hotel_home_page.html" style="color: #f45cad;">HOME</a></div>
       <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
       <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
-      <div class="nav_text">
+      <div class="nav_text nav_text_search">
         <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
-        <button class="material-symbols-outlined" id="search" style="border-radius: none; color: white;" onclick="search()">
+        <button class="material-symbols-outlined" id="search" style="border-radius: none; color: white;"  onclick="search()">
           search
         </button>
       </div>
@@ -192,8 +210,8 @@
           <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
         </div>
       </div>
+      <!-- avta -->
       <div class="nav_log nav_text nav-item dropdown" id="avata">
-        <!-- <li class="nav-item dropdown"> -->
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
         </a>
@@ -207,7 +225,7 @@
       <div class="row container--body">
         <h1>WELCOME TO <span>YAWN YAWN</span></h1>
       </div>
-      <div class="row">
+      <div class="row container_body_aboutus">
         <div class="col-lg-6">
           <div class="row about--introduce">
             <h2 id="about_us">About us</h2>
@@ -215,7 +233,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maxime quam harum eum repellat dicta pariatur. Ipsam omnis dolorem qui culpa quos, quaerat quod rem, maiores quasi beatae, magnam provident?</b>
             </p>
           </div>
-          <div class="overviews">
+          <div class="row overviews">
             <div class="overview overview-rooms">
               <div class="about about-rooms">
                 <i class="fa-solid fa-building"></i>
@@ -239,11 +257,11 @@
             </div>
           </div>
         </div>
-        <div class="row col-lg-6">
-          <div class="room1 col-lg-6">
+        <div class="row col-lg-6 col-md-12">
+          <div class="room1 col-lg-6 col-md-12">
             <img id="img1" src="assets/about-img1.jpg" alt="" width="100%">
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-12">
             <img src="assets/about-img3.jpg" alt="" width="100%" style="margin-bottom: 20px; margin-top: 20px;">
             <img src="assets/about-img.jpg" alt="" width="100%">
           </div>
@@ -357,7 +375,6 @@
           </div>
         </div>
       </div>
-    </div>
     <!-- footer -->
     <div class="row container-fluid footer" id="footer">
       <div class=" row justify-content-around  p-lg-4 ">

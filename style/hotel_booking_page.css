@@ -332,3 +332,8 @@ i{
         height: auto;
     }
 }
+/* responsive */
+.list-navbar{
+    display: none;
+}
+/* responsive */

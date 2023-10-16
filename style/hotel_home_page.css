@@ -5,6 +5,11 @@ body{
     /* position: relative; */
     font-family: 'Roboto', sans-serif;   
 }
+/* responsive */
+.list-navbar{
+    display: none;
+}
+/* responsive */
 .logo{
     margin-left: 10px;
 }
@@ -29,8 +34,10 @@ body{
 .nav_log.nav_text{
     display: flex;
     gap: 20px;
-    margin-right: 50px;
+    margin-right: 40px;
+    margin-left: 10px;
 }
+
 .nav_text>input{
     border-radius: 10px;
     width: 200px;
@@ -90,9 +97,9 @@ p{
 #contact--yawnyawn-mail-text ,#contact--yawnyawn-phone-text, #navbar--user{
     padding: 20px;
 }
-.row--contact{
+/* .row--contact{
     padding: 20px;
-}
+} */
 #contact--yawnyawn-mail-icon,#contact--yawnyawn-phone-icon{
     color: #FF3FA4;
 }
@@ -288,3 +295,21 @@ i{
 .text-white{
     padding: 0px;
 }
+.row{
+    margin-right: 0px;
+}
+  /* CSS cho màn hình nhỏ hơn hoặc bằng 736px */
+  @media screen and (max-width: 415px) {
+    /* #img1 {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    #img1, #img2, #img3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    .container_body_aboutus{
+        display: none;
+    }
+  }
