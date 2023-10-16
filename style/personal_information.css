@@ -124,42 +124,58 @@ h1 > span{
     background-color: #EC9999;
     border-radius: 10px;
 }
-.content_profile-usernames-about> #profile-edit-avata{
-    width: 50%;
-    margin-left: 100px;
-    border-radius: 5px;
+.edit-avata-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #avata-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     border-radius: 50%;
-    width: 50%;
-    /* text-align: center; */
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+#profile-edit-avata{
+    border-radius: 5px;
+    border: #EC9999;
 }
 .content_profile-username-email-password{
     display: grid;
 }
-.content_profile-username-email-password>input{
+/* .content_profile-username-email-password>input{
     height: 60%;
     border-radius: 7px;
-    background-color: #FFE2E9;
+    background-color: #f1e1e5;
+    border: ;
+} */
+.form-input-profile{
+    max-height: 50px;
+    border-radius: 5px;
+    border: 1px solid ;
 }
 .profile-back-edit{
     text-align: end;
 }
 .profile-back-edit button{
-    border: 5px;
-    padding: 10px;
+    border: none;
+    padding: 6px;
     width: 30%;
     border-radius: 7px;
 }
 .profile-back-edit>#profile-back{
-    background-color: rgb(154, 152, 152);
-    margin-right: 10%;
+    background-color: rgb(171, 171, 171);
+    margin-right: 3px;
     width: 30%;
 }
 #profile-edit{
     background-color: #EC9999;
+    padding: 4px;
+    padding-top: 7px;
     
 }
 /* Modal-edit */
@@ -218,4 +234,24 @@ h1 > span{
     background-color: black;
     color: white;
     border: none;
+}
+.text-white{
+    padding: 0px;
+}
+/* responsive */
+.list-navbar{
+    display: none;
+}
+/* responsive */
+@media screen and (max-width: 415px) {
+    .form-input-profile{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #search{
+        margin-right: 50px;
+    }
+    .nav-link{
+        margin-left: 50px;
+    }
 }

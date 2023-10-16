@@ -149,3 +149,12 @@ i{
 #logo_nav{
     width: 90px;
 }
+
+/* footer */
+.nav_text_footer:hover{
+    color: #FF296f; 
+}
+.footer_contact{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
