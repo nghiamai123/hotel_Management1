@@ -21,8 +21,8 @@ fetch(baserooms)
             document.getElementById("img4").src = element.room_image[4];
             document.getElementById("img5").src = element.room_image[5];
             document.getElementById("type1").innerHTML = element.type[0];
-            document.getElementById("type1").innerHTML = element.type[1];
-            document.getElementById("type1").innerHTML = element.type[2];
+            document.getElementById("type2").innerHTML = element.type[1];
+            document.getElementById("type3").innerHTML = element.type[2];
         }
     });
 })
