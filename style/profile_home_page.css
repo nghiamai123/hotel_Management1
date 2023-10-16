@@ -38,3 +38,29 @@ body{
 .list--profile>a{
     color: black !important;
 }
+.text-white{
+    padding: 0px;
+}
+/* responsive */
+.list-navbar{
+    display: none;
+}
+/* responsive */
+@media screen and (max-width: 415px) {
+    body{
+        margin:0;
+    }
+    .profile-home-page{
+        margin: 0;
+    }
+    .list--profile{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 370px;
+    }
+    .row{
+         --bs-gutter-x: 0px;
+        margin-left:0px;
+        margin-right: 0px;
+    }
+}
