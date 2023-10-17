@@ -1,0 +1,44 @@
+.favorite-icon {
+    font-size: 35px;
+    color: palevioletred;
+    cursor: pointer;
+}
+
+.favorite-icon.filled {
+    color: rgb(255, 0, 98);
+}
+
+.favorite-image {
+    width: 200px;
+    height: 200px;
+}
+
+.favorite-image.filled {
+    border: 2px solid rgb(243, 235, 235);
+}
+
+.into {
+    padding-top: 70px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .delete-icon {
+    opacity: 1;
+}

@@ -1,6 +1,8 @@
 const listRooms = "http://localhost:3000/rooms";
 const listUser = "http://localhost:3000/user";
+var currentlylogin = false;
 let tang = 0;
+
 async function search() { 
     let checkroom = document.getElementById("nav_input_search").value;
     localStorage.setItem('inputValue', JSON.stringify(checkroom));
@@ -9,6 +11,7 @@ async function search() {
         return;
     }
     document.getElementById("pp").innerHTML = "";
+
     try {
         const res = await fetch(listRooms);
         const data = await res.json();
@@ -46,11 +49,12 @@ async function search() {
             </div>` 
             }
         });
-        console.log(document.getElementById("pp").innerHTML.length)
+
         if (document.getElementById("pp").innerHTML.length == 0) {
             window.location.href = "looking_errer_page.html";
             return;
         } 
+
         if (window.location.href != "http://127.0.0.1:5500/hotel_rooms_page.html") {
             window.location.href = "hotel_rooms_page.html"; 
             var savedValue = JSON.parse(localStorage.getItem('inputValue'));
@@ -60,6 +64,7 @@ async function search() {
         console.log(error);
     } 
 }
+
 // gán lại giá trị input từ trang home page
 var savedValue = JSON.parse(localStorage.getItem('inputValue'));
 document.getElementById("nav_input_search").value = savedValue;
@@ -72,13 +77,12 @@ function dangnhap(){
     document.getElementById("avata").style.display = 'block';
 }
 
-var currentlylogin = false;
 function login(){
-    // var a = true;
     const loginData = {
         email: document.getElementById("loginEmail").value,
         password: document.getElementById("loginPassord").value
     };
+
     fetch(listUser)
     .then(res => res.json())
     .then(data => {
@@ -96,6 +100,7 @@ function login(){
                 return;
             }
         });
+
         if (error){alert("You have failed to log in")};
     }
 )}
@@ -123,6 +128,7 @@ function register() {
     var password = document.getElementById("registerPassword").value;
     var gender = document.getElementById("auth-form__gender").value;
     var passwordConfirm = document.getElementById("registerConfirmPassword").value;
+
     if (name == ""){
         alert("Name required.");
         return ;
@@ -140,7 +146,7 @@ function register() {
         return ;
     }
     else if ( password == passwordConfirm ){
-        // Tạo đối tượng chứa dữ liệu đăng ký
+    // Tạo đối tượng chứa dữ liệu đăng ký
     const formData = {
         name: name,
         email: email,
@@ -166,9 +172,9 @@ function register() {
     })
        return;
     }
-    else {
-        alert("Password don't match retype your Password.");
-        return;
-    }
+        else {
+            alert("Password don't match retype your Password.");
+            return;
+        }
     
 }
