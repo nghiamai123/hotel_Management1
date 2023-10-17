@@ -332,8 +332,11 @@ i{
         height: auto;
     }
 }
-/* responsive */
-/* .list-navbar{
-    display: none;
-} */
-/* responsive */
+@media screen and (max-width: 415px){
+    .body--content{
+        margin: 0px;
+    }
+    .right-content{
+        margin-top: 20px;
+    }
+}
