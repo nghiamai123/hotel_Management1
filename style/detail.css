@@ -348,5 +348,39 @@ i{
 
 /* responsive */
 @media screen and (max-width: 415px) {
-  
+    .picture {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+          "center1"
+          "center2"
+          "center3"
+          "center4"
+          "center5";
+      }
+    
+      .img1 {
+        grid-area: center1;
+      }
+    
+      .img2 {
+        grid-area: center2;
+      }
+    
+      .img3 {
+        grid-area: center3;
+
+      }
+    
+      .img4 {
+        grid-area:center4;
+      }
+    
+      .img5 {
+        grid-area: center5;
+      }
+    .detail_img{
+        border-radius: 15px !important;
+    }
+    
 }

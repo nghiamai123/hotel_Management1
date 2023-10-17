@@ -151,3 +151,18 @@ a{
     height: 50px;
     border-radius: 50%;
 }
+
+@media screen and (max-width: 415px) {
+    .auth-form__input{
+        width: 300px;
+    }
+    .btn--with-icon{       
+        min-width:300px;
+    }
+    .control-login-continue{
+        min-width:300px;
+    }
+    #auth-form__gender{
+        margin-left: 20px;    
+    }
+}

@@ -294,22 +294,8 @@ i{
 .row{
     margin-right: 0px;
 }
-/* responsive */
-.list-navbar{
-    display: none;
-}
-/* responsive */
   /* CSS cho màn hình nhỏ hơn hoặc bằng 736px */
   @media screen and (max-width: 415px) {
-    /* #img1 {
-        margin-top: 60px;
-        margin-bottom: 20px;
-    }
-    #img1, #img2, #img3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
     .container_body_aboutus{
         display: none;
     }

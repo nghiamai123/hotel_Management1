@@ -160,3 +160,51 @@ i{
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
+/* responsive */
+.list-navbar{
+    display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 415px) {
+    .list-navbar{
+        display: inline;
+        margin-left: 10px;
+    }
+    .nav_log.nav_text>.nav_log_text button{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .about--introduce{
+        display: none;
+    }
+    .nav{
+        display: grid !important;
+        grid-template-columns: 30% 30% 10% 30%;
+        gap: 5px;
+        padding: 10px 0px;
+        background-color: black
+        /* justify-content: space-between; */
+        /* align-items: center; */
+    }
+    .nav_log.nav_text.nav-item.dropdown{
+        margin-right: 0px;
+    }
+    .nav_text { 
+       display: none; /* Ẩn các thành phần nav_text */
+    } 
+    .nav_text_search{
+        display: block;
+    } 
+
+    /* avata */
+    /* .nav-link.dropdown-toggle{
+        display: none;
+        margin: 0px;
+        padding: 0px;
+    } */
+    .container--body>h1{
+        font-size: 50px;
+    }
+  }
