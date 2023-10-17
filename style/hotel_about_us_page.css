@@ -1,0 +1,119 @@
+.container--body{
+    background-image:url("../assets/backgroun1.jpg") ;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom:100px ;
+    margin: 0px !important;
+    padding: 0px;
+
+}
+
+/* hiện ứng chuyển ảnh */
+.container--body {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: changeBackgroundImage 12s infinite;
+  }
+  
+  @keyframes changeBackgroundImage {
+    0% {
+      background-image: url(../assets/background2.jpg);
+    }
+    22% {
+      background-image: url(../assets/background3.jpg);
+    }
+    44% {
+      background-image: url(../assets/background3.jpg);
+    }
+    66% {
+        background-image: url(../assets/background4.webp);
+    }
+    80% {
+        background-image: url(../assets/img-background.jpg);
+    }
+    100% {
+        background-image: url(../assets/about-img.jpg);
+    }
+}
+/* ảnh avata thay đổi */
+#avata{
+    display: none;
+    margin-right: 40px;
+}
+/* BODY */
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    font-size: 4.5rem;
+    letter-spacing: 17px;
+    flex-direction: column;
+}
+.title-abouts-us{
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_abouts_us 10s ease-in-out infinite;
+}
+@keyframes gradient_abouts_us {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}
+.div-body{
+    margin: 0px 100px;
+}
+.title-about{
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-fact{
+    /* border: 0.1px solid black; */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgb(244, 139, 156);
+    justify-content: center;
+}
+.card-fact>p{
+    padding-left: 0;
+}
+.facts-number{
+    font-size: 50px;
+    font-weight: 500;
+}
+.facts-text{
+    font-size:32px;
+}
+.card-img-top{
+    width: auto;
+    height: 150px;
+}
+.card-text-name{
+    margin-left: 0px;
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* END BODY */
+@media screen and (max-width: 415px){
+    .div-body{
+        margin: 0px 20px;
+    }
+}

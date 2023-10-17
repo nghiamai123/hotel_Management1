@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAWN YAWN - HOMEPAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style/hotel_about_us_page.css">
+    <link rel="stylesheet" href="./style/hotel_home_auth.css  ">
+    <link rel="stylesheet" href="./style/personal_information.css">
+    <link rel="stylesheet" href="./style/header_footer.css">
+    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
+  </head>
+  <body>
+
+     <!-- modal -->
+    <div class="modalContainer" id="modalContainer" onload="daydl()">
+      <!-- modal-login -->
+      <div class="modal fade form-auth" id="loginModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="auth-form__header">
+                  <h4 class="auth-form__heading">Log in</h4>
+                  <button style="border: none; background-color: white;" type="button" class="auth-form_swith" id="loginToRegister" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register</button>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group login">
+                    <input id="loginEmail" type="tel" class="auth-form__input" placeholder="Phone number/Email/Name" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group login">
+                    <input id="loginPassord" type="password" class="auth-form__input" placeholder="Password" required>
+                  </div>
+                </div>
+                <div class="auth-form__control">
+                  <button class="btn control-login-continue" id="btn-login" id="loginToRegister" onclick="login(); return false;">Log in</button>
+                </div>
+                <div class="auth-form__or login">
+                  <div>
+                    <hr>
+                  </div>
+                  <div><span><i>OR</i></span></div>
+                  <div>
+                    <hr>
+                  </div>
+                </div>
+                <div class="auth-form__social login">
+                  <a href="https://m.facebook.com/login/?locale=vi_VN" class="btn btn--with-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    Continue with facebook
+                  </a>
+                  <a href="https://www.google.com.vn/?hl=en" class="btn btn--with-icon">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                  </a>
+                  <a href="https://www.icloud.com/" class="btn btn--with-icon">
+                    <i class="fa-brands fa-apple"></i>
+                    Continue with Apple
+                  </a>
+                </div>
+            </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal-register -->
+      <div class="modal fade form-auth" id="registerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="auth-form__header">
+                  <h4 class="auth-form__heading">Register</h4>
+                  <button style="border: none; background-color: white;" type="button" class="auth-form_swith" data-bs-toggle="modal" id="registerToLogin" data-bs-target="#loginModal" data-bs-dismiss="modal">Log in</button>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerName" type="text" class="auth-form__input" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerEmail" type="email" class="auth-form__input" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group date-gender">
+                    <div class="auth-form__date">
+                      <input type="date" id="auth-form__date" class="auth-form__input " placeholder="Date of birth" required>
+                    </div>
+                    <select name="gender" id="auth-form__gender" class="auth-form__input" required>
+                      <option disabled >Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerPhone" type="tel" class="auth-form__input" placeholder="Phone number" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerPassword" type="password" class="auth-form__input" placeholder="Password" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="auth-form__group">
+                    <input id="registerConfirmPassword" type="password" class="auth-form__input" placeholder="Confirm password" required>
+                  </div>
+                </div>
+                <div class="auth-form__aside">
+                  <p class="auth-form__inform"><input type="checkbox"> We will call or text you to confirm the phone number.
+                    <a id="auth-form__policy-link" href="#">Privacy policy</a>
+                  </p>
+                </div>
+                <div class="auth-form__control">
+                  <!-- <button class="button">BACK</button> -->
+                  <button class="btn control-login-continue" id="registrationForm" onclick="register();return false;">Continue</button>
+                </div>
+                <div class="auth-form__or login">
+                  <div>
+                    <hr>
+                  </div>
+                  <div><span><i>OR</i></span></div>
+                  <div>
+                    <hr>
+                  </div>
+                </div>
+                <!-- <hr> -->
+                <div class="auth-form__social login">
+                  <a href="https://m.facebook.com/login/?locale=vi_VN" class="btn btn--with-icon" class="btn btn--with-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    Continue with facebook
+                  </a>
+                  <a href="https://www.google.com.vn/?hl=en" class="btn btn--with-icon">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                  </a>
+                  <a href="https://www.icloud.com/" class="btn btn--with-icon">
+                    <i class="fa-brands fa-apple"></i>
+                    Continue with Apple
+                  </a>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <div class="nav">
+      <div class="list-navbar"> 
+        <div class="nav_log nav-item dropdown" >
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-list"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+            <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
+            <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- end tạo reponsive cho navbar -->
+      <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a></div>
+      <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+      <div class="nav_text"><a href="hotel_about_us_page.html" style="color: #f45cad ;">ABOUTS US</a></div>
+      <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+      <div class="nav_text nav_text_search">
+        <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
+        <button class="material-symbols-outlined" id="search" style="border-radius: none; color: white;" onclick="search()">
+          search
+        </button>
+      </div>
+      <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+      <div class="nav_log nav_text">
+        <div class="nav_log_text" id="sign">
+          <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+        </div>
+        <div class="nav_log_text" id="register">
+          <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+        </div>
+      </div>
+      <div class="nav_log nav_text nav-item dropdown" id="avata">
+        <!-- <li class="nav-item dropdown"> -->
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+          <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ABOUT US -->
+    <div class="row container--body">
+        <h1 class="title-abouts-us">ABOUTS US</h1>
+    </div>
+    <div class="div-body">
+        <!-- about -->
+        <div class="d-flex my-5 justify-content-center align-content-center">
+            <div class="row col-lg-6 col-12">
+                <p class="title-about">Abouts Us</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus fugiat quibusdam animi laboriosam, vitae ullam sequi blanditiis ea magni, odit est totam, eligendi corrupti quae! Molestiae totam dolor ad!</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maxime quam harum eum repellat dicta pariatur. Ipsam omnis dolorem qui culpa quos, quaerat quod rem, maiores quasi beatae, magnam provident?</p>
+            </div>
+        </div>
+        <!-- Fast facts -->
+        <div class="div-fast-facts my-5">
+            <div>
+                <p class="title-about">Fast Facts</p>
+            </div>
+            <div  class="fast--facts row d-flex justify-content-evenly ">
+                <div class="col-lg-3 col-12 my-3  card-fact">
+                    <p class="facts-number">1234</p>
+                    <p class="facts-text">Rooms</p>
+                </div>
+                <div class="col-lg-3 col-12 my-3 card-fact">
+                    <p class="facts-number">1234</p>
+                    <p class="facts-text">Staff</p>
+                </div>
+                <div class="col-lg-3 col-12 my-3 card-fact">
+                    <p class="facts-number">9999+</p>
+                    <p class="facts-text">User</p>
+                </div>
+            </div>
+        </div>
+        <!-- about us -->
+        <div class="div-founders my-5">
+            <div><p class="title-about">Founders</p></div>
+            <div class="row founders justify-content-evenly">
+                <div class="card col-lg-2  col-10 my-2">
+                    <img src="https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-dai-dien-zalo-51-29-15-13-22.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text-name">Mai Xuân Nghĩa</p> 
+                        <p class="card-text">Some quick example text to build on the card title and make up .</p>
+                    </div>
+                </div>
+                <div class="card col-lg-2 col-10 my-2 ">
+                    <img src="https://toigingiuvedep.vn/wp-content/uploads/2021/07/hinh-ve-don-gian-va-de-thuong-nhat.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text-name">D.T Hồng Lam</p> 
+                        <p class="card-text">Some quick example text to build on the card title and make up .</p>
+                    </div>
+                </div>
+                <div class="card col-lg-2 col-10 my-2 ">
+                    <img src="https://img2.thuthuatphanmem.vn/uploads/2018/11/30/anh-dai-dien-che-hai_104205084.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text-name">T.T Việt Mỹ</p> 
+                        <p class="card-text">Some quick example text to build on the card title and make up .</p>
+                    </div>
+                </div>
+                <div class="card col-lg-2 col-10 my-2 ">
+                    <img src="https://kynguyenlamdep.com/wp-content/uploads/2022/06/avatar-cute-cho-co-nang-nghien-tra-sua.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text-name">Hồ Thị Xươm</p> 
+                        <p class="card-text">Some quick example text to build on the card title and make up .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="row container-fluid footer" id="footer">
+      <div class=" row justify-content-around  p-lg-4 ">
+          <!-- cột 1 -->
+      
+          <div class="contact-item col-md-12 col-lg-4">
+              <a href=""><img src="assets/logo_big.png" alt="logo" style="width: 400px;"></a>
+          </div>
+          
+          <!-- cột 2 -->
+          <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+              <div>
+                  <i class="fa-solid fa-house"></i>
+                  <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
+              </div>
+              <div>
+                  <i class="fa-solid fa-address-card"></i>
+                  <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
+              </div>
+              <div>
+                  <i class="fa-solid fa-bed"></i>
+                  <a class="nav_text_footer" href="hotel_rooms_page.html">Rooms</a>
+              </div>
+          </div>
+          <!-- cột 3 -->
+          <div class="col-md-6 col-lg-4 mt-4">
+              <h6 class="section-title text-white text-uppercase" style="font-size: larger;">Contacts</h6>
+              <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+              <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+              <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+              <div class="d-flex pt-2">
+                  <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                  <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="./js/hotel_home_page.js"></script>
+    <script src="js/looking_errer_page.js"></script>
+  </body>
+
+</html>

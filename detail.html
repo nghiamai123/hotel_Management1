@@ -19,9 +19,15 @@
     <!-- link icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- link css -->
-   <link rel="stylesheet" href="../style/detail.css">
+    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
+    <link rel="stylesheet" href="./style/hotel_home_auth.css">
+    <link rel="stylesheet" href="./style/detail.css">
+    <!-- mới thêm -->
+    <link rel="stylesheet" href="./style/header_footer.css"> 
+
     <!-- icon -->
     <link rel="website icon"  type="png" href="./assets/logo_big.png">
+    <!-- <link rel="stylesheet" href="style/personal_information.css"> -->
 </head>
 <body>
     <!-- modal -->
@@ -50,7 +56,7 @@
                   </div>
                 </div>
                 <div class="auth-form__control">
-                  <button class="btn control-login-continue" id="btn-login" id="loginToRegister">Log in</button>
+                  <button class="btn control-login-continue" id="btn-login" id="loginToRegister" onclick="login(); return false;">Log in</button>
                 </div>
                 <div class="auth-form__or login">
                   <div>
@@ -177,206 +183,236 @@
         </div>
       </div>
     </div>
-    <!-- header -->
-    <div class="nav">
-        <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a></div>
-        <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
-        <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
-        <div class="nav_text"><a href="rooms.html">ROOMS</a></div>
-        <div class="nav_text">
-          <input type="text" name="nav_input" id="nav_input_search" placeholder="Seach">
-          <button class="material-symbols-outlined" id="search" style="border-radius: none; ">
-            search
-          </button>
-        </div>
-        <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
-        <div class="nav_log nav_text">
-          <div class="nav_log_text" id="sign">
-            <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
-          </div>
-          <div class="nav_log_text" id="register">
-            <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
-          </div>
-        </div>
-        <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div>
+ <!-- header -->
+  <div class="nav">
+    <!-- tạo reponsive cho navbar -->
+    <div class="list-navbar"> 
+      <div class="nav_log nav-item dropdown" >
+        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-list"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+          <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
+          <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
+        </ul>
       </div>
+    </div>
+    <!-- end tạo reponsive cho navbar -->
+    <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" style="width:75px;height:73px;"></a></div>
+    <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+    <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
+    <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+    <div class="nav_text nav_text_search">
+      <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Seach" >
+      <button class="material-symbols-outlined" id="search" style="border-radius: none;" onclick="search()">
+        search
+      </button>
+    </div>
+    <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+    <div class="nav_log nav_text">
+      <div class="nav_log_text" id="sign">
+        <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+      </div>
+      <div class="nav_log_text" id="register">
+        <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+      </div>
+    </div>
+    <div class="nav_log nav_text nav-item dropdown" id="avata">
+      <!-- <li class="nav-item dropdown"> -->
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img id="nav-avata" src="./assets/avata-profile.jpg"  alt="">
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+        <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+      </ul>
+    </div>
+  </div>
     <!-- body -->
-    
+    <!-- body -->
+  
     <div class="row details_room">
         <!-- picture -->
         <div class="picture">
-            <img class="img1" src="./assets/Room101_hinh1.webp" alt="Hình ảnh phòng 1">
-            <img class="img2" src="./assets/Room101_hinh2.webp" alt="">
-            <img class="img3" src="./assets/Room101_hinh3.webp" alt="">
-            <img class="img4" src="./assets/Room101_hinh4.webp" alt="">
-            <img class="img5" src="./assets/Room101_hinh5.webp" alt="">                         
+            <img class="img1 detail_img" id="img1" src="./assets/Room101_hinh1.webp" alt="Hình ảnh phòng 1">
+            <img class="img2 detail_img" id="img2" src="./assets/Room101_hinh2.webp" alt="Hình ảnh phòng 2">
+            <img class="img3 detail_img" id="img3" src="./assets/Room101_hinh3.webp" alt="Hình ảnh phòng 3">
+            <img class="img4 detail_img" id="img4" src="./assets/Room101_hinh4.webp" alt="Hình ảnh phòng 4">
+            <img class="img5 detail_img" id="img5" src="./assets/Room101_hinh5.webp" alt="Hình ảnh phòng 5">                         
         </div>
 
         <!-- text -->
         <div class="row content">
-            <!-- phía bên trái -->
-            <div class="col-lg-9">
+          <!-- phía bên trái -->
+          <div class="col-lg-9 col-12">
 
-                <div class="row content-text">
-                    <div class="col-lg-4 content__text">
-                        <p id="name_room_detail">Room 101</p>
-                        <p id="price_room_detail">$50/night</p>
-                    </div>
-                    <div class="col-lg-4 context__icon">
-                        <i id="icon_heart_detail" class="fa-regular fa-heart"></i>
-                        <i id="icon_share_detail" class="fa-solid fa-share"></i>
-                    </div>
+              <div class="row content-text">
+                  <div class="col-lg-4 col-6 content__text">
+                      <p id="name_room_detail">Room 101</p>
+                      <p id="price_room_detail">$50/night</p>
+                  </div>
+                  <div class="col-lg-4 col-6 context__icon">
+                      <i id="icon_heart_detail" class="fa-regular fa-heart"></i>
+                      <i id="icon_share_detail" class="fa-solid fa-share" onclick="shareViaEmail()"></i>
+                  </div>
+              </div>
+
+              <div class="row content-icon">
+                <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
+                  <i class="fa-solid fa-bed"></i>
+                  <p id="type1">1 Bedroom</p>
                 </div>
-
-                <div class="row content-icon">
-                    <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
-                        <i class="fa-solid fa-bed"></i>
-                        <p>1 Bedroom</p>
-                    </div>
-                    <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
-                        <i class="fa fa-bath" aria-hidden="true"></i>
-                        <p>1 Bathroom</p>
-                    </div>
-                    <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
-                        <img src="./assets/icon sofa.png" alt="" style="width: 34px;height: 20px;">
-                        <p>1 Livingroom</p>
-                    </div>
+                <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
+                  <i class="fa fa-bath" aria-hidden="true"></i>
+                  <p id="type2">1 Bathroom</p>
                 </div>
-
-                <div class="row content-description">
+                <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
+                  <img src="./assets/icon sofa.png" alt="" style="width: 34px;height: 20px;">
+                  <p id="type3">1 Livingroom</p>
+                </div>
+              </div>
+              <div class="row content-description">
+              
+                <div class="col-lg-9">
+                    <h4>Room Description</h4>
+                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                </div>
+            </div>
+            <!-- tổng trung bình sao -->
+            <div class="row content-review">
+                    <div class="col-lg-2 col-6 ">
+                        <h4>Reviews</h4>
+                        <p>Convenient</p>
+                        <p>Clean</p>
+                        <p>Staff</p>
+                        <p>Quality room</p>
+                    </div>
+                    <div class="col-lg-1 col-6 text-end">
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-star  pe-2 " style="color: #FF2966;"></i>
+                            <h4>5.0</h4>  
+                        </div>
+                        <p id="convenient">5.0</p>
+                        <p id="clean">5.0</p>
+                        <p id="staff">5.0</p>
+                        <p id="quality">5.0</p>
+                    </div>
                     
-                    <div class="col-lg-9">
-                        <h4>Room Description</h4>
-                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            </div>
+            <!-- comment detail -->
+            <div class="row content_comment-detail">
+                <div class="col-lg-5 comment-cus">
+                    <div class="row">
+                        <div class="col-lg-2 col-3 ">
+                            <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
+                        </div>
+                        <div class="col-lg-4 col-6">
+                            <h5>jondoberman</h5>
+                            <p>Mar 12 2022</p>
+                        </div>
+                    </div>
+                    <div class="row ">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
                     </div>
                 </div>
-                <!-- tổng trung bình sao -->
-                <div class="row content-review">
-                        <div class="col-lg-2 ">
-                            <h4>Reviews</h4>
-                            <p>Convenient</p>
-                            <p>Clean</p>
-                            <p>Staff</p>
-                            <p>Quality room</p>
+                <div class="col-lg-5 comment-cus">
+                    <div class="row">
+                        <div class="col-lg-2 col-3">
+                            <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="col-lg-1 text-end">
-                            <div style="display: flex;">
-                                <i class="fa-solid fa-star pe-2 m-0" style="color: #FF2966; "></i>
-                                <h4>5.0</h4>
-                            </div>
-                            <p id="convenient" class="text-end">5.0</p>
-                            <p id="clean">5.0</p>
-                            <p id="staff">5.0</p>
-                            <p id="quality">5.0</p>
+                        <div class="col-lg-4 col-6">
+                            <h5>jondoberman</h5>
+                            <p>Mar 12 2022</p>
                         </div>
-                        
+                    </div>
+                    <div class="row ">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
+                    </div>
                 </div>
-                <!-- comment detail -->
-                <div class="row content_comment-detail">
-                    <div class="col-lg-5 comment-cus">
-                        <div class="row">
-                            <div class="col-lg-2 ">
-                                <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
-                            </div>
-                            <div class="col-lg-4">
-                                <h5>jondoberman</h5>
-                                <p>Mar 12 2022</p>
-                            </div>
+                <div class="col-lg-5 comment-cus">
+                    <div class="row">
+                        <div class="col-lg-2 col-3">
+                            <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="row ">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
+                        <div class="col-lg-4 col-6">
+                            <h5>jondoberman</h5>
+                            <p>Mar 12 2022</p>
                         </div>
                     </div>
-                    <div class="col-lg-5 comment-cus">
-                        <div class="row">
-                            <div class="col-lg-2 ">
-                                <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
-                            </div>
-                            <div class="col-lg-4">
-                                <h5>jondoberman</h5>
-                                <p>Mar 12 2022</p>
-                            </div>
+                    <div class="row">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 comment-cus">
+                    <div class="row">
+                        <div class="col-lg-2 col-3 ">
+                            <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="row ">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
+                        <div class="col-lg-4 col-6">
+                            <h5>jondoberman</h5>
+                            <p>Mar 12 2022</p>
                         </div>
                     </div>
-                    <div class="col-lg-5 comment-cus">
-                        <div class="row">
-                            <div class="col-lg-2 ">
-                                <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
-                            </div>
-                            <div class="col-lg-4">
-                                <h5>jondoberman</h5>
-                                <p>Mar 12 2022</p>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 comment-cus">
-                        <div class="row">
-                            <div class="col-lg-2 ">
-                                <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
-                            </div>
-                            <div class="col-lg-4">
-                                <h5>jondoberman</h5>
-                                <p>Mar 12 2022</p>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
-                        </div>
+                    <div class="row ">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est eaque inventore laborum deleniti doloribus, quasi quae ducimus deserunt officiis maiores laboriosam quaerat, voluptates autem enim, culpa vitae rerum. Facilis!</p>
                     </div>
                 </div>
             </div>
-            <!-- phía bên phải -->
-            <div class="col-lg-3">
-                <a href="#"><button id="booking_now" class="button_booking" >BOOKING NOW</button></a>
-            </div>
+          </div>
+
+          <!-- phía bên phải -->
+          <div class="col-lg-3 col-12" id="booking-btn">
+            <a href="hotel_booking_page.html?id=" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a>
+          </div>
         </div>
-    </div>
-    
-    <!-- footer -->
-    <div class="row container-fluid footer" id="footer">
-        <div class=" row justify-content-around  p-lg-4 ">
-            <!-- cột 1 -->
         
-            <div class="contact-item col-md-12 col-lg-4">
-                <a href=""><img src="assets/logo_big.png" alt="logo"></a>
-            </div>
-            
-            <!-- cột 2 -->
-            <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
-                <div>
-                    <i class="fa-solid fa-house"></i>
-                    <a class="nav_text" href="hotel_home_page.html">Home</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-address-card"></i>
-                    <a class="nav_text" href="hotel_about_us_page.html">About us</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-bed"></i>
-                    <a class="nav_text" href="rooms.html">Rooms</a>
-                </div>
-            </div>
-            <!-- cột 3 -->
-            <div class="col-md-6 col-lg-4 mt-4">
-                <h6 class="section-title text-white text-uppercase" style="font-size: larger;">Contacts</h6>
-                <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
-                <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
-                <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                    <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+</div>
+<div id="pp"></div>
+<!-- footer -->
+<div class="row container-fluid footer" id="footer">
+  <div class=" row justify-content-around  p-lg-4 ">
+      <!-- cột 1 -->
+  
+      <div class="contact-item col-md-12 col-lg-4">
+          <a href=""><img src="assets/logo_big.png" alt="logo" width="300px" height="218px"></a>
+      </div>
+      
+      <!-- cột 2 -->
+      <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+          <div>
+              <i class="fa-solid fa-house"></i>
+              <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
+          </div>
+          <div>
+              <i class="fa-solid fa-address-card"></i>
+              <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
+          </div>
+          <div>
+              <i class="fa-solid fa-bed"></i>
+              <a class="nav_text_footer" href="hotel_rooms_page.html">Rooms</a>
+          </div>
+      </div>
+      <!-- cột 3 -->
+      <div class="col-md-6 col-lg-4 mt-4">
+          <h6 class="section-title text-white text-uppercase" style="font-size: larger;">Contact</h6>
+          <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+          <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+          <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+          <div class="d-flex pt-2">
+              <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<script src="js/detail.js"></script>
+<script src="js/looking_errer_page.js"></script>
 </body>
 </html>
