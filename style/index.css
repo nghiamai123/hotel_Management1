@@ -1,8 +1,8 @@
-.row{
+.file{
    padding-left: 500px ;
 }
 hr{
-    margin-left: 10px;
+    margin-left: 5px;
 }
 .inline{
     display: flex;
@@ -11,7 +11,7 @@ hr{
 h2{
     margin-right: 500px;
 }
-.four{
+.four{ 
     display: flex;
 }
 .three{

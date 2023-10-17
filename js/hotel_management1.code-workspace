@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../data_MockAPI"
+		},
+		{
+			"path": "../../TrafficLight"
+		},
+		{
+			"path": "../../hotel_management"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hotel_management1"
+	}
+}
