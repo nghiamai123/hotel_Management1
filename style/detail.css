@@ -331,7 +331,7 @@ i{
 }
 #footer{
     /* padding: 50px; */
-    background-color: #0F172B
+    background-color: #000000 !important;
 }
 .section-title{
     color: #FF3FA4 !important;
