@@ -13,6 +13,7 @@ body{
     width: 100%;
     z-index: 1;
     left: -3px;
+    top:0px
 }
 .nav,.nav_log{
     background-color: black;
