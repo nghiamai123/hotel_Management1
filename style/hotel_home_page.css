@@ -1,27 +1,57 @@
 body{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-    /* position: relative; */
     font-family: 'Roboto', sans-serif;   
 }
 
 .logo{
     margin-left: 10px;
 }
-.nav{
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    left: -3px;
-}
-.nav,.nav_log{
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
+.title-welcome-hotel-yawn_yawn {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_welcome-hotel-yawn_yawn 10s ease-in-out infinite;
+    text-align: center;
+}
+@keyframes gradient_welcome-hotel-yawn_yawn {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}
+.title-explore_our_rooms {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_explore_our_rooms 10s ease-in-out infinite;
+    text-align: center;
+}
+@keyframes gradient_explore_our_rooms {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}
 .nav>.nav_text{
     font-family: 'Roboto', sans-serif;
     font-size: larger;
@@ -32,17 +62,6 @@ body{
     gap: 20px;
     margin-right: 40px;
     margin-left: 10px;
-}
-
-.nav_text>input{
-    border-radius: 10px;
-    width: 200px;
-    position: relative;
-}
-.nav_text>.material-symbols-outlined{
-    display: inline-block;
-    position: absolute;
-    top: 28% !important;
 }
 .nav_text:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) a:hover {
     color: #FF3FA4 ;
@@ -59,14 +78,6 @@ a{
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
-}
-#search{
-    border-radius: 20px;
-    outline: none;
-    background-color: black;
-    color: white;
-    border: none;
-    margin-left: 2px;
 }
 
 .container--body{
@@ -93,9 +104,7 @@ p{
 #contact--yawnyawn-mail-text ,#contact--yawnyawn-phone-text, #navbar--user{
     padding: 20px;
 }
-/* .row--contact{
-    padding: 20px;
-} */
+
 #contact--yawnyawn-mail-icon,#contact--yawnyawn-phone-icon{
     color: #FF3FA4;
 }
@@ -150,12 +159,6 @@ h1{
     flex-direction: column;
 }
 
-
-i{
-    color: #FF2966!important; 
-    font-size: 20px;
-    margin: 0px 10px;
-}
 
 .overviews{
     display: grid;
@@ -298,5 +301,12 @@ i{
   @media screen and (max-width: 415px) {
     .container_body_aboutus{
         display: none;
+    }
+    .title-welcome-hotel-yawn_yawn {
+        text-align: center;
+        font-size: 60px;
+    }
+    .title-explore_our_rooms{
+        font-size: 40px;
     }
   }

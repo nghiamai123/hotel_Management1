@@ -1,4 +1,4 @@
-
+/* 
 @media screen and (max-width: 415px) {
     .list-navbar{
         display: inline;
@@ -16,15 +16,12 @@
         grid-template-columns: 20% 40% 10% 30% !important;
         gap: 5px;
         padding: 10px 0px;
-        /* background-color: black */
-        /* justify-content: space-between; */
-        /* align-items: center; */
     }
     .nav_log.nav_text.nav-item.dropdown{
         margin-right: 0px;
     }
     .nav_text { 
-       display: none; /* Ẩn các thành phần nav_text */
+       display: none; 
     } 
     .nav_text_search{
         display: block;
@@ -32,16 +29,11 @@
     #nav_input_search{
         width: 140px;
     }
-    /* avata */
-    /* .nav-link.dropdown-toggle{
-        display: none;
-        margin: 0px;
-        padding: 0px;
-    } */
+
     .container--body>h1{
         font-size: 50px;
     }
     .dropdown-toggle::after {
         content: none;
       }
-  }
+  } */
