@@ -111,7 +111,7 @@ while(takelogin){
     document.getElementById("register").style.display = 'none';
     document.getElementById("avata").style.display = 'block';
     document.getElementById("nav-avata").src = JSON.parse(localStorage.getItem("avata"));
-    document.getElementById("img-avt").src = JSON.parse(localStorage.getItem("avata"));
+    // document.getElementById("img-avt").src = JSON.parse(localStorage.getItem("avata"));
     break;
 }
 

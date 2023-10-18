@@ -2,7 +2,6 @@ const baserooms = "http://localhost:3000/rooms";
 fetch(baserooms)
 .then((res) => res.json())
 .then((data)=> {
-    console.log(data)
     var a = data.map((data1) => {
         return `
         <div class="col-lg-4 col-md-6" >

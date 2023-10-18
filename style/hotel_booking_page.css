@@ -314,13 +314,18 @@ i{
     font-size: large;
     padding-left: 50px;
 }
+#hinh{
+    width: 100%;
+    height: 40%;
+}
 /* css cho màn hình ipad pro */
 @media screen and (max-width: 1407px) { 
     #describe{
         display: none;
     }
     #hinh{
-        height: auto;
+        width: 100%;
+        height: 40%;
     }
 }
 @media screen and (max-width: 415px){

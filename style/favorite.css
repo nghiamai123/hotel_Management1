@@ -18,9 +18,16 @@
 }
 
 .into {
-    padding-top: 70px;
+    margin-top: 100px;
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_we_have_many_rooms 10s ease-in-out infinite;
     text-align: center;
-    font-size: 50px;
 }
 
 .image-container {
@@ -41,4 +48,8 @@
 
 .image-container:hover .delete-icon {
     opacity: 1;
+}
+
+#block_favorite {
+    padding: 0px 30px;
 }

@@ -192,6 +192,14 @@ img{
     font-size: xx-large;
 }
 
+#favorite-icon {
+    user-select: none;
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+    color: #ff0022;
+}
+
 /* responsive */
 @media screen and (max-width: 415px) {
     .picture {
