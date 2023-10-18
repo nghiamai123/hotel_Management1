@@ -1,0 +1,19 @@
+/* CSS styling */
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+nav {
+    background-color: black;
+    color: pink;
+    padding: 10px;
+}
+nav a {
+    color: pink;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+nav a:hover {
+    background-color: pink;
+    color: black;
+}
