@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./style/hotel_home_auth.css  ">
     <link rel="stylesheet" href="./style/personal_information.css">
     <link rel="stylesheet" href="./style/header_footer.css">
-    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
+    <!-- <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css"> -->
   </head>
   <body>
 
@@ -175,28 +175,42 @@
     </div>
     <!-- header -->
     <div class="nav">
+      <!-- tạo reponsive cho navbar -->
       <div class="list-navbar"> 
         <div class="nav_log nav-item dropdown" >
           <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-list"></i>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
-            <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
-            <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
+            <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
+            <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
+            <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li>   
+            <li>              
+              <div class="list_nav_log_text" id="sign_in">
+                <button type="button" class="list_nav-text-signin dropdown-item" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">Sign in</button>
+              </div>
+            </li>
+            <li>
+              <div class="list_nav_log_text" id="register_in">
+                <button type="button" class="list_nav-text-signin dropdown-item" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">Register</button>
+              </div>
+            </li>  
           </ul>
         </div>
       </div>
       <!-- end tạo reponsive cho navbar -->
-      <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a></div>
-      <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
-      <div class="nav_text"><a href="hotel_about_us_page.html" style="color: #f45cad ;">ABOUTS US</a></div>
-      <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+
+      <div class="logo nav_text">
+        <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+      </div>
+      <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html" >HOME</a></div>
+      <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html" style="color: #f45cad;">ABOUTS US</a></div>
+      <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
       <div class="nav_text nav_text_search">
         <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
-        <button class="material-symbols-outlined" id="search" style="border-radius: none; color: white;" onclick="search()">
-          search
-        </button>
+        <button class="material-symbols-outlined" id="search" onclick="search()">
+          <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
+        </button>   
       </div>
       <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
       <div class="nav_log nav_text">
@@ -207,10 +221,10 @@
           <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
         </div>
       </div>
+      <!-- avta -->
       <div class="nav_log nav_text nav-item dropdown" id="avata">
-        <!-- <li class="nav-item dropdown"> -->
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+          <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
@@ -255,28 +269,28 @@
         <div class="div-founders my-5">
             <div><p class="title-about">Founders</p></div>
             <div class="row founders justify-content-evenly">
-                <div class="card col-lg-2  col-10 my-2">
+                <div class="card col-lg-2  col-10 my-2  founders_card">
                     <img src="https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-dai-dien-zalo-51-29-15-13-22.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text-name">Mai Xuân Nghĩa</p> 
                         <p class="card-text">Some quick example text to build on the card title and make up .</p>
                     </div>
                 </div>
-                <div class="card col-lg-2 col-10 my-2 ">
+                <div class="card col-lg-2 col-10 my-2 founders_card">
                     <img src="https://toigingiuvedep.vn/wp-content/uploads/2021/07/hinh-ve-don-gian-va-de-thuong-nhat.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text-name">D.T Hồng Lam</p> 
                         <p class="card-text">Some quick example text to build on the card title and make up .</p>
                     </div>
                 </div>
-                <div class="card col-lg-2 col-10 my-2 ">
+                <div class="card col-lg-2 col-10 my-2 founders_card">
                     <img src="https://img2.thuthuatphanmem.vn/uploads/2018/11/30/anh-dai-dien-che-hai_104205084.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text-name">T.T Việt Mỹ</p> 
                         <p class="card-text">Some quick example text to build on the card title and make up .</p>
                     </div>
                 </div>
-                <div class="card col-lg-2 col-10 my-2 ">
+                <div class="card col-lg-2 col-10 my-2 founders_card">
                     <img src="https://kynguyenlamdep.com/wp-content/uploads/2022/06/avatar-cute-cho-co-nang-nghien-tra-sua.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text-name">Hồ Thị Xươm</p> 
@@ -290,40 +304,40 @@
     <!-- footer -->
     <div class="row container-fluid footer" id="footer">
       <div class=" row justify-content-around  p-lg-4 ">
-          <!-- cột 1 -->
-      
-          <div class="contact-item col-md-12 col-lg-4">
-              <a href=""><img src="assets/logo_big.png" alt="logo" style="width: 400px;"></a>
+        <!-- cột 1 -->
+
+        <div class="contact-item col-md-12 col-lg-4">
+          <a href=""><img src="assets/logo_big.png" alt="logo"></a>
+        </div>
+
+        <!-- cột 2 -->
+        <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+          <div>
+            <i class="fa-solid fa-house"></i>
+            <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
           </div>
-          
-          <!-- cột 2 -->
-          <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
-              <div>
-                  <i class="fa-solid fa-house"></i>
-                  <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
-              </div>
-              <div>
-                  <i class="fa-solid fa-address-card"></i>
-                  <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
-              </div>
-              <div>
-                  <i class="fa-solid fa-bed"></i>
-                  <a class="nav_text_footer" href="hotel_rooms_page.html">Rooms</a>
-              </div>
+          <div>
+            <i class="fa-solid fa-address-card"></i>
+            <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
           </div>
-          <!-- cột 3 -->
-          <div class="col-md-6 col-lg-4 mt-4">
-              <h6 class="section-title text-white text-uppercase" style="font-size: larger;">Contacts</h6>
-              <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
-              <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
-              <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-              <div class="d-flex pt-2">
-                  <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                  <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                  <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
-              </div>
+          <div>
+            <i class="fa-solid fa-bed"></i>
+            <a class="nav_text_footer" href="hotel_rooms_page.html">Rooms</a>
           </div>
+        </div>
+        <!-- cột 3 -->
+        <div class="col-md-6 col-lg-4 ">
+          <h6 class="section-title text-white text-uppercase" style="font-size: larger;">Contact</h6>
+          <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+          <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+          <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+          <div class="d-flex pt-2">
+            <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+            <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./js/hotel_home_page.js"></script>

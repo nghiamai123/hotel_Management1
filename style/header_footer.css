@@ -8,6 +8,17 @@ body{
 .logo{
     margin-left: 10px;
 }
+.section-title{
+    color: #FF3FA4 !important;
+}
+
+.nav_text:hover{
+    color: #FF3FA4;
+}
+
+#logo_nav{
+    width: 90px;
+}
 .nav{
     position: fixed;
     width: 100%;
@@ -15,7 +26,7 @@ body{
     left: -3px;
     top:0px
 }
-.nav,.nav_log{
+.nav{
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -35,7 +46,7 @@ body{
 .nav_text>input{
     border-radius: 10px;
     width: 200px;
-    position: relative;
+    /* position: relative; */
 }
 .nav_text>.material-symbols-outlined{
     display: inline-block;
@@ -60,15 +71,25 @@ a{
 a:hover{
     color: #FF2966;
 }
+#nav-avata {
+    height: 50px;
+    border-radius: 50%;
+}
 #search{
-    border-radius: 20px;
     outline: none;
     background-color: black;
-    color: white;
     border: none;
     margin-left: 2px;
 }
-
+#nav_search{
+    color: white !important;
+    margin-left: 10px !important;
+}
+i{
+    color: #FF296f;
+    font-size: 20px;
+    margin-right: 20px;
+}
 #contact--yawnyawn-mail-text ,#contact--yawnyawn-phone-text, #navbar--user{
     padding: 20px;
 }
@@ -79,6 +100,9 @@ a:hover{
     background-color: black;
     padding: 5px;
 }
+/* .dropdown-item {
+    color: #FF296f;
+} */
 .navbar-search{
     padding: 8px;
 }
@@ -88,11 +112,7 @@ a:hover{
 .nav_text:hover{
     color: #FF2966 !important;
 }
-i{
-    color: #FF2966!important; 
-    font-size: 20px;
-    margin: 0px 10px;
-}
+
 .nav-text-signin{
     background-color: black;
     color: white;
@@ -127,33 +147,25 @@ i{
 #avata{
     margin-right: 40px;
 }
-.col-md-6.col-lg-4 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 .section-title.text-white.text-uppercase.mb-4 {
     width: 268px;
     height: 48px;
     color: #FF3FA4 !important;
     font-size: xx-large;
 }
-#footer{
-    /* padding: 50px; */
-    background-color: #000000 !important;
-}
-.section-title{
-    color: #FF3FA4 !important;
-}
 
-.nav_text:hover{
-    color: #FF3FA4;
-}
-
-#logo_nav{
-    width: 90px;
+.fa-solid.fa-magnifying-glass {
+    position: relative;
+    left: -20%;
+    bottom: 5px;
 }
 /* footer */
+#footer{
+    padding-left: 50px;
+    width: 100%;
+    background-color: #000000 !important;
+}
+
 .nav_text_footer:hover{
     color: #FF296f; 
 }
@@ -162,50 +174,88 @@ i{
     margin-top: 10px;
 }
 
+.col-md-6.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dropdown-toggle::after {
+    content: none;
+  }
 /* responsive */
 .list-navbar{
     display: none;
+}
+.list_navbar_drop_signin{
+    display: none ;
 }
 
 /* responsive */
 @media screen and (max-width: 415px) {
     .list-navbar{
-        display: inline;
+        display: block;
         margin-left: 10px;
+    }
+    .dropdown-item_text{
+        color: #FF296f;
     }
     .nav_log.nav_text>.nav_log_text button{
         font-size: 10px;
         margin-left: 10px;
     }
+    .nav-text-signin{
+        display: block;
+    }
     .about--introduce{
         display: none;
     }
+    #nav_search{
+        margin-bottom: 5px;
+    }
     .nav{
         display: grid !important;
-        grid-template-columns: 30% 30% 10% 30%;
+        grid-template-columns: 15% 45% 10% 30%;
         gap: 5px;
-        padding: 10px 0px;
-        background-color: black
-        /* justify-content: space-between; */
-        /* align-items: center; */
+        padding: 10px;
     }
+
     .nav_log.nav_text.nav-item.dropdown{
         margin-right: 0px;
+    }
+    .list_nav-text-signin{
+        color: #FF296f;
+        font-size: larger;
     }
     .nav_text { 
        display: none; /* Ẩn các thành phần nav_text */
     } 
+    .nav-text-signin{
+        display: none;
+    }
     .nav_text_search{
         display: block;
     } 
-
-    /* avata */
-    /* .nav-link.dropdown-toggle{
-        display: none;
-        margin: 0px;
-        padding: 0px;
-    } */
+    #search{
+        margin-left: 200px;
+    }
+    .nav-link {
+        margin-right: 100px;
+        margin-left: 10px;
+    }
+    #avata {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
     .container--body>h1{
         font-size: 50px;
+    }
+    #footer{
+        /* padding: 50px; */
+        width: 100%;
+        background-color: #000000 !important;
+    }
+    .section-title.text-white.text-uppercase{
+        margin-top: 30px;
     }
   }

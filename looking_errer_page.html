@@ -172,7 +172,6 @@
           </div>
         </div>
       </div>
-
       <div class="nav">
         <!-- tạo reponsive cho navbar -->
         <div class="list-navbar"> 
@@ -181,22 +180,35 @@
               <i class="fa-solid fa-list"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
-              <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
-              <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
+              <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
+              <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
+              <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li>   
+              <li>              
+                <div class="list_nav_log_text" id="sign_in">
+                  <button type="button" class="list_nav-text-signin dropdown-item" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">Sign in</button>
+                </div>
+              </li>
+              <li>
+                <div class="list_nav_log_text" id="register_in">
+                  <button type="button" class="list_nav-text-signin dropdown-item" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">Register</button>
+                </div>
+              </li>  
             </ul>
           </div>
         </div>
-      <!-- end tạo reponsive cho navbar -->
-        <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" width="78px" height="76"></a></div>
-        <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
-        <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
-        <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+        <!-- end tạo reponsive cho navbar -->
+  
+        <div class="logo nav_text">
+          <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+        </div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html" style="color: #f45cad;">HOME</a></div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html">ABOUTS US</a></div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
         <div class="nav_text nav_text_search">
-          <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Seach" >
-          <button class="material-symbols-outlined" id="search" style="border-radius: none;" onclick="search()">
-            search
-          </button>
+          <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
+          <button class="material-symbols-outlined" id="search" onclick="search()">
+            <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
+          </button>   
         </div>
         <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
         <div class="nav_log nav_text">
@@ -207,10 +219,10 @@
             <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
           </div>
         </div>
+        <!-- avta -->
         <div class="nav_log nav_text nav-item dropdown" id="avata">
-          <!-- <li class="nav-item dropdown"> -->
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
+            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
@@ -218,6 +230,7 @@
           </ul>
         </div>
       </div>
+  
         <div class="hide"></div>
         <div class="notfound">
             <div class="notfound-404">

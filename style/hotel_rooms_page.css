@@ -18,12 +18,6 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
-.nav>.nav_text{
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    color: white;
-}
 .nav_log.nav_text{
     display: flex;
     gap: 20px;
@@ -33,12 +27,6 @@ body{
     border-radius: 10px;
     width: 200px;
     position: relative;
-}
-.nav_text>.material-symbols-outlined{
-    display: inline-block;
-    position: absolute;
-    top: 33%;
-    padding-bottom: 20px;
 }
 .nav_text:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) a:hover {
     color: #FF3FA4 ;
@@ -135,17 +123,6 @@ p{
     padding: 5px;
     /* margin: 150px 0px; */
 }
-.navbar-search{
-    padding: 8px;
-}
-#search{
-    border-radius: 20px;
-    outline: none;
-    background-color: black;
-    color: white;
-    border: none;
-    margin-left: 2px;
-}
 .fa-user{
     color: #FF3FA4;
     width: 50px;
@@ -158,6 +135,51 @@ i{
 }
 .nav-link{
     margin-right:100px ;
+}
+.title-we_have_many_rooms {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_we_have_many_rooms 10s ease-in-out infinite;
+    text-align: center;
+}
+@keyframes gradient_we_have_many_rooms {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}
+
+.title-explore_our_rooms {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_explore_our_rooms 10s ease-in-out infinite;
+    text-align: center;
+}
+@keyframes gradient_explore_our_rooms {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
 }
 .overviews{
     display: grid;
@@ -242,11 +264,6 @@ i{
     justify-content: space-around;
 }
 
-.fa-solid.fa-magnifying-glass {
-    position: relative;
-    left: -20%;
-}
-
 /* ô lựa chọn */
 .about.about-rooms>.fa-solid.fa-building, .fa-solid.fa-user{
     text-align: center;
@@ -263,19 +280,7 @@ i{
     color: #FF3FA4 !important;
     font-size: xx-large;
 }
-/* thay đổi vị trí about us */
-#img1{
-    position: relative;
-    top: -9.9%;
-}
-.row.about--introduce{
-    margin: 10rem 5rem ;
-}
-.overviews{
-    margin-left: 6rem;
-    gap: 6rem;
-}
-/* ảnh avata thay đổi */
+
 #avata{
     display: none;
     margin-right: 40px;
@@ -290,12 +295,7 @@ h6,.col-lg-4.col-md-6{
     25%   {top:0px; right:0px;}
     0%  {top:400px; right:0px;}
 }
-/* css footer and header */
-.col-md-6.col-lg-4 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+
 .section-title.text-white.text-uppercase.mb-4 {
     width: 268px;
     height: 48px;
@@ -323,3 +323,12 @@ h6,.col-lg-4.col-md-6{
     display: none;
 } */
 /* responsive */
+@media screen and (max-width: 415px) {
+    .title-welcome-hotel-yawn_yawn {
+        text-align: center;
+        font-size: 60px;
+    }
+    .title-explore_our_rooms{
+        font-size: 40px;
+    }
+  }
