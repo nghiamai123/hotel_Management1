@@ -10,12 +10,12 @@ fetch(baserooms)
             <td>${data1.type[0]}</td>
             <td>${data1.price}</td>
             <td>
-                <button class="button-icon">
-                    <i class="fa fa-cogs" aria-hidden="true" id="${data1.id}"></i>
-                </button>
-                <button class="button-icon">
-                    <i class="fa fa-trash" aria-hidden="true" id="${data1.id}" ></i>
-                </button>
+            <button class="button-icon">
+            <i class="fa fa-cogs" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_edit_room" data-bs-whatever="@mdo" id="${data1.id}"></i>
+        </button>
+        <button class="button-icon">
+            <i class="fa fa-trash" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_create_new_" data-bs-whatever="@mdo" id="${data1.id}" ></i>
+        </button>
             </td>
         </tr>
         `
@@ -32,16 +32,16 @@ fetch(user)
         <tr>
             <th>${data2.id}</th>
             <td>${data2.name}</td>
-            <td>${data2.password}</td>
-            <td>${data2.phone}</td>
             <td>${data2.email}</td>
+            <td>${data2.phone}</td>
+            <td>${data2.password}</td>
             <td>none</td>
             <td>
                 <button class="button-icon">
-                    <i class="fa fa-cogs" aria-hidden="true" id="${data2.id}"></i>
+                    <i class="fa fa-cogs" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_user_edit" data-bs-whatever="@mdo" id="${data2.id}"></i>
                 </button>
                 <button class="button-icon">
-                    <i class="fa fa-trash" aria-hidden="true" id="${data2.id}" ></i>
+                    <i class="fa fa-trash" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_create_new_" data-bs-whatever="@mdo" id="${data2.id}" ></i>
                 </button>
             </td>
         </tr>
