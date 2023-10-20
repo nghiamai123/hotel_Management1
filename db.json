@@ -83,7 +83,7 @@
     },
     {
       "id": 5,
-      "like": "no",
+      "like": "yes",
       "type": [
         "2 bed",
         "2 bath",
@@ -893,7 +893,7 @@
     },
     {
       "id": 35,
-      "like": "yes",
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -946,7 +946,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": 37,
       "like": "yes",
       "type": [
         "5 bed",
