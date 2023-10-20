@@ -23,6 +23,8 @@ fetch(baserooms)
     })
     document.getElementById("rooms-table").innerHTML = `${a.join("")}`
 })
+
+// show user 
 const user= "http://localhost:3000/user";
 fetch(user)
 .then((res) => res.json())
@@ -38,7 +40,7 @@ fetch(user)
             <td>none</td>
             <td>
                 <button class="button-icon">
-                    <i class="fa fa-cogs" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_user_edit" data-bs-whatever="@mdo" id="${data2.id}"></i>
+                    <i class="fa fa-cogs" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_edit_user" data-bs-whatever="@mdo" id="${data2.id}"></i>
                 </button>
                 <button class="button-icon">
                     <i class="fa fa-trash" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_create_new_" data-bs-whatever="@mdo" id="${data2.id}" ></i>
