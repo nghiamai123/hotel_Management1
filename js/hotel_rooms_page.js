@@ -1,8 +1,11 @@
 const baserooms = "http://localhost:3000/rooms";
+for(let i = 0; i < 1; i++){
+  ++i
 fetch(baserooms)
 .then((res) => res.json())
 .then((data)=> {
     var a = data.map((data1) => {
+      roomId = data1.id;
         return `
         <div class="col-lg-4 col-md-6" >
         <div class="room-item shadow rounded overflow-hidden">
@@ -30,8 +33,8 @@ fetch(baserooms)
               <div class="d-flex justify-content-between">
                 <h4 style="color: #f45cad;">$${data1.price}/night</h4>
                 <div class="col-lg-4 col-6 context__icon">
-                    <i id="icon_heart_detail" class="fa-regular fa-heart" onclick="clickFavorite(${data1.id})"></i>
-                    <span id="favorite-icon" class="favorite-icon" onclick="clickunFavorite(${data1.id})">&#10084;</span>
+                    <i id="icon_heart_detail${data1.id}" class="fa-regular fa-heart" onclick="clickFavorite(${data1.id})"></i>
+                    <span id="favorite-icon${data1.id}" class="favorite-icon" onclick="clickunFavorite(${data1.id})">&#10084;</span>
                     <i id="icon_share_detail" class="fa-solid fa-share" onclick="shareViaEmail()"></i>
                 </div>
               </div>
@@ -42,28 +45,39 @@ fetch(baserooms)
     })
     document.getElementById("pp").innerHTML = `${a.join("")}`
 })
+}
+// giữ hiển thị icon 
+fetch(baserooms)
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach(element => {
+      console.log(element.like);
+      console.log(element.id);
+      if (element.like === "yes") {
+        document.getElementById(`icon_heart_detail${element.id}`).style.display = "none";
+        document.getElementById(`favorite-icon${element.id}`).style.display = "inline";
+        var favoriteIcon = document.getElementById(`favorite-icon${element.id}`);
+        favoriteIcon.style.userSelect = 'none';
+        favoriteIcon.style.position = 'relative';
+        favoriteIcon.style.right = '40px';
+        favoriteIcon.style.cursor = 'pointer';
+        favoriteIcon.style.color = '#ff0022';
+        favoriteIcon.style.fontSize = '26px';
+      } 
+      else if (element.like === "no") {
+        document.getElementById(`icon_heart_detail${element.id}`).style.display = "inline";
+        document.getElementById(`favorite-icon${element.id}`).style.display = "none";
+        var favoriteIcon = document.getElementById(`favorite-icon${element.id}`);
+        favoriteIcon.style.userSelect = 'none';
+        favoriteIcon.style.position = 'relative';
+        favoriteIcon.style.right = '40px';
+        favoriteIcon.style.cursor = 'pointer';
+        favoriteIcon.style.color = '#ff0022';
+        favoriteIcon.style.fontSize = '26px';
+      }
+    }) 
+  })
 
-// function checkLikeStatus() {
-//   fetch(baserooms)
-//       .then((res) => res.json())
-//       .then((data) => {
-//           data.forEach(element => {
-//               // console.log(element.like);
-//               if (element.like === "yes") {
-//                   document.getElementById("icon_heart_detail").style.display = "none";
-//                   document.getElementById("favorite-icon").style.display = "inline";
-//               } else if (element.like === "no") {
-//                   document.getElementById("icon_heart_detail").style.display = "inline";
-//                   document.getElementById("favorite-icon").style.display = "none";
-//               }
-//           });
-//       })
-//       .catch((error) => {
-//           console.log("Error:", error);
-//       });
-// }
-// Gọi hàm checkLikeStatus một lần duy nhất
-// checkLikeStatus();
 
 
 // chức năng yêu thích
@@ -84,7 +98,8 @@ function clickFavorite (roomId) {
         });
     
         if (response.ok) {
-          console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+          document.getElementById("icon_heart_detail").style.display = "none";
+          document.getElementById("favorite-icon").style.display = "inline";
         } else {
           console.error('Lỗi khi cập nhật dữ liệu người dùng!');
         }
@@ -110,7 +125,8 @@ function clickunFavorite (roomId) {
         });
     
         if (response.ok) {
-          console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+          document.getElementById("icon_heart_detail").style.display = "inline";
+          document.getElementById("favorite-icon").style.display = "none";
         } else {
           console.error('Lỗi khi cập nhật dữ liệu người dùng!');
         }

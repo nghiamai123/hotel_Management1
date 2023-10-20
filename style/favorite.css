@@ -2,6 +2,7 @@
     font-size: 35px;
     color: palevioletred;
     cursor: pointer;
+    /* display: none; */
 }
 
 .favorite-icon.filled {

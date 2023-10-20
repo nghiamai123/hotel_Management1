@@ -8,8 +8,6 @@ fetch(baserooms)
     data.forEach(element => {
         if (detailId == element.id){
             document.getElementById("hinh").src = element.room_image[1];
-            // document.getElementById("name-room1").innerHTML = element.nameroom;
-            // document.getElementById("describe").innerHTML = element.description;
             document.getElementById("tinhngay").innerHTML = element.price;
             document.getElementById("tongcoban").innerHTML = element.price;
         }
@@ -35,7 +33,7 @@ function calculateDateDifference() {
         tongelement.innerHTML = tong;
         pleselement1.style.display = "none";
         document.getElementById("tongcoban").innerHTML = 0
-        alert("booking not Successful !!!")
+        alert("add room not Successful !!!")
         return;
     }
     else if (currentlylogin != "true"){
@@ -55,15 +53,18 @@ function calculateDateDifference() {
         pleselement1.innerHTML = document.getElementById("tongcoban").innerHTML + " x " + dayDifference + " night";
         tongelement.innerHTML = 3 + 10 + (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
         tongelement.innerHTML = (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
-        alert("booking Successful !!!");
+        alert("add room Successful !!!");
     }
     else{
         tongelement.innerHTML = 0;
         alert("failed to set your room");
     }
 }
+
 // hàm dành cho form input date thư viện js
 $( function() {
     $("#datepicker1").datepicker();
     $("#datepicker2").datepicker();
 });
+
+// hàm thanh toán

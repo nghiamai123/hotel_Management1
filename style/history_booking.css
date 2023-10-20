@@ -1,0 +1,47 @@
+/* button icon edit and delete */
+.button-icon {
+/* position: relative; */
+margin: 0;
+width:35px;
+height: 35px;
+/* padding: 15px; */
+outline: none;
+background-color: #fff;
+border: 1px solid rgba(246, 30, 91, 0.6);
+border-radius: 10px;
+z-index: 0;
+overflow: hidden;
+/* transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1); */
+}
+
+.button-icon i {
+color:#000000;
+}
+
+.button-icon:hover {
+animation: rotate624 0.7s ease-in-out both;
+background-color: #FF2966;
+
+}
+
+.into {
+    font-weight: 900;
+    letter-spacing: 2px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_Booking 8s ease-in-out infinite;
+    text-align: center;
+}
+@keyframes gradient_Booking {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}

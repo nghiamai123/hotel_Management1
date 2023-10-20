@@ -24,57 +24,57 @@
     <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
 </head>
 <body>
-     <!-- header -->
-     <div class="nav">
-        <!-- tạo reponsive cho navbar -->
-        <div class="list-navbar"> 
-          <div class="nav_log nav-item dropdown" >
-            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-list"></i>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="Favorite.html" style="color: #f45cad;" id="Favorite" >Favorite</a></li>
-              <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
-              <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
-              <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li>   
-            </ul>
-          </div>
-        </div>
-        <!-- end tạo reponsive cho navbar -->
-  
-        <div class="logo nav_text">
-          <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
-        </div>
-        <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html">HOME</a></div>
-        <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html">ABOUTS US</a></div>
-        <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
-        <div class="nav_text nav_text_search">
-          <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
-          <button class="material-symbols-outlined" id="search" onclick="search()">
-            <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
-          </button>   
-        </div>
-        <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
-        <div class="nav_log nav_text">
-          <div class="nav_log_text" id="sign">
-            <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
-          </div>
-          <div class="nav_log_text" id="register">
-            <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
-          </div>
-        </div>
-        <!-- avta -->
-        <div class="nav_log nav_text nav-item dropdown" id="avata">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
+    <!-- header -->
+    <div class="nav">
+      <!-- tạo reponsive cho navbar -->
+      <div class="list-navbar"> 
+        <div class="nav_log nav-item dropdown" >
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-list"></i>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="Favorite.html" style="color: #f45cad;" id="Favorite" >Favorite</a></li>
-            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
-            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+            <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
+            <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
+            <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li>   
           </ul>
         </div>
       </div>
+      <!-- end tạo reponsive cho navbar -->
+
+      <div class="logo nav_text">
+        <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+      </div>
+      <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html">HOME</a></div>
+      <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html">ABOUTS US</a></div>
+      <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
+      <div class="nav_text nav_text_search">
+        <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
+        <button class="material-symbols-outlined" id="search" onclick="search()">
+          <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
+        </button>   
+      </div>
+      <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+      <div class="nav_log nav_text">
+        <div class="nav_log_text" id="sign">
+          <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+        </div>
+        <div class="nav_log_text" id="register">
+          <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+        </div>
+      </div>
+      <!-- avta -->
+      <div class="nav_log nav_text nav-item dropdown" id="avata">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="Favorite.html" style="color: #f45cad;" id="Favorite" >Favorite</a></li>
+          <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+          <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+        </ul>
+      </div>
+    </div>
   
 
     <!-- body -->
@@ -85,21 +85,21 @@
         </div>
 
         <div class="row row-list d-flex justify-content-around align-content-between ">
-            <div class="list--profile  col-lg-3 col-12 ">
+            <div class="list--profile col-lg-3 col-12">
                 <a href="personal_information.html">
                     <span class="material-symbols-outlined ">account_circle</span>
                     <h5>Personal information</h5>
                     <p>Provide personal information and how we can contact you</p>
                 </a>
             </div>
-            <div class="list--profile   col-lg-3 col-12  ">
-                <a href="Favorite.html">
-                    <span class="material-symbols-outlined">favorite</span>
-                    <h5>Favorites list</h5>
-                    <p>Updates your password and secure your account</p>
-                </a>
+            <div class="list--profile col-lg-3 col-12">
+              <a href="history_booking.html">
+                <span class="material-symbols-outlined">production_quantity_limits</span>
+                <h5>History Booking</h5>
+                <p>View booking information and their history</p>
+              </a>
             </div>
-            <div class="list--profile    col-lg-3 col-12 ">
+            <div class="list--profile col-lg-3 col-12">
                 <a href="security.html">
                     <span class="material-symbols-outlined">admin_panel_settings</span>
                     <h5> Sign in and secure</h5>
@@ -118,7 +118,7 @@
                 <a href=""><img src="assets/logo_big.png" alt="logo" width="300px" height="218px"></a>
             </div>
             <!-- cột 2 -->
-            <div class="col-md-6 col-lg-4  justify-content-around align-content-end footer_contact ">
+            <div class="col-md-6 col-lg-4 justify-content-around align-content-end footer_contact ">
                 <div>
                     <i class="fa-solid fa-house"></i>
                     <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
