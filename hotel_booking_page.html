@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAWN YAWN - HOMEPAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+    <!-- link thư viện js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="style/hotel_home_auth.css">
+    <link rel="stylesheet" href="./style/hotel_booking_page.css">
+    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
+    <link rel="stylesheet" href="./style/header_footer.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- header -->
+        <div class="nav">
+            <!-- tạo reponsive cho navbar -->
+            <div class="list-navbar"> 
+                <div class="nav_log nav-item dropdown" >
+                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-list"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+                    <li><a class="dropdown-item" href="hotel_rooms_page.html"color: #f45cad;">Rooms</a></li>
+                    <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
+                    </ul>
+                </div>
+            </div>
+                <!-- end tạo reponsive cho navbar -->
+            <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="78px" height="76"></a></div>
+            <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+            <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
+            <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+            <div class="nav_text nav_text_search">
+                <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
+                <button class="material-symbols-outlined" id="search" style="border-radius: none;" onclick="search()">
+                    search
+                </button>
+            </div>
+            <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+            <div class="nav_log nav_text">
+                <div class="nav_log_text" id="sign">
+                    <div></div>
+                </div>
+                <div></div>
+            </div>
+            <div class="nav_text" id="avata"><img src="#" alt=""></div>
+        </div>
+        
+       <!-- Body -->
+        <div class="row body--content">
+            <!-- EDIT TITLE -->
+            
+            <div class="title">     
+                <p class="title-booking-room" style="user-select: none;">BOOKING ROOM</p>
+            </div>
+            
+            
+            <div class="content__text row">
+                <div class="left-content col-6">
+                    <div class="infor">
+                        <div class="input--group row">
+                            <label for="" class="label">Name</label>
+                            <input type="text" id="in" placeholder="Your name" class="name-booking" required>
+                        </div>
+                        <div class="input--group row">
+                            <div class="check-date  col-6 ">
+                                <label for="" class="label">Check in</label>
+                                <input type="text" name="" class="input__check-date" id="datepicker1">
+                            </div>
+                            <div class="check-date col-6">
+                                <label for="" class="label">Check out</label>
+                                <input type="text" name="" class="input__check-date"id="datepicker2">
+                            </div>
+                        </div>
+                        <div class="input--group">
+                            <input type="text" class="input-request" id="SpecialR_Request" placeholder="Special Request">
+                        </div>
+                        <div>
+                            <button type="button" class="button" id="update_money" onclick="calculateDateDifference()">SAVE</button>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="payment">
+                        <p class="title-small">Payment By</p>
+                        <select id="infirst1" class="select-option">
+                            <option disabled selected value>Credit or Debit card</option>
+                            <option value="Credit">Credit</option>
+                            <option value="Debit card">Debit card</option>
+                        </select>
+                        <div class="form-number--card">
+                            <!-- TRÊN -->
+                            <div class="number-card">
+                                <input type="text" placeholder="Number card" class="input-number-card" id="">
+                            </div>
+                            <hr>
+                            <!-- DƯỚI -->
+                            <div class="number-date-card row ">
+                                <div class="col div-expiration">
+                                    <input type="text" class="input-number-card"placeholder="Expiration date">
+                                </div>
+                                
+                                <div class="col div-CVV">
+                                    <input class="input-number-card"type="text"placeholder="CVV" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-postal">
+                            <input type="text" placeholder="Postal cde" class="input-number-card">
+                        </div> 
+                        <div>
+                            <select id="infirst1" class="select-option">
+                                <option disabled selected value>Country/region</option>
+                                <option value="American">American</option>
+                                <option value="Viet Nam">Viet Nam</option>
+                                <option value="Thai Lan">Thai Lan</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Lao">Lao</option>
+                            </select>
+                        </div> 
+                        <hr>
+                    </div> 
+                    <div class="general-standard">
+                        <p class="title-small">General standards</p>
+                        <p>We ask all guests to remember a few simple rules to be a great guest.</p>
+                        <ul>
+                            <li>Comply with house rules</li>
+                            <li>Maintain the house as if it were your home</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button id="Revervation_required" type="button" class="button">Revervation required</button>
+                    </div>
+                </div>
+                <div class="col"></div>
+                <!-- total price -->
+                <div class="right-content col-5">
+                    <div class="div-right">
+                        <div class="div-infor--room row d-flex justify-content-center align-items-center">
+                            <img src="https://seanahotel.com/wp-content/uploads/2019/09/Deluxe-Sea-view-2-1.jpg" alt="" class="col-7 img--infor" id="hinh">
+                            <div class="col-5 ">
+                                <p id="name-room1" class="title-small">Room 101</p>
+                                <p class="describe" id="describe">Quis autem vel eum iure reprehenderit qui in ea</p>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="div-price-detail">
+                            <p class="title-small">Prices Detail</p>
+                            <div class="row  d-flex justify-content-center align-items-center">
+                                <div class="col-7">
+                                    <div class="d-flex ">
+                                        <p id="tinhngay">$50</p><span id="tinhngay1">&nbsp;x 1 <span id="n">/night</span></span>
+                                    </div>
+                                    <p>Cleaning fee</p>
+                                    <p>Tax</p>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <p id="tongcoban">$50</p>
+                                    <p>$3</p>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="div-total-price d-flex justify-content-between align-content-center ">
+                            <p class="title-small">Total (USD)</p>
+                            <p id="tong" class="price">$00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pp"></div>
+        </div>
+
+        <!-- footer -->
+        <div class="row container-fluid" id="footer">
+            <div class=" row justify-content-around  p-lg-4 ">
+                <!-- cột 1 -->
+            
+                <div class="contact-item col-md-12 col-lg-4">
+                    <a href=""><img src="assets/logo_big.png" alt="logo"></a>
+                </div>
+                
+                <!-- cột 2 -->
+                <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-address-card"></i>
+                        <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-bed"></i>
+                        <a class="nav_text_footer" href="rooms.html">Rooms</a>
+                    </div>
+                </div>
+                <!-- cột 3 -->
+                <div class="col-md-6 col-lg-4 ">
+                    <h6 class="section-title  text-uppercase" style="font-size: larger;">Contact</h6>
+                    <p class="mb-3 text-white"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+                    <p class="mb-3 text-white"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+                    <p class="mb-2 text-white"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/hotel_booking_page.js"></script>
+    <script src="js/looking_errer_page.js"></script>
+</body>
+</html>

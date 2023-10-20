@@ -21,8 +21,14 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="style/personal_information.css">
+<<<<<<< HEAD
 </head>
 <script src="update.js"></script>
+=======
+  <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
+  <link rel="stylesheet" href="./style/header_footer.css">
+</head>
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
 
 <body>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -32,7 +38,11 @@
           <h1 class="modal-title fs-5" id="modal-edit">Edit</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+<<<<<<< HEAD
         <div class="modal-body" style="background-color: pink;">
+=======
+        <div class="modal-body">
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
           <form>
             <div class="mb-3">
               <label for="name">UserName:</label>
@@ -53,7 +63,11 @@
           </form>
         </div>
         <div class="modal-footer">
+<<<<<<< HEAD
           <button type="button" class="btn modal-save">Save</button>
+=======
+<button type="button" class="btn modal-save" onclick="change()">Save</button>
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
         </div>
       </div>
     </div>
@@ -61,6 +75,7 @@
   <div class="container-fluid">
     <!-- header -->
     <div class="nav">
+<<<<<<< HEAD
       <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="90px"></a></div>
       <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
       <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
@@ -72,11 +87,39 @@
         </button>
       </div>
       <div class="nav_log nav_text nav-item dropdown">
+=======
+            <!-- tạo reponsive cho navbar -->
+            <div class="list-navbar"> 
+              <div class="nav_log nav-item dropdown" >
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-list"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
+                  <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
+                  <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- end tạo reponsive cho navbar -->
+      <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="78px" height="76"></a></div>
+      <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
+      <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
+      <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+      <div class="nav_text nav_text_search">
+        <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
+        <button class="material-symbols-outlined" id="search" style="color: #ffffff; padding-bottom: 20px;" onclick="search()">
+          search
+        </button>
+      </div>
+      <div class="nav_log nav_text nav-item dropdown" id="avata">
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
         <!-- <li class="nav-item dropdown"> -->
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img id="nav-avata" src="./assets/avata-profile.jpg" alt="">
         </a>
         <ul class="dropdown-menu">
+<<<<<<< HEAD
           <li><a class="dropdown-item" href="#" style="color: #f45cad;">Accout</a></li>
           <li><a class="dropdown-item" href="#" style="color: #f45cad;">Log out</a></li>
         </ul>
@@ -84,6 +127,13 @@
         <!-- <div class="nav_log_text"><a href="form_sign_in.html">SIGN IN</a></div>
                 <div class="nav_log_text"><a href="form_register.html">REGISTER</a></div> -->
         <!-- <img id="nav-avata" src="./assets/avata-profile.jpg" alt=""> -->
+=======
+          <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+          <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li> 
+        </ul>
+        <div id="sign"></div>
+        <div id="register"></div>
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
       </div>
     </div>
     <!-- body -->
@@ -93,8 +143,19 @@
     <p id="profile-date">July 2023</p>
     <div class="row content_profile-usernames">
       <div class="col-lg-4 content_profile-usernames-about">
+<<<<<<< HEAD
         <img id="avata-user" src="./assets/avata-profile.jpg" alt="ảnh đại diện"><br>
         <button id="profile-edit-avata">Upload a photo</button>
+=======
+        <div class="edit-avata-user">
+          <img id="avata-user" src="./assets/avata-profile.jpg" alt="ảnh đại diện">
+        </div>
+        <div class="edit-avata-user">
+<button id="profile-edit-avata">Upload a photo</button>
+          <input type="file" id="avatar-input" accept="image/*" style="display: none;"></input>
+        </div>
+        <!-- tạo input khác ẩn và gọi một hàm đến sử lý -->
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
         <h4>Identify Verification</h4>
         <p style="padding-left: 30px; padding-right:30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cum veritatis quaerat ut reprehenderit architecto ipsa quos similique eveniet voluptates. Iste facere cumque, voluptatibus cum ut aut ipsam similique eaque?</p>
         <h3 id="profile-user-name" style="padding-left: 30px;">User Name</h3>
@@ -109,6 +170,7 @@
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-5 content_profile-username-email-password" style="margin-top: 30px;">
+<<<<<<< HEAD
         <input type="text" class="form-input" name="user-name" id="user_name" style="padding-left: 20px;"placeholder="User name" value="Việt Mỹ" readonly>
         <input type="text" name="email" id="email" style="padding-left: 20px;" placeholder="Email" value="Vietmy@gmail.com" readonly>
         <input type="tel" name="phonenumber" id="user_phonenumber" style="padding-left: 20px;" placeholder="Phonenumber" value="0987654321" readonly>
@@ -126,12 +188,30 @@
 
     </div>
   </div>
+=======
+        <input type="text" class="form-input-profile" name="user-name" id="user_name" style="padding-left: 20px;"placeholder="User name" value="Việt Mỹ" readonly>
+        <input type="text" class="form-input-profile" name="email" id="email11" style="padding-left: 20px;" placeholder="Email" value="Vietmy@gmail.com" readonly>
+        <input type="tel" class="form-input-profile" name="phonenumber" id="user_phonenumber" style="padding-left: 20px;" placeholder="Phonenumber" value="0987654321" readonly>
+        <input type="password" class="form-input-profile" name="password" id="user_password" style="padding-left: 20px;" placeholder="**********" value="hihimyne" readonly>
+        <p>All required user information can be save here.</p>
+        <div class="profile-back-edit">
+          <a href="profile_home_page.html"><button id="profile-back">Back</button></a>
+          <button id="profile-edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@mdo">Edit</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="pp" style="height: 114px;"> </div>
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
   <!-- footer -->
   <div class="row container-fluid footer" id="footer">
     <div class=" row justify-content-around  p-lg-4 ">
       <!-- cột 1 -->
 
       <div class="contact-item col-md-12 col-lg-4">
+<<<<<<< HEAD
         <a href=""><img src="assets/logo_big.png" alt="logo" width="100%"></a>
       </div>
 
@@ -149,6 +229,25 @@
           <i class="fa-solid fa-bed"></i>
           <a class="nav_text" href="rooms.html">Rooms</a>
         </div>
+=======
+        <a href="hotel_home_page.html"><img src="assets/logo_big.png" alt="logo" width="300px" height="218px"></a>
+      </div>
+
+      <!-- cột 2 -->
+      <div class="col-md-6 col-lg-4  justify-content-around align-content-center ">
+        <div>
+          <i class="fa-solid fa-house"></i>
+          <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-address-card"></i>
+          <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-bed"></i>
+<a class="nav_text_footer" href="hotel_rooms_page.html">Rooms</a>
+</div>
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
       </div>
       <!-- cột 3 -->
       <div class="col-md-6 col-lg-4 ">
@@ -167,6 +266,11 @@
 
     </div>
   </div>
+<<<<<<< HEAD
+=======
+  <script src="js/personal_information.js"></script>
+  <script src="js/looking_errer_page.js"></script>
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
 </body>
 
 </html>

@@ -48,7 +48,10 @@ body{
     color: #FF3FA4 ;
 } */
 a{
+<<<<<<< HEAD
     color: var(--pink-2, #FF3FA4);
+=======
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
     color: #f9f5f7;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -57,6 +60,12 @@ a{
     line-height: normal;
     text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+a:hover{
+    color: #FF2966;
+}
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
 #search{
     border-radius: 20px;
     outline: none;
@@ -82,7 +91,13 @@ a{
 .nav-link{
     margin-right:100px ;
 }
+<<<<<<< HEAD
 
+=======
+.nav_text:hover{
+    color: #FF2966 !important;
+}
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
 i{
     color: #FF2966!important; 
     font-size: 20px;
@@ -120,7 +135,10 @@ i{
 }
 
 #avata{
+<<<<<<< HEAD
     display: none;
+=======
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
     margin-right: 40px;
 }
 .col-md-6.col-lg-4 {
@@ -148,4 +166,64 @@ i{
 
 #logo_nav{
     width: 90px;
+<<<<<<< HEAD
 }
+=======
+}
+/* footer */
+.nav_text_footer:hover{
+    color: #FF296f; 
+}
+.footer_contact{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* responsive */
+.list-navbar{
+    display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 415px) {
+    .list-navbar{
+        display: inline;
+        margin-left: 10px;
+    }
+    .nav_log.nav_text>.nav_log_text button{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .about--introduce{
+        display: none;
+    }
+    .nav{
+        display: grid !important;
+        grid-template-columns: 30% 30% 10% 30%;
+        gap: 5px;
+        padding: 10px 0px;
+        background-color: black
+        /* justify-content: space-between; */
+        /* align-items: center; */
+    }
+    .nav_log.nav_text.nav-item.dropdown{
+        margin-right: 0px;
+    }
+    .nav_text { 
+       display: none; /* Ẩn các thành phần nav_text */
+    } 
+    .nav_text_search{
+        display: block;
+    } 
+
+    /* avata */
+    /* .nav-link.dropdown-toggle{
+        display: none;
+        margin: 0px;
+        padding: 0px;
+    } */
+    .container--body>h1{
+        font-size: 50px;
+    }
+  }
+>>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
