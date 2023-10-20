@@ -1,17 +1,15 @@
 const searchParams = new URLSearchParams(window.location.search);
-const productId = searchParams.get("id");
+const roomId = searchParams.get("id");
 const baserooms = "http://localhost:3000/rooms";
 
-var bookingUrl = `<a href="hotel_booking_page.html?id=${productId}" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a>`
+var bookingUrl = `<a href="hotel_booking_page.html?id=${roomId}" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a>`
 document.getElementById('booking-btn').innerHTML = bookingUrl
 
 fetch(baserooms)
 .then((res) => res.json())
 .then((data) => {
-    console.log(data)
-    // var check = false;
     data.forEach(element => {
-        if (productId == element.id){
+        if (roomId == element.id){
             document.getElementById("name_room_detail").innerHTML = element.nameroom;
             document.getElementById("price_room_detail").innerHTML = "$" + element.price + "/night";
             document.getElementById("img1").src = element.room_image[1];
@@ -33,6 +31,7 @@ fetch(baserooms)
         }
     });
 })
+
 // chức năng share qua mail.
 function shareViaEmail() {
     var subject = " Try booking a room at YAWN YAWN now ";
@@ -60,73 +59,67 @@ function shareViaEmail() {
 // Lấy tham chiếu đến hai icon
 var icon1 = document.getElementById("icon_heart_detail");
 var icon2 = document.getElementById("favorite-icon");
-
 // Thêm sự kiện click cho icon1
 icon1.addEventListener("click", async function() {
   // Kiểm tra trạng thái hiển thị của icon2
   if (icon2.style.display === "none") {
     // Nếu icon2 đang ẩn, hiển thị icon2 và ẩn icon1
-    const updateUser = async (productId, newData) => {
-        const url = `http://localhost:3000/rooms/${productId}`;
-        console.log(url)
-        try {
-          const response = await fetch(url, {
-            method: 'PATCH',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(newData),
-          });
-      
-          if (response.ok) {
-            console.log('Dữ liệu người dùng đã được cập nhật thành công!');
-          } else {
-            console.error('Lỗi khi cập nhật dữ liệu người dùng!');
-          }
-        } catch (error) {
-          console.error('Lỗi khi gửi yêu cầu:', error);
+    const updateUser = async (roomId, newData) => {
+      const url = `http://localhost:3000/rooms/${roomId}`;
+      console.log(url)
+      try {
+        const response = await fetch(url, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newData),
+        });
+    
+        if (response.ok) {
+          console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+        } else {
+          console.error('Lỗi khi cập nhật dữ liệu người dùng!');
         }
-      };
-      
-      // Ví dụ sử dụng
-     
-        // productId; // Lấy userId từ localStorage hoặc nguồn dữ liệu khác
-      const newData = { like: 'yes'};
-      
-      updateUser(productId, newData); // Cập nhật dữ liệu người dùng với userId và dữ liệu mới
+      } catch (error) {
+        console.error('Lỗi khi gửi yêu cầu:', error);
+      }
+    };
+    const newData = { like: 'yes'};
+    
+    updateUser(roomId, newData); // Cập nhật dữ liệu người dùng 
   }
 });
 
 icon2.addEventListener("click", function() {
-    // Kiểm tra trạng thái hiển thị của icon2
-    if (icon1.style.display === "none") {
-      // Ngược lại, hiển thị icon1 và ẩn icon2
-      const updateUser = async (productId, newData) => {
-        const url = `http://localhost:3000/rooms/${productId}`;
-        try {
-          const response = await fetch(url, {
-            method: 'PATCH',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(newData),
-          });
-      
-          if (response.ok) {
-            console.log('Dữ liệu người dùng đã được cập nhật thành công!');
-          } else {
-            console.error('Lỗi khi cập nhật dữ liệu người dùng!');
-          }
-        } catch (error) {
-          console.error('Lỗi khi gửi yêu cầu:', error);
+  // Kiểm tra trạng thái hiển thị của icon2
+  if (icon1.style.display === "none") {
+    // Ngược lại, hiển thị icon1 và ẩn icon2
+    const updateUser = async (roomId, newData) => {
+      const url = `http://localhost:3000/rooms/${roomId}`;
+      try {
+        const response = await fetch(url, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newData),
+        });
+    
+        if (response.ok) {
+          console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+        } else {
+          console.error('Lỗi khi cập nhật dữ liệu người dùng!');
         }
-      };
-      
-      // Ví dụ sử dụng
-     
-        // productId; // Lấy userId từ localStorage hoặc nguồn dữ liệu khác
-      const newData = { like: 'no'};
-      
-      updateUser(productId, newData); // Cập nhật dữ liệu người dùng với userId và dữ liệu mới
-    }
-  });
+      } catch (error) {
+        console.error('Lỗi khi gửi yêu cầu:', error);
+      }
+    };
+    const newData = { like: 'no'};
+    updateUser(roomId, newData); // Cập nhật dữ liệu người dùng
+  }
+});
+
+function clickFavorite (roomId) {
+  console.log(roomId);
+}

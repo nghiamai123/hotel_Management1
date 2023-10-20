@@ -6,18 +6,15 @@ fetch(baserooms)
 .then((res) => res.json())
 .then((data) => {
     data.forEach(element => {
-        console.log(element.nameroom)
         if (detailId == element.id){
             document.getElementById("hinh").src = element.room_image[1];
-            document.getElementById("name-room1").innerHTML = element.nameroom;
-            document.getElementById("describe").innerHTML = element.description;
+            // document.getElementById("name-room1").innerHTML = element.nameroom;
+            // document.getElementById("describe").innerHTML = element.description;
             document.getElementById("tinhngay").innerHTML = element.price;
             document.getElementById("tongcoban").innerHTML = element.price;
-            
         }
     });
 })
-
 
 // tính phí và trả ra số Ngày
 function calculateDateDifference() {
@@ -52,19 +49,17 @@ function calculateDateDifference() {
     var dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24)); 
     // Chuyển đổi thành số ngày
     console.log("Khoảng cách giữa hai ngày là: " + dayDifference + " ngày");
-    if (dayDifference > 0){
-        // console.log(isnull(dayDifference))
+    if (date2 > date1){
         pleselement.style.display = "none";
         pleselement1.style.display = "inline";
-        // n.style.display = "inline";
         pleselement1.innerHTML = document.getElementById("tongcoban").innerHTML + " x " + dayDifference + " night";
         tongelement.innerHTML = 3 + 10 + (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
-        document.getElementById("tongcoban").innerHTML = (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
-        alert("booking Successful !!!")
+        tongelement.innerHTML = (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
+        alert("booking Successful !!!");
     }
     else{
-        document.getElementById("tongcoban").innerHTML = 0
-        tongelement.innerHTML = 0
+        tongelement.innerHTML = 0;
+        alert("failed to set your room");
     }
 }
 // hàm dành cho form input date thư viện js
@@ -72,5 +67,3 @@ $( function() {
     $("#datepicker1").datepicker();
     $("#datepicker2").datepicker();
 });
-
-

@@ -317,11 +317,6 @@ h6,.col-lg-4.col-md-6{
     padding: 0px;
 }
 
-
-/* responsive */
-/* .list-navbar{
-    display: none;
-} */
 /* responsive */
 @media screen and (max-width: 415px) {
     .title-welcome-hotel-yawn_yawn {
@@ -331,4 +326,32 @@ h6,.col-lg-4.col-md-6{
     .title-explore_our_rooms{
         font-size: 40px;
     }
-  }
+}
+
+#icon_heart_detail{
+    cursor: pointer;
+    padding-right: 20px;
+    font-size: 26px;
+}
+
+#icon_share_detail{
+    cursor: pointer;
+    position: static;
+    top: 30px;
+    left: 100px;
+    font-size: 26px !important;
+}
+
+#favorite-icon {
+    user-select: none;
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+    color: #ff0022;
+    font-size: 26px !important;
+    display: none;
+}
+
+.context__icon {
+    display: flex;
+}

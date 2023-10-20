@@ -309,4 +309,26 @@ h1{
     .title-explore_our_rooms{
         font-size: 40px;
     }
-  }
+}
+
+#icon_heart_detail{
+    cursor: pointer;
+    padding-right: 20px;
+    font-size: 26px;
+}
+
+#icon_share_detail{
+    cursor: pointer;
+    font-size: 26px !important;
+}
+
+#favorite-icon {
+    cursor: pointer;
+    color: #ff0022;
+    font-size: 26px !important;
+    display: none;
+}
+
+.context__icon {
+    display: flex;
+}

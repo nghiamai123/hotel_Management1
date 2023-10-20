@@ -191,7 +191,7 @@
     },
     {
       "id": 9,
-      "like": "no",
+      "like": "yes",
       "type": [
         "4 bed",
         "2 bath",
@@ -1055,7 +1055,7 @@
       "id": 8
     },
     {
-      "name": "taaa",
+      "name": "nghĩa",
       "email": "ta@gmail.com",
       "phone": "1011212",
       "password": "1133",

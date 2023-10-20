@@ -183,6 +183,7 @@
             <i class="fa-solid fa-list"></i>
           </a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Favorite.html" style="color: #f45cad;" id="Favorite" >Favorite</a></li>
             <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
             <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
             <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li> 
@@ -228,6 +229,7 @@
           <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
         </a>
         <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="Favorite.html" style="color: #f45cad;" id="Favorite" >Favorite</a></li>
           <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
           <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
         </ul>
@@ -301,7 +303,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <a href="detail.html">
+                  <a href="hotel_rooms_page.html">
                     <img class="img-fluid" src="assets/Room101.jpg" alt="">
                   </a>
                 </div>
@@ -323,6 +325,11 @@
 
                   <div class="d-flex justify-content-between">
                     <h4 style="color: #f45cad;">$50/night</h4>
+                    <div class="col-lg-4 col-6 context__icon">
+                      <i id="icon_heart_detail" class="fa-regular fa-heart"></i>
+                      <span id="favorite-icon" class="favorite-icon">&#10084;</span>
+                      <i id="icon_share_detail" class="fa-solid fa-share" onclick="shareViaEmail()"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -330,7 +337,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <a href="detail.html">
+                  <a href="hotel_rooms_page.html">
                     <img class="img-fluid" src="assets/Room102.jpg">
                   </a>
                 </div>
@@ -352,6 +359,11 @@
 
                   <div class="d-flex justify-content-between">
                     <h4 style="color: #f45cad;">$100/night</h4>
+                    <div class="col-lg-4 col-6 context__icon">
+                      <i id="icon_heart_detail" class="fa-regular fa-heart"></i>
+                      <span id="favorite-icon" class="favorite-icon">&#10084;</span>
+                      <i id="icon_share_detail" class="fa-solid fa-share" onclick="shareViaEmail()"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -359,8 +371,8 @@
             <div class="col-lg-4 col-md-6">
               <div class="room-item shadow rounded overflow-hidden">
                 <div class="position-relative">
-                  <a href="detail.html">
-                    <img class="img-fluid" src="assets/Room103.jpg" alt="">
+                  <a href="hotel_rooms_page.html">
+                    <img class="img-fluid" src="assets/Room103.jpg" alt="fluid">
                   </a>
                 </div>
                 <div class="p-4 mt-2">
@@ -381,6 +393,11 @@
 
                   <div class="d-flex justify-content-between">
                     <h4 style="color: #f45cad;">$70/night</h4>
+                    <div class="col-lg-4 col-6 context__icon">
+                      <i id="icon_heart_detail" class="fa-regular fa-heart"></i>
+                      <span id="favorite-icon" class="favorite-icon">&#10084;</span>
+                      <i id="icon_share_detail" class="fa-solid fa-share" onclick="shareViaEmail()"></i>
+                    </div>
                   </div>
                 </div>
               </div>
