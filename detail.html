@@ -185,51 +185,64 @@
       </div>
     </div>
  <!-- header -->
-  <div class="nav">
-    <!-- tạo reponsive cho navbar -->
-    <div class="list-navbar"> 
-      <div class="nav_log nav-item dropdown" >
-        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-list"></i>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;">Home</a></li>
-          <li><a class="dropdown-item" href="hotel_rooms_page.html" style="color: #f45cad;">Rooms</a></li>
-          <li><a class="dropdown-item" href="hotel_about_us_page.html" style="color: #f45cad;">About us</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- end tạo reponsive cho navbar -->
-    <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" style="width:75px;height:73px;"></a></div>
-    <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
-    <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
-    <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
-    <div class="nav_text nav_text_search">
-      <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Seach" >
-      <button class="material-symbols-outlined" id="search" style="border-radius: none;" onclick="search()">
-        search
-      </button>
-    </div>
-    <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
-    <div class="nav_log nav_text">
-      <div class="nav_log_text" id="sign">
-        <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
-      </div>
-      <div class="nav_log_text" id="register">
-        <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
-      </div>
-    </div>
-    <div class="nav_log nav_text nav-item dropdown" id="avata">
-      <!-- <li class="nav-item dropdown"> -->
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <img id="nav-avata" src="./assets/avata-profile.jpg"  alt="">
+ <div class="nav">
+  <!-- tạo reponsive cho navbar -->
+  <div class="list-navbar"> 
+    <div class="nav_log nav-item dropdown" >
+      <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-list"></i>
       </a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
-        <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+        <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
+        <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
+        <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li>  
+        <li>              
+          <div class="list_nav_log_text" id="sign_in">
+            <button type="button" class="list_nav-text-signin dropdown-item" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">Sign in</button>
+          </div>
+        </li>
+        <li>
+          <div class="list_nav_log_text" id="register_in">
+            <button type="button" class="list_nav-text-signin dropdown-item" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">Register</button>
+          </div>
+        </li>   
       </ul>
     </div>
   </div>
+  <!-- end tạo reponsive cho navbar -->
+
+  <div class="logo nav_text">
+    <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+  </div>
+  <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html">HOME</a></div>
+  <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html">ABOUTS US</a></div>
+  <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
+  <div class="nav_text nav_text_search">
+    <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
+    <button class="material-symbols-outlined" id="search" onclick="search()">
+      <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
+    </button>   
+  </div>
+  <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+  <div class="nav_log nav_text">
+    <div class="nav_log_text" id="sign">
+      <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+    </div>
+    <div class="nav_log_text" id="register">
+      <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+    </div>
+  </div>
+  <!-- avta -->
+  <div class="nav_log nav_text nav-item dropdown" id="avata">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+      <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+    </ul>
+  </div>
+</div>
     <!-- body -->
     <!-- body -->
   
@@ -245,38 +258,37 @@
 
         <!-- text -->
         <div class="row content">
-            <!-- phía bên trái -->
-            <div class="col-lg-9">
+          <!-- phía bên trái -->
+          <div class="col-lg-9 col-12">
 
-                <div class="row content-text">
-                    <div class="col-lg-4 content__text">
-                        <p id="name_room_detail">Room 101</p>
-                        <p id="price_room_detail">$50/night</p>
-                    </div>
-                    <div class="col-lg-4 context__icon">
-                        <span class="favorite-icon">&#10084;</span>
-                        <!-- <i id="icon_heart_detail" class="fa-regular fa-heart"onclick="shareViaEmail()"></i> -->
-                        <i id="icon_share_detail" class="fa-solid fa-share" ></i>
-                    </div>
-                </div>
+              <div class="row content-text">
+                  <div class="col-lg-4 col-6 content__text">
+                      <p id="name_room_detail">Room 101</p>
+                      <p id="price_room_detail">$50/night</p>
+                  </div>
+                  <div class="col-lg-4 col-6 context__icon">
+                      <i id="icon_heart_detail" class="fa-regular fa-heart"></i>
+                      <span id="favorite-icon" class="favorite-icon">&#10084;</span>
+                      <i id="icon_share_detail" class="fa-solid fa-share" onclick="shareViaEmail()"></i>
+                  </div>
+              </div>
 
-                <div class="row content-icon">
-                  <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
-                    <i class="fa-solid fa-bed"></i>
-                    <p id="type1">1 Bedroom</p>
+              <div class="row content-icon">
+                <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
+                  <i class="fa-solid fa-bed"></i>
+                  <p id="type1">1 Bedroom</p>
                 </div>
                 <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
-                    <i class="fa fa-bath" aria-hidden="true"></i>
-                    <p id="type2">1 Bathroom</p>
+                  <i class="fa fa-bath" aria-hidden="true"></i>
+                  <p id="type2">1 Bathroom</p>
                 </div>
                 <div class="col-lg-3 my-2 mx-2 pt-2 icon__room">
-                    <img src="./assets/icon sofa.png" alt="" style="width: 34px;height: 20px;">
-                    <p id="type3">1 Livingroom</p>
+                  <img src="./assets/icon sofa.png" alt="" style="width: 34px;height: 20px;">
+                  <p id="type3">1 Livingroom</p>
                 </div>
-            </div>
-
-            <div class="row content-description">
-                
+              </div>
+              <div class="row content-description">
+              
                 <div class="col-lg-9">
                     <h4>Room Description</h4>
                     <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu</p>
@@ -285,14 +297,14 @@
             </div>
             <!-- tổng trung bình sao -->
             <div class="row content-review">
-                    <div class="col-lg-2 ">
+                    <div class="col-lg-2 col-6 ">
                         <h4>Reviews</h4>
                         <p>Convenient</p>
                         <p>Clean</p>
                         <p>Staff</p>
                         <p>Quality room</p>
                     </div>
-                    <div class="col-lg-1 text-end">
+                    <div class="col-lg-1 col-6 text-end">
                         <div class="d-flex justify-content-end">
                             <i class="fa-solid fa-star  pe-2 " style="color: #FF2966;"></i>
                             <h4>5.0</h4>  
@@ -308,10 +320,10 @@
             <div class="row content_comment-detail">
                 <div class="col-lg-5 comment-cus">
                     <div class="row">
-                        <div class="col-lg-2 ">
+                        <div class="col-lg-2 col-3 ">
                             <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-6">
                             <h5>jondoberman</h5>
                             <p>Mar 12 2022</p>
                         </div>
@@ -322,10 +334,10 @@
                 </div>
                 <div class="col-lg-5 comment-cus">
                     <div class="row">
-                        <div class="col-lg-2 ">
+                        <div class="col-lg-2 col-3">
                             <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-6">
                             <h5>jondoberman</h5>
                             <p>Mar 12 2022</p>
                         </div>
@@ -336,10 +348,10 @@
                 </div>
                 <div class="col-lg-5 comment-cus">
                     <div class="row">
-                        <div class="col-lg-2 ">
+                        <div class="col-lg-2 col-3">
                             <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-6">
                             <h5>jondoberman</h5>
                             <p>Mar 12 2022</p>
                         </div>
@@ -350,10 +362,10 @@
                 </div>
                 <div class="col-lg-5 comment-cus">
                     <div class="row">
-                        <div class="col-lg-2 ">
+                        <div class="col-lg-2 col-3 ">
                             <img id="avata1" class="avata__review" src="./assets/avata1.png" alt="">  
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-6">
                             <h5>jondoberman</h5>
                             <p>Mar 12 2022</p>
                         </div>
@@ -363,11 +375,16 @@
                     </div>
                 </div>
             </div>
+          </div>
+
+          <!-- phía bên phải -->
+          <div class="col-lg-3 col-12" id="booking-btn">
+            <a href="hotel_booking_page.html?id=" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a>
+          </div>
         </div>
-        <!-- phía bên phải -->
-        <div class="col-lg-3" id="booking-btn">
-          <!-- <a href="hotel_booking_page.html?id=" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a> -->
+        
       </div>
+    </div>
   </div>
 </div>
 <div id="pp"></div>

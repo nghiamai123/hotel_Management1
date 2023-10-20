@@ -2,6 +2,7 @@
   "rooms": [
     {
       "id": 2,
+      "like": "yes",
       "type": [
         "2 bed",
         "2 bath",
@@ -28,6 +29,7 @@
     },
     {
       "id": 3,
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -54,6 +56,7 @@
     },
     {
       "id": 4,
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -80,6 +83,7 @@
     },
     {
       "id": 5,
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -106,6 +110,7 @@
     },
     {
       "id": 6,
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -132,6 +137,7 @@
     },
     {
       "id": 7,
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -158,6 +164,7 @@
     },
     {
       "id": 8,
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -184,6 +191,7 @@
     },
     {
       "id": 9,
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -210,6 +218,7 @@
     },
     {
       "id": 10,
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -236,6 +245,7 @@
     },
     {
       "id": 11,
+      "like": "no",
       "type": [
         "1 bed",
         "1 bath",
@@ -262,6 +272,7 @@
     },
     {
       "id": 12,
+      "like": "no",
       "type": [
         "1 bed",
         "1 bath",
@@ -288,6 +299,7 @@
     },
     {
       "id": 13,
+      "like": "no",
       "type": [
         "1 bed",
         "1 bath",
@@ -314,6 +326,7 @@
     },
     {
       "id": 14,
+      "like": "no",
       "type": [
         "1 bed",
         "1 bath",
@@ -340,6 +353,7 @@
     },
     {
       "id": 15,
+      "like": "no",
       "type": [
         "3 bed",
         "2 bath",
@@ -366,6 +380,7 @@
     },
     {
       "id": 16,
+      "like": "no",
       "type": [
         "3 bed",
         "2 bath",
@@ -392,6 +407,7 @@
     },
     {
       "id": 17,
+      "like": "no",
       "type": [
         "3 bed",
         "2 bath",
@@ -418,6 +434,7 @@
     },
     {
       "id": 18,
+      "like": "no",
       "type": [
         "3 bed",
         "2 bath",
@@ -444,6 +461,7 @@
     },
     {
       "id": 19,
+      "like": "no",
       "type": [
         "3 bed",
         "2 bath",
@@ -470,6 +488,7 @@
     },
     {
       "id": 20,
+      "like": "no",
       "type": [
         "3 bed",
         "2 bath",
@@ -496,6 +515,7 @@
     },
     {
       "id": 21,
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -522,6 +542,7 @@
     },
     {
       "id": 22,
+      "like": "no",
       "type": [
         "1 bed",
         "1 bath",
@@ -548,6 +569,7 @@
     },
     {
       "id": 23,
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -574,6 +596,7 @@
     },
     {
       "id": 24,
+      "like": "no",
       "type": [
         "10 bed",
         "3 bath",
@@ -600,6 +623,7 @@
     },
     {
       "id": 25,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -626,6 +650,7 @@
     },
     {
       "id": 26,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -652,6 +677,7 @@
     },
     {
       "id": 27,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -678,6 +704,7 @@
     },
     {
       "id": 28,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -704,6 +731,7 @@
     },
     {
       "id": 29,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -730,6 +758,7 @@
     },
     {
       "id": 30,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -756,6 +785,7 @@
     },
     {
       "id": 31,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -782,6 +812,7 @@
     },
     {
       "id": 32,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -808,6 +839,7 @@
     },
     {
       "id": 33,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -834,6 +866,7 @@
     },
     {
       "id": 34,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -860,6 +893,7 @@
     },
     {
       "id": 35,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -886,6 +920,7 @@
     },
     {
       "id": 36,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -912,6 +947,7 @@
     },
     {
       "id": 35,
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -1019,13 +1055,13 @@
       "id": 8
     },
     {
-      "name": "ta",
+      "name": "taaa",
       "email": "ta@gmail.com",
       "phone": "1011212",
       "password": "1133",
       "avata": "https://img4.thuthuatphanmem.vn/uploads/2020/08/27/anh-avatar-zalo-cute-nhat-cho-con-trai_052907656.jpg",
       "age": "2023-10-12",
-      "gender": "Unidentify",
+      "gender": "Male",
       "id": 9
     }
   ]

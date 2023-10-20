@@ -9,12 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-<<<<<<< HEAD
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
-=======
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -24,16 +20,14 @@
     <!-- link header and footer -->
     <link rel="stylesheet" href=".\style\header_footer.css">
     <link rel="stylesheet" href="style/profile_home_page.css">
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="style/personal_information.css">
     <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
 </head>
 <body>
      <!-- header -->
+
     <div class="nav">
-<<<<<<< HEAD
+
         <div class="logo"><a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a></div>
         <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
         <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
@@ -45,7 +39,7 @@
           </button>
         </div>
         <div class="nav_log nav_text nav-item dropdown">
-=======
+
               <!-- tạo reponsive cho navbar -->
               <div class="list-navbar"> 
                 <div class="nav_log nav-item dropdown" >
@@ -71,13 +65,13 @@
           </button>
         </div>
         <div class="nav_log nav_text nav-item dropdown" id="avata">
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
             <!-- <li class="nav-item dropdown"> -->
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img id="nav-avata" src="./assets/avata-profile.jpg" alt="" width="60px" style="border-radius: 50%;">
             </a>
             <ul class="dropdown-menu">
-<<<<<<< HEAD
+
               <li><a class="dropdown-item" href="#" style="color: #f45cad;">Accout</a></li>
               <li><a class="dropdown-item" href="#" style="color: #f45cad;">Log out</a></li>
             </ul>
@@ -92,61 +86,116 @@
           </div>
         </div>
         <div class="nav_text" id="avata"><img src="./assets/Ellipse 1.png" alt=""></div> -->
-=======
+
               <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
               <li><a class="dropdown-item" href="hotel_home_page.html" onclick="logout()" style="color: #f45cad;">Log out</a></li>
+
+     <div class="nav">
+        <!-- tạo reponsive cho navbar -->
+        <div class="list-navbar"> 
+          <div class="nav_log nav-item dropdown" >
+            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-list"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
+              <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
+              <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li>   
+
             </ul>
           </div>
+        </div>
+        <!-- end tạo reponsive cho navbar -->
+  
+        <div class="logo nav_text">
+          <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+        </div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html">HOME</a></div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html">ABOUTS US</a></div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
+        <div class="nav_text nav_text_search">
+          <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
+          <button class="material-symbols-outlined" id="search" onclick="search()">
+            <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
+          </button>   
+        </div>
         <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+
         <div id="sign"></div>
         <div id="register"></div>
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
     </div>
+
+
+        <div class="nav_log nav_text">
+          <div class="nav_log_text" id="sign">
+            <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+          </div>
+          <div class="nav_log_text" id="register">
+            <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+          </div>
+        </div>
+        <!-- avta -->
+        <div class="nav_log nav_text nav-item dropdown" id="avata">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+  
 
 
     <!-- body -->
     <div class="row profile-home-page">
         <div class="row-name">
-<<<<<<< HEAD
+
             <img src="assets/avata-profile.jpg" class="img-avt" alt="">
             <p class="name-user" id="name-user">Việt Mỹ</p>
         </div>
 
         <div class="row row-list">
             <div class="list--profile mx-3 col ">
-=======
+
             <img src="assets/avata-profile.jpg" width="200px" height="200px" class="img-avt" alt="img-avt" id="img-avt">
             <p class="name-user" id="name-user">Việt Mỹ</p>
         </div>
 
         <div class="row row-list d-flex justify-content-around align-content-between ">
             <div class="list--profile  col-lg-3 col-12 ">
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
                 <a href="personal_information.html">
                     <span class="material-symbols-outlined ">account_circle</span>
                     <h5>Personal information</h5>
                     <p>Provide personal information and how we can contact you</p>
                 </a>
             </div>
-<<<<<<< HEAD
+
             <div class="list--profile mx-3 col  ">
                 <a href="Favorite.html">
-=======
+
             <div class="list--profile   col-lg-3 col-12  ">
+
                 <a href="#">
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
+
+                <a href="Favorite.html">
+
                     <span class="material-symbols-outlined">favorite</span>
                     <h5>Favorites list</h5>
                     <p>Updates your password and secure your account</p>
                 </a>
             </div>
-<<<<<<< HEAD
+
             <div class="list--profile mx-3  col ">
                 <a href="index.html">
-=======
+
             <div class="list--profile    col-lg-3 col-12 ">
                 <a href="security.html">
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
                     <span class="material-symbols-outlined">admin_panel_settings</span>
                     <h5> Sign in and secure</h5>
                     <p>Updates your password and secure your account</p>
@@ -154,17 +203,17 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-=======
+
+
     <div id="pp" style="height: 114px;"></div>
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
     <!-- Footer -->
     <div class="row container-fluid footer" id="footer">
         <div class=" row justify-content-around  p-lg-4 ">
             <!-- cột 1 -->
         
             <div class="contact-item col-md-12 col-lg-4">
-<<<<<<< HEAD
+
                 <a href=""><img src="assets/logo_big.png" alt="logo" width="100%"></a>
             </div>
             
@@ -181,7 +230,7 @@
                 <div>
                     <i class="fa-solid fa-bed"></i>
                     <a class="nav_text" href="rooms.html">Rooms</a>
-=======
+
                 <a href=""><img src="assets/logo_big.png" alt="logo" width="300px" height="218px"></a>
             </div>
             <!-- cột 2 -->
@@ -197,7 +246,7 @@
                 <div>
                     <i class="fa-solid fa-bed"></i>
                     <a class="nav_text_footer" href="hotel_rooms_page.html">Rooms</a>
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
                 </div>
             </div>
             <!-- cột 3 -->
@@ -215,10 +264,14 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-=======
+
+
     <script src="js/User.js"></script>
     <script src="js/looking_errer_page.js"></script>
->>>>>>> 1162ad2bb562106dec28c13eb6cadb8b7dc51239
+
+
+
+    <script src="js/profile_home_page.js"></script>
+
 </body>
 </html>

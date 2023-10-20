@@ -66,9 +66,8 @@ body{
         margin: 0;
     }
     .list--profile{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 370px !important;
+        margin-top: 25px;
+        width: 90%;
     }
     .row{
          --bs-gutter-x: 0px;

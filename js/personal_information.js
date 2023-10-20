@@ -37,11 +37,11 @@ function change() {
     password: document.getElementById("password").value,
     avata: JSON.parse(localStorage.getItem("avata")),
     age: "2023-10-12",
-    gender: "Unidentify"
+    gender: "Male"
   };
 
   fetch(`${apiUrl}/${tableName}/${recordId}`, {
-    method: 'PUT', // Hoặc 'PATCH' nếu bạn chỉ muốn cập nhật một phần dữ liệu
+    method: 'PATCH', // Hoặc 'PATCH' nếu bạn chỉ muốn cập nhật một phần dữ liệu
     headers: {
       'Content-Type': 'application/json'
     },

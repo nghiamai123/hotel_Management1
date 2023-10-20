@@ -11,7 +11,6 @@ fetch(baserooms)
     console.log(data)
     // var check = false;
     data.forEach(element => {
-        console.log(element.nameroom)
         if (productId == element.id){
             document.getElementById("name_room_detail").innerHTML = element.nameroom;
             document.getElementById("price_room_detail").innerHTML = "$" + element.price + "/night";
@@ -23,6 +22,14 @@ fetch(baserooms)
             document.getElementById("type1").innerHTML = element.type[0];
             document.getElementById("type2").innerHTML = element.type[1];
             document.getElementById("type3").innerHTML = element.type[2];
+            if (element.like === "yes" ){
+                document.getElementById("icon_heart_detail").style.display = "none";
+                document.getElementById("favorite-icon").style.display = "inline";
+            }
+            else {
+                document.getElementById("icon_heart_detail").style.display = "inline";
+                document.getElementById("favorite-icon").style.display = "none";
+            }
         }
     });
 })
@@ -48,3 +55,78 @@ function shareViaEmail() {
     // Mở trình đánh thư điện tử mặc định với URL mailto
     window.location.href = mailtoUrl;
 }
+// chức năng yêu thích
+
+// Lấy tham chiếu đến hai icon
+var icon1 = document.getElementById("icon_heart_detail");
+var icon2 = document.getElementById("favorite-icon");
+
+// Thêm sự kiện click cho icon1
+icon1.addEventListener("click", async function() {
+  // Kiểm tra trạng thái hiển thị của icon2
+  if (icon2.style.display === "none") {
+    // Nếu icon2 đang ẩn, hiển thị icon2 và ẩn icon1
+    const updateUser = async (productId, newData) => {
+        const url = `http://localhost:3000/rooms/${productId}`;
+        console.log(url)
+        try {
+          const response = await fetch(url, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newData),
+          });
+      
+          if (response.ok) {
+            console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+          } else {
+            console.error('Lỗi khi cập nhật dữ liệu người dùng!');
+          }
+        } catch (error) {
+          console.error('Lỗi khi gửi yêu cầu:', error);
+        }
+      };
+      
+      // Ví dụ sử dụng
+     
+        // productId; // Lấy userId từ localStorage hoặc nguồn dữ liệu khác
+      const newData = { like: 'yes'};
+      
+      updateUser(productId, newData); // Cập nhật dữ liệu người dùng với userId và dữ liệu mới
+  }
+});
+
+icon2.addEventListener("click", function() {
+    // Kiểm tra trạng thái hiển thị của icon2
+    if (icon1.style.display === "none") {
+      // Ngược lại, hiển thị icon1 và ẩn icon2
+      const updateUser = async (productId, newData) => {
+        const url = `http://localhost:3000/rooms/${productId}`;
+        try {
+          const response = await fetch(url, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newData),
+          });
+      
+          if (response.ok) {
+            console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+          } else {
+            console.error('Lỗi khi cập nhật dữ liệu người dùng!');
+          }
+        } catch (error) {
+          console.error('Lỗi khi gửi yêu cầu:', error);
+        }
+      };
+      
+      // Ví dụ sử dụng
+     
+        // productId; // Lấy userId từ localStorage hoặc nguồn dữ liệu khác
+      const newData = { like: 'no'};
+      
+      updateUser(productId, newData); // Cập nhật dữ liệu người dùng với userId và dữ liệu mới
+    }
+  });

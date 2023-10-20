@@ -1,76 +1,8 @@
-body{
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-    /* position: relative; */
-    font-family: 'Roboto', sans-serif;   
-}
-.logo{
-    margin-left: 10px;
-}
-.nav{
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    left: -3px;
-}
-.nav,.nav_log{
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav>.nav_text{
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    color: white;
-}
-.nav_log.nav_text{
-    display: flex;
-    gap: 20px;
-    margin-right: 50px;
-}
-.nav_text>input{
-    border-radius: 10px;
-    width: 200px;
-    position: relative;
-}
-.nav_text>.material-symbols-outlined{
-    display: inline-block;
-    position: absolute;
-    top: 28% !important;
-}
-.nav_text:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) a:hover {
-    color: #FF3FA4 ;
-}
-.nav_log_text a:hover{
-    color: #FF3FA4 ;
-}
-a{
-    color: var(--pink-2, #FF3FA4);
-    color: #f9f5f7;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
-}
-#search{
-    border-radius: 20px;
-    outline: none;
-    background-color: black;
-    color: white;
-    border: none;
-    margin-left: 2px;
-}
-
 .container--body{
     background-image:url("../assets/backgroun1.jpg") ;
     position: relative;
     width: 100%;
-    height: 700PX;
+    height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom:100px ;
@@ -108,12 +40,6 @@ a{
     100% {
         background-image: url(../assets/about-img.jpg);
     }
-}
-
-i{
-    color: #FF2966!important; 
-    font-size: 20px;
-    margin: 0px 10px;
 }
 /* ảnh avata thay đổi */
 #avata{
@@ -177,7 +103,7 @@ h1{
 }
 .card-img-top{
     width: auto;
-    height: 150px;
+    height: 80%;
 }
 .card-text-name{
     margin-left: 0px;
@@ -186,17 +112,12 @@ h1{
     font-weight: bold;
 }
 /* END BODY */
-#footer{
-    /* padding: 50px; */
-    background-color: #000000!important;
-}
-.section-title{
-    color: #FF3FA4 !important;
-}
-
-.nav_text:hover{
-    color: #FF3FA4;
-}
-.text-white{
-    padding: 0px;
+@media screen and (max-width: 415px){
+    .div-body{
+        margin: 0px 20px;
+    }
+    .card-img-top{
+        width: auto;
+        height: 100%;
+    }
 }
