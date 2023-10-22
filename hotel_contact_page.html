@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
     <link rel="stylesheet" href="./style/hotel_contact_page.css">
 
+
   </head>
   <body>
     <div class="container-fluid">
@@ -235,7 +236,7 @@
         </div>
 
         <div class="row container--body">
-            <h1 class="title-contact">Liên hệ</h1>
+            <h1 class="title-contact">Contact</h1>
             <p class="paragrap-contact">We are always ready to receive all comments and answer your requests.
                 Please contact us immediately</p>
             <div class="row">
@@ -252,7 +253,7 @@
                     </div>
                     <div>
                     <button class="contact"> 
-                        <p class="mb-2 contact-text-black"><i class="fa fa-envelope me-3" onclick="contactViaEmail()"></i>info@example.com</p>
+                        <p class="mb-2 contact-text-black"><i class="fa fa-envelope me-3" onclick=""></i>info@example.com</p>
                     </button>
                     </div>
                     <div class="contact--form">
@@ -266,13 +267,14 @@
                         </div>
                         <div class="form_lable">
                             <label for="">Phone number</label>
-                            <input type="tel" name="phonenumber" id="phoneNumer" placeholder="Your phone number">
+                            <input type="tel" name="phonenumber" id="phoneNumber" placeholder="Your phone number">
                         </div>
                         <div>
-                            <textarea class="PlainTextarea-module_textarea__u3Wvp PlainTextarea-module_invalid__2drkq" placeholder="Enter contact content..." name="description"></textarea>
+                            <textarea id="textDescription" class="PlainTextarea-module_textarea__u3Wvp PlainTextarea-module_invalid__2drkq" placeholder="Enter contact content..." name="description"></textarea>
                         </div>
                         <div>
-                            <button type="button" class="button" id="contact-submit" onclick="calculateDateDifference()">Submit</button>
+                            <button type="button" class="button" id="contact-submit" requered value="Send Email" 
+                            onclick="submitContactForm()">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -280,7 +282,7 @@
                     <div class="img_map_hotel">
                         <img src="./assets/map.jpg" alt="">
                         <div class="contact_link_map">
-                            <a class="link_map" target="_blank" href="https://www.google.com/maps/place/101+L%C3%AA+H%E1%BB%AFu+Tr%C3%A1c,+Ph%C6%B0%E1%BB%9Bc+M%E1%BB%B9,+S%C6%A1n+Tr%C3%A0,+%C4%90%C3%A0+N%E1%BA%B5ng+550000,+Vietnam/@16.0589109,108.2397656,17z/data=!3m1!4b1!4m6!3m5!1s0x3142177efafe1ddd:0x285ec76f7199fffe!8m2!3d16.0589078!4d108.2412967!16s%2Fg%2F11gsbc4qqp!5m1!1e1?entry=ttu">Xem bản đồ lớn hơn</a>
+                            <a class="link_map" target="_blank" href="https://www.google.com/maps/place/101+L%C3%AA+H%E1%BB%AFu+Tr%C3%A1c,+Ph%C6%B0%E1%BB%9Bc+M%E1%BB%B9,+S%C6%A1n+Tr%C3%A0,+%C4%90%C3%A0+N%E1%BA%B5ng+550000,+Vietnam/@16.0589109,108.2397656,17z/data=!3m1!4b1!4m6!3m5!1s0x3142177efafe1ddd:0x285ec76f7199fffe!8m2!3d16.0589078!4d108.2412967!16s%2Fg%2F11gsbc4qqp!5m1!1e1?entry=ttu" required >Xem bản đồ lớn hơn</a>
                         </div>
                     </div>
 
@@ -290,5 +292,9 @@
 
     </div>
     </div>
+    <script src= 
+    "https://smtpjs.com/v3/smtp.js"> 
+    </script> 
+    <script src="./js/contact.js"></script>
   </body>
 </html>
