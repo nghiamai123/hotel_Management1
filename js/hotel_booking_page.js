@@ -57,6 +57,7 @@ function calculateDateDifference() {
         pleselement1.innerHTML = document.getElementById("tongcoban").innerHTML + " x " + dayDifference + " night";
         tongelement.innerHTML = 3 + 10 + (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
         tongelement.innerHTML = (dayDifference * parseInt(document.getElementById("tongcoban").innerHTML));
+        localStorage.setItem("totalprice", JSON.stringify(tongelement.innerHTML));
     }
     else{
         tongelement.innerHTML = 0;
@@ -90,7 +91,6 @@ fetch (listuser)
 
 function payment() {
     calculateDateDifference();
-    var history1 = [];
 
     var typecard = document.getElementById("infirst1").value;
     var numbercard = document.getElementById("number-card").value;
@@ -102,7 +102,7 @@ function payment() {
     var chout = document.getElementById("datepicker2").value;
     var nameroom1 = JSON.parse(localStorage.getItem("nameroom"));
     var price = JSON.parse(localStorage.getItem("price"));
-    history1.push(nameroom1, chin, chout, typecard, numbercard, price, Expirationdate, CVV, Email, country);
+    var totalprice = JSON.parse(localStorage.getItem("totalprice"));
     // bắt lỗi và lấy thông tin cho history
     console.log(typecard);
     if (typecard == ""){
@@ -129,11 +129,11 @@ function payment() {
         return ;
     }
 // Kiểm tra trạng thái hiển thị của icon2
-const updateUser = async (IDuser, newData) => {
-    const url = `http://localhost:3000/user/${IDuser}`;
+const updateUser = async (newData) => {
+    const url = `http://localhost:3000/order`;
     try {
     const response = await fetch(url, {
-        method: 'PATCH',
+        method: 'POST',
         headers: {
         'Content-Type': 'application/json',
         },
@@ -141,7 +141,7 @@ const updateUser = async (IDuser, newData) => {
     });
 
     if (response.ok) {
-        console.log(history1);
+        console.log(newData);
     } else {
         console.error('Lỗi khi cập nhật dữ liệu người dùng!');
     }
@@ -150,7 +150,19 @@ const updateUser = async (IDuser, newData) => {
     }
 };
 const newData = {
-    history: history1,
+    user: IDuser,
+    typecard: typecard,
+    numbercard: numbercard,
+    Expirationdate: Expirationdate,
+    CVV: CVV,
+    Email: Email,
+    country: country,
+    chin: chin,
+    chout: chout,
+    nameroom: nameroom1,
+    price: price,
+    totalprice: totalprice,
+    status: confirm("You pay it?")
 };
-updateUser(IDuser, newData); // Cập nhật dữ liệu người dùng 
+updateUser(newData); // Cập nhật dữ liệu người dùng 
 }

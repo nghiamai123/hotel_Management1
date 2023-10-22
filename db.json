@@ -982,8 +982,7 @@
       "phone": "0326826518",
       "email": "xuom25@ho.com",
       "age": "19",
-      "gender": "Nữ",
-      "history": []
+      "gender": "Nữ"
     },
     {
       "id": 2,
@@ -993,8 +992,7 @@
       "phone": "0335749023",
       "email": "lam25@duong.com",
       "age": "19",
-      "gender": "Nữ",
-      "history": []
+      "gender": "Nữ"
     },
     {
       "id": 3,
@@ -1004,8 +1002,7 @@
       "phone": "03768635043",
       "email": "my25@tran.com",
       "age": "19",
-      "gender": "Nữ",
-      "history": []
+      "gender": "Nữ"
     },
     {
       "id": 4,
@@ -1015,8 +1012,7 @@
       "phone": "0320069749",
       "email": "nghia25@mai.com",
       "age": "20",
-      "gender": "Nam",
-      "history": []
+      "gender": "Nam"
     },
     {
       "id": 5,
@@ -1026,8 +1022,7 @@
       "phone": "0346789209",
       "email": "hoang25@ho.com",
       "age": "23",
-      "gender": "Nam",
-      "history": []
+      "gender": "Nam"
     },
     {
       "name": "name",
@@ -1037,7 +1032,6 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "222",
-      "history": [],
       "id": 6
     },
     {
@@ -1048,7 +1042,6 @@
       "age": "2001-11-15",
       "gender": "Male",
       "password": "111222",
-      "history": [],
       "id": 7
     },
     {
@@ -1059,7 +1052,6 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "111",
-      "history": [],
       "id": 8
     },
     {
@@ -1070,19 +1062,25 @@
       "avata": "https://img4.thuthuatphanmem.vn/uploads/2020/08/27/anh-avatar-zalo-cute-nhat-cho-con-trai_052907656.jpg",
       "age": "2023-10-12",
       "gender": "Male",
-      "history": [
-        "109",
-        "10/22/2023",
-        "10/24/2023",
-        "Credit",
-        "22",
-        450,
-        "2",
-        "2",
-        "ta@gmail.com",
-        "Viet Nam"
-      ],
       "id": 9
+    }
+  ],
+  "order": [
+    {
+      "user": 9,
+      "typecard": "Credit",
+      "numbercard": "71416562",
+      "Expirationdate": "12/24/2023",
+      "CVV": "984",
+      "Email": "ta@gmail.com",
+      "country": "Viet Nam",
+      "chin": "10/23/2023",
+      "chout": "10/25/2023",
+      "nameroom": "1011",
+      "price": 450,
+      "totalprice": "900",
+      "status": true,
+      "id": 1
     }
   ]
 }
