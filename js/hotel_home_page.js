@@ -69,6 +69,6 @@ icon2.addEventListener("click", function() {
       }
     };
     const newData = { like: 'no'};
-    updateUser(productId, newData); // Cập nhật dữ liệu người dùng với userId và dữ liệu mới
+    updateUser(productId, newData); // Cập nhật dữ liệu người dùng
   }
 });

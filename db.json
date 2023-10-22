@@ -56,7 +56,7 @@
     },
     {
       "id": 4,
-      "like": "yes",
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -83,7 +83,7 @@
     },
     {
       "id": 5,
-      "like": "yes",
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
@@ -137,7 +137,7 @@
     },
     {
       "id": 7,
-      "like": "yes",
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -164,7 +164,7 @@
     },
     {
       "id": 8,
-      "like": "yes",
+      "like": "no",
       "type": [
         "4 bed",
         "2 bath",
@@ -272,7 +272,7 @@
     },
     {
       "id": 12,
-      "like": "yes",
+      "like": "no",
       "type": [
         "1 bed",
         "1 bath",
@@ -947,7 +947,7 @@
     },
     {
       "id": 37,
-      "like": "yes",
+      "like": "no",
       "type": [
         "5 bed",
         "3 bath",
@@ -982,7 +982,8 @@
       "phone": "0326826518",
       "email": "xuom25@ho.com",
       "age": "19",
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "history": []
     },
     {
       "id": 2,
@@ -992,7 +993,8 @@
       "phone": "0335749023",
       "email": "lam25@duong.com",
       "age": "19",
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "history": []
     },
     {
       "id": 3,
@@ -1002,7 +1004,8 @@
       "phone": "03768635043",
       "email": "my25@tran.com",
       "age": "19",
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "history": []
     },
     {
       "id": 4,
@@ -1012,7 +1015,8 @@
       "phone": "0320069749",
       "email": "nghia25@mai.com",
       "age": "20",
-      "gender": "Nam"
+      "gender": "Nam",
+      "history": []
     },
     {
       "id": 5,
@@ -1022,7 +1026,8 @@
       "phone": "0346789209",
       "email": "hoang25@ho.com",
       "age": "23",
-      "gender": "Nam"
+      "gender": "Nam",
+      "history": []
     },
     {
       "name": "name",
@@ -1032,6 +1037,7 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "222",
+      "history": [],
       "id": 6
     },
     {
@@ -1042,6 +1048,7 @@
       "age": "2001-11-15",
       "gender": "Male",
       "password": "111222",
+      "history": [],
       "id": 7
     },
     {
@@ -1052,6 +1059,7 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "111",
+      "history": [],
       "id": 8
     },
     {
@@ -1062,6 +1070,18 @@
       "avata": "https://img4.thuthuatphanmem.vn/uploads/2020/08/27/anh-avatar-zalo-cute-nhat-cho-con-trai_052907656.jpg",
       "age": "2023-10-12",
       "gender": "Male",
+      "history": [
+        "109",
+        "10/22/2023",
+        "10/24/2023",
+        "Credit",
+        "22",
+        450,
+        "2",
+        "2",
+        "ta@gmail.com",
+        "Viet Nam"
+      ],
       "id": 9
     }
   ]

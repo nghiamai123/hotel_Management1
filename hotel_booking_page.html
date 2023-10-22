@@ -298,25 +298,25 @@
                         <div class="form-number--card">
                             <!-- TRÊN -->
                             <div class="number-card">
-                                <input type="text" placeholder="Number card" class="input-number-card" id="">
+                                <input type="text" placeholder="Number card" class="input-number-card" id="number-card">
                             </div>
                             <hr>
                             <!-- DƯỚI -->
                             <div class="number-date-card row ">
                                 <div class="col div-expiration">
-                                    <input type="text" class="input-number-card"placeholder="Expiration date">
+                                    <input type="text" class="input-number-card"placeholder="Expiration date" id="Expiration-date">
                                 </div>
                                 
                                 <div class="col div-CVV">
-                                    <input class="input-number-card"type="text"placeholder="CVV" >
+                                    <input class="input-number-card"type="text"placeholder="CVV" id="CVV">
                                 </div>
                             </div>
                         </div>
                         <div class="div-postal">
-                            <input type="text" placeholder="Postal cde" class="input-number-card">
+                            <input type="text" placeholder="Email" class="input-number-card" id="InEm">
                         </div> 
                         <div>
-                            <select id="infirst1" class="select-option">
+                            <select id="infirst2" class="select-option">
                                 <option disabled selected value>Country/region</option>
                                 <option value="American">American</option>
                                 <option value="Viet Nam">Viet Nam</option>
@@ -336,7 +336,7 @@
                         </ul>
                     </div>
                     <div>
-                        <button id="Revervation_required" type="button" class="button">Revervation required</button>
+                        <button id="Revervation_required" type="button" class="button" onclick="payment()">Revervation required</button>
                     </div>
                 </div>
                 <div class="col"></div>
