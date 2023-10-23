@@ -54,20 +54,25 @@ fetch(listUser1)
 
 // submit Contact Form
 	function submitContactForm() { 
-		var body = document.getElementById("textDescription").value;
-	Email.send({ 
-		Host: "smtp.gmail.com", 
-		Username: "hoahauhk123@gmail.com", 
-		Password: "yawnyawn123", 
-		To: 'honglamhk2004@gmail.com', 
-		From: "hoahauhk123@gmail.com", 
-		Subject: "Contact", 
-		Body: body, 
-	}) 
-		.then(function (message) { 
-		alert("mail sent successfully") 
-		}); 
-	} 
+    var name = document.getElementById("fullName").value;
+    console.log(fullName);
+    var mail = document.getElementById("email").value;
+    console.log(mail);
+    var phone = document.getElementById("phoneNumber").value;
+    var Description = document.getElementById("textDescription").value;
+    var templateParams = {
+      fullName:name,
+      phoneNumber : phone,
+      textDescription: Description
+    };
+    
+    emailjs.send('service_2xnx02q', 'template_cq8m0w3', templateParams) //use your Service ID and Template ID
+      .then(function(response) {
+         console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+         console.log('FAILED...', error);
+      });
+    }
 
 
 
