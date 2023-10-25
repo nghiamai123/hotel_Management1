@@ -51,6 +51,7 @@ fetch(listUser1)
     )
   });
 
+  
 
 // submit Contact Form
 	function submitContactForm() { 
@@ -60,6 +61,10 @@ fetch(listUser1)
     console.log(mail);
     var phone = document.getElementById("phoneNumber").value;
     var Description = document.getElementById("textDescription").value;
+    if (fullName == "" || mail == "" || phoneNumber == "" || Description == "") {
+      alert("Please re-enter");
+      return;
+    }
     var templateParams = {
       fullName:name,
       phoneNumber : phone,
