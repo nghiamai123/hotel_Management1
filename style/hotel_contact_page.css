@@ -1,0 +1,171 @@
+.row.container--body{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.container--body{
+    margin-top: 50px;
+}
+.paragrap-contact{
+    color:black;
+}
+/* avata khi chưa đăng nhập hay đăng ký */
+#avata{ 
+  display: none;
+  margin-right: 40px;
+}
+.title-contact{
+    margin: 50px 0;
+    /* text-align: center; */
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_contact 12s ease-in-out infinite;
+}
+@keyframes gradient_contact {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}   
+.contact{
+    background-color: white;
+    border: none;
+}
+.contact p{
+    color: black;
+}
+.form_lable label{
+    display: block;
+    margin-bottom: 5px;
+}
+.form_lable input{
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #f2bfda;
+    outline: none;
+}
+.form_lable input:hover{
+  border: 2px solid #f2379b;
+}
+.img_map_hotel{
+    position: relative;
+}
+.img_map_hotel img{
+    width: 100%;
+    border-radius: 10px;
+}
+.link_map{
+    position: absolute;
+    top: 12px;
+    right: 220px;
+    color:blue;
+    background-color: white;
+    padding:5px;
+    border-radius: 6px;
+    text-decoration: underline;
+    
+}
+
+.PlainTextarea-module_textarea__u3Wvp.PlainTextarea-module_invalid__2drkq {
+    border: 1px solid #f2bfda;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    outline: none;
+}
+.PlainTextarea-module_textarea__u3Wvp.PlainTextarea-module_invalid__2drkq:hover{
+  border: 2px solid #f2379b;
+}
+/* edit button */
+.button {
+    margin: 12px 0px ;
+    width:110px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(250, 81, 157);
+    
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #000000;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    background:#FFE2E9;
+  }
+  
+  .button:hover {
+    background: #FF2966;
+    box-shadow: 0 0 30px 5px rgba(243, 44, 104, 0.815);
+    
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  .button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: 0px;
+    }
