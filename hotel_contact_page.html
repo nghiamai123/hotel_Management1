@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAWN YAWN - HOMEPAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style/header_footer.css">
+    <link rel="stylesheet" href="style/hotel_home_auth.css  ">
+    <!-- <link rel="stylesheet" href="style/personal_information.css"> -->
+    <link rel="stylesheet" href="./style/hotel_navbar_reponsive.css">
+    <link rel="stylesheet" href="./style/hotel_contact_page.css">
+
+
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!-- modal -->
+        <div class="modalContainer" id="modalContainer" onload="daydl()">
+        <!-- modal-login -->
+        <div class="modal fade form-auth" id="loginModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="auth-form__header">
+                    <h4 class="auth-form__heading">Log in</h4>
+                    <button style="border: none; background-color: white;" type="button" class="auth-form_swith" id="loginToRegister" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register</button>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group login">
+                        <input id="loginEmail" type="tel" class="auth-form__input" placeholder="Email" required>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group login">
+                        <input id="loginPassord" type="password" class="auth-form__input" placeholder="Password" required>
+                    </div>
+                    </div>
+                    <div class="auth-form__control">
+                    <button class="btn control-login-continue" id="btn-login" id="loginToRegister" onclick="login(); return false;">Log in</button>
+                    </div>
+                    <div class="auth-form__or login">
+                    <div>
+                        <hr>
+                    </div>
+                    <div><span><i>OR</i></span></div>
+                    <div>
+                        <hr>
+                    </div>
+                    </div>
+                    <div class="auth-form__social login">
+                    <a href="https://m.facebook.com/login/?locale=vi_VN" class="btn btn--with-icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        Continue with facebook
+                    </a>
+                    <a href="https://www.google.com.vn/?hl=en" class="btn btn--with-icon">
+                        <i class="fa-brands fa-google"></i>
+                        Continue with Google
+                    </a>
+                    <a href="https://www.icloud.com/" class="btn btn--with-icon">
+                        <i class="fa-brands fa-apple"></i>
+                        Continue with Apple
+                    </a>
+                    </div>
+                </div>
+                </form>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- modal-register -->
+        <div class="modal fade form-auth" id="registerModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="auth-form__header">
+                    <h4 class="auth-form__heading">Register</h4>
+                    <button style="border: none; background-color: white;" type="button" class="auth-form_swith" data-bs-toggle="modal" id="registerToLogin" data-bs-target="#loginModal" data-bs-dismiss="modal">Log in</button>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group">
+                        <input id="registerName" type="text" class="auth-form__input" placeholder="Name" required>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group">
+                        <input id="registerEmail" type="email" class="auth-form__input" placeholder="Email" required>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group date-gender">
+                        <div class="auth-form__date">
+                        <input type="date" id="auth-form__date" class="auth-form__input " placeholder="Date of birth" required>
+                        </div>
+                        <select name="gender" id="auth-form__gender" class="auth-form__input" required>
+                        <option disabled >Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group">
+                        <input id="registerPhone" type="tel" class="auth-form__input" placeholder="Phone number" required>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group">
+                        <input id="registerPassword" type="password" class="auth-form__input" placeholder="Password" required>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <div class="auth-form__group">
+                        <input id="registerConfirmPassword" type="password" class="auth-form__input" placeholder="Confirm password" required>
+                    </div>
+                    </div>
+                    <div class="auth-form__aside">
+                    <p class="auth-form__inform"><input type="checkbox"> We will call or text you to confirm the phone number.
+                        <a id="auth-form__policy-link" href="#">Privacy policy</a>
+                    </p>
+                    </div>
+                    <div class="auth-form__control">
+                    <!-- <button class="button">BACK</button> -->
+                    <button class="btn control-login-continue" id="registrationForm" onclick="register();return false;">Continue</button>
+                    </div>
+                    <div class="auth-form__or login">
+                    <div>
+                        <hr>
+                    </div>
+                    <div><span><i>OR</i></span></div>
+                    <div>
+                        <hr>
+                    </div>
+                    </div>
+                    <!-- <hr> -->
+                    <div class="auth-form__social login">
+                    <a href="https://m.facebook.com/login/?locale=vi_VN" class="btn btn--with-icon" class="btn btn--with-icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        Continue with facebook
+                    </a>
+                    <a href="https://www.google.com.vn/?hl=en" class="btn btn--with-icon">
+                        <i class="fa-brands fa-google"></i>
+                        Continue with Google
+                    </a>
+                    <a href="https://www.icloud.com/" class="btn btn--with-icon">
+                        <i class="fa-brands fa-apple"></i>
+                        Continue with Apple
+                    </a>
+                    </div>
+                </form>
+                </div>
+
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid" style="padding: 0%;">
+        <div class="nav">
+        <!-- tạo reponsive cho navbar -->
+        <div class="list-navbar"> 
+            <div class="nav_log nav-item dropdown" >
+            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-list"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item_text" href="hotel_home_page.html" >Home</a></li>
+                <li><a class="dropdown-item dropdown-item_text" href="hotel_rooms_page.html" >Rooms</a></li>
+                <li><a class="dropdown-item dropdown-item_text" href="hotel_about_us_page.html">About us</a></li> 
+                <li>              
+                <div class="list_nav_log_text" id="sign_in">
+                    <button type="button" class="list_nav-text-signin dropdown-item" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">Sign in</button>
+                </div>
+                </li>
+                <li>
+                <div class="list_nav_log_text" id="register_in">
+                    <button type="button" class="list_nav-text-signin dropdown-item" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">Register</button>
+                </div>
+                </li>  
+            </ul>
+            </div>
+        </div>
+        <!-- end tạo reponsive cho navbar -->
+
+        <div class="logo nav_text">
+            <a href="hotel_home_page.html"><img src="./assets/image 2.png" id="logo_nav" alt="logo"></a>
+        </div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_home_page.html" style="color: #f45cad;">HOME</a></div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_about_us_page.html">ABOUTS US</a></div>
+        <div class="nav_text"><a  class="nav_text" href="hotel_rooms_page.html">ROOMS</a></div>
+        <div class="nav_text nav_text_search">
+            <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px; " placeholder="Search" >
+            <button class="material-symbols-outlined" id="search" onclick="search()">
+            <i id="nav_search" class="fa-solid fa-magnifying-glass"></i> 
+            </button>   
+        </div>
+        <!-- tại đây sửa tạp thời khi đăng nhập tạo avata -->
+        <div class="nav_log nav_text">
+            <div class="nav_log_text" id="sign">
+            <button type="button" class="nav-text-signin" id="showModal" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-whatever="@mdo">SIGN IN</button>
+            </div>
+            <div class="nav_log_text" id="register">
+            <button type="button" class="nav-text-signin" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-whatever="@mdo">REGISTER</button>
+            </div>
+        </div>
+        <!-- avta -->
+        <div class="nav_log nav_text nav-item dropdown" id="avata">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img id="nav-avata" src="./assets/avata-profile.jpg" alt="avata">
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profile_home_page.html" style="color: #f45cad;">Account</a></li>
+            <li><a class="dropdown-item" href="hotel_home_page.html" style="color: #f45cad;" id="logout" onclick="logout()">Log out</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="row container--body">
+            <h1 class="title-contact">Contact</h1>
+            <p class="paragrap-contact">We are always ready to receive all comments and answer your requests.
+                Please contact us immediately</p>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div>
+                        <button class="contact"> 
+                            <p class="mb-3 contact-text-black"><i class="fa fa-map-marker-alt me-3"></i>101 Le Huu Trac, Son Tra, Da Nang, Viet Nam</p>
+                        </button>
+                    </div>
+                    <div>
+                    <button class="contact"> 
+                        <p class="mb-3 contact-text-black"><i class="fa fa-phone-alt me-3"></i>+09876543321</p>
+                    </button>
+                    </div>
+                    <div>
+                    <button class="contact"> 
+                        <p class="mb-2 contact-text-black"><i class="fa fa-envelope me-3" onclick=""></i>info@example.com</p>
+                    </button>
+                    </div>
+                    <div class="contact--form">
+                        <div class="form_lable">
+                            <label for="">Full name</label>
+                            <input type="text" name="fullName" id="fullName" placeholder="Your fullName">
+                        </div>
+                        <div class="form_lable">
+                            <label for="">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Your email">
+                        </div>
+                        <div class="form_lable">
+                            <label for="">Phone number</label>
+                            <input type="tel" name="phonenumber" id="phoneNumber" placeholder="Your phone number">
+                        </div>
+                        <div>
+                            <textarea id="textDescription" class="PlainTextarea-module_textarea__u3Wvp PlainTextarea-module_invalid__2drkq" placeholder="Enter contact content..." name="description"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="button" id="contact-submit" requered value="Send Email" 
+                            onclick="submitContactForm()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 map">
+                    <div class="img_map_hotel">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.1104681376014!2d108.23816577398571!3d16.0597563396937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142177f00c05eed%3A0xb72c8e84c343e282!2zMzY1UitWOUcsIDEwMUIgTMOqIEjhu691IFRyw6FjLCBQaMaw4bubYyBN4bu5LCBTxqFuIFRyw6AsIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1697987262706!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="contact_link_map">
+                            <a class="link_map" target="_blank" href="https://www.google.com/maps/place/101+L%C3%AA+H%E1%BB%AFu+Tr%C3%A1c,+Ph%C6%B0%E1%BB%9Bc+M%E1%BB%B9,+S%C6%A1n+Tr%C3%A0,+%C4%90%C3%A0+N%E1%BA%B5ng+550000,+Vietnam/@16.0589109,108.2397656,17z/data=!3m1!4b1!4m6!3m5!1s0x3142177efafe1ddd:0x285ec76f7199fffe!8m2!3d16.0589078!4d108.2412967!16s%2Fg%2F11gsbc4qqp!5m1!1e1?entry=ttu" required >Xem bản đồ lớn hơn</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("Go7__wfcQuNzv_yXH"); //use your USER ID
+        })();
+     </script>
+    <script src="./js/contact.js"></script>
+  </body>
+</html>

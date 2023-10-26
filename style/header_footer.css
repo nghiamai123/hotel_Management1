@@ -259,3 +259,10 @@ i{
         margin-top: 30px;
     }
   }
+
+
+  /* contact */
+  .footer_contact_email{
+    background-color: black;
+    border: none;
+  }
