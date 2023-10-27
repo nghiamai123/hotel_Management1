@@ -240,6 +240,14 @@ body{
     }
     .button_booking{
         position:inherit;
-    }
-   
+    }  
+}
+
+#addbag{
+    position: relative;
+    top: -30px;
+    left: 40px;
+    font-size: 48px !important;
+    color: #d41e51;
+    cursor: pointer;
 }

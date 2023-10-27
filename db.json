@@ -1,6 +1,33 @@
 {
   "rooms": [
     {
+      "id": 1,
+      "like": "no",
+      "type": [
+        "2 bed",
+        "2 bath",
+        "wifi"
+      ],
+      "nameroom": "104",
+      "price": 70,
+      "status": "true",
+      "convenient": [
+        "air-conditioner",
+        "wifi"
+      ],
+      "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "evaluate": 5,
+      "reviews": "sakdlsadlk",
+      "room_image": [
+        "./assets/Room101.jpg",
+        "./assets/imgroom101b.jpg",
+        "./assets/imgroom1012.png",
+        "./assets/imgroom1013.png",
+        "./assets/imgroom1014.png",
+        "./assets/imgroom1015.png"
+      ]
+    },
+    {
       "id": 2,
       "like": "no",
       "type": [
@@ -10,7 +37,7 @@
       ],
       "nameroom": "104",
       "price": 70,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -37,7 +64,7 @@
       ],
       "nameroom": "105",
       "price": 70,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -64,7 +91,7 @@
       ],
       "nameroom": "106",
       "price": 70,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -91,7 +118,7 @@
       ],
       "nameroom": "107",
       "price": 70,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -118,7 +145,7 @@
       ],
       "nameroom": "108",
       "price": 450,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -145,7 +172,7 @@
       ],
       "nameroom": "109",
       "price": 450,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -172,7 +199,7 @@
       ],
       "nameroom": "1010",
       "price": 450,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -199,7 +226,7 @@
       ],
       "nameroom": "1011",
       "price": 450,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -226,7 +253,7 @@
       ],
       "nameroom": "1012",
       "price": 450,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -253,7 +280,7 @@
       ],
       "nameroom": "1014",
       "price": 80,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -280,7 +307,7 @@
       ],
       "nameroom": "1015",
       "price": 80,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -307,7 +334,7 @@
       ],
       "nameroom": "1016",
       "price": 80,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -334,7 +361,7 @@
       ],
       "nameroom": "1017",
       "price": 80,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -361,7 +388,7 @@
       ],
       "nameroom": "1018",
       "price": 370,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -388,7 +415,7 @@
       ],
       "nameroom": "1019",
       "price": 370,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -415,7 +442,7 @@
       ],
       "nameroom": "1020",
       "price": 370,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -442,7 +469,7 @@
       ],
       "nameroom": "1021",
       "price": 370,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -469,7 +496,7 @@
       ],
       "nameroom": "1022",
       "price": 370,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -496,7 +523,7 @@
       ],
       "nameroom": "1023",
       "price": 370,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -523,7 +550,7 @@
       ],
       "nameroom": "1024",
       "price": 90,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -550,7 +577,7 @@
       ],
       "nameroom": "1025",
       "price": 80,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -577,7 +604,7 @@
       ],
       "nameroom": "1026",
       "price": 170,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -604,7 +631,7 @@
       ],
       "nameroom": "1027",
       "price": 970,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -631,7 +658,7 @@
       ],
       "nameroom": "1028",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -658,7 +685,7 @@
       ],
       "nameroom": "1029",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -685,7 +712,7 @@
       ],
       "nameroom": "1030",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -712,7 +739,7 @@
       ],
       "nameroom": "1031",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -739,7 +766,7 @@
       ],
       "nameroom": "1032",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -766,7 +793,7 @@
       ],
       "nameroom": "1033",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -793,7 +820,7 @@
       ],
       "nameroom": "1034",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -820,7 +847,7 @@
       ],
       "nameroom": "1035",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -847,7 +874,7 @@
       ],
       "nameroom": "1036",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -874,7 +901,7 @@
       ],
       "nameroom": "1037",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -901,7 +928,7 @@
       ],
       "nameroom": "1038",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -928,7 +955,7 @@
       ],
       "nameroom": "1039",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -955,7 +982,7 @@
       ],
       "nameroom": "1040",
       "price": 700,
-      "availability": "stat",
+      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -1066,21 +1093,7 @@
     }
   ],
   "order": [
-    {
-      "user": 9,
-      "typecard": "Credit",
-      "numbercard": "71416562",
-      "Expirationdate": "12/24/2023",
-      "CVV": "984",
-      "Email": "ta@gmail.com",
-      "country": "Viet Nam",
-      "chin": "10/23/2023",
-      "chout": "10/25/2023",
-      "nameroom": "1011",
-      "price": 450,
-      "totalprice": "900",
-      "status": true,
-      "id": 1
-    }
-  ]
+    
+  ],
+  "orders": []
 }

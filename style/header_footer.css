@@ -247,7 +247,7 @@ i{
         margin-right: 10px;
         margin-left: 20px;
     }
-    .container--body>h1{
+    .container--body>h1 {
         font-size: 50px;
     }
     #footer{
@@ -261,13 +261,23 @@ i{
   }
 
 /* contact */
-.footer_contact_email{
+.footer_contact_email {
 background-color: black;
 border: none;
 }
 
-#matocss:hover{
-    background-color: #FF3FA4;
+#matocss {
     border-radius: 5px;
+    font-size: 50px !important;
     cursor: pointer;
+    position: relative;
+}
+
+#notied {
+    position: absolute;
+    z-index: 9;
+    color: white;
+    right: 730px;
+    top: 20px;
+    color: red;
 }
