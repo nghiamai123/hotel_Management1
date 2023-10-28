@@ -1,5 +1,7 @@
 const baserooms = "http://localhost:3000/rooms";
 fetch(baserooms)
+
+    
 .then((res) => res.json())
 .then((data)=> {
     var a = data.map((element) => {
