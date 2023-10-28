@@ -1,29 +1,30 @@
 
-// let previousUser= []; // Lưu trữ dữ liệu trước đó
+let previousUser= []; // Lưu trữ dữ liệu trước đó
 
-// // Hàm lấy dữ liệu từ JSON server và tiến hành so sánh
-// function fetchUserAndCompare() {
-//     fetch('http://localhost:3000/user')
-//         .then(response => response.json())
-//         .then(user => {
-//             // So sánh dữ liệu mới với dữ liệu trước đó
-//             if (JSON.stringify(user) === JSON.stringify(previousUser)) {
-//                 console.log('Dữ liệu không thay đổi.');
-//             } else {
-//                 console.log('Dữ liệu đã thay đổi.');
-//                 // Thực hiện các hành động khác nếu dữ liệu thay đổi
-//             }
+// Hàm lấy dữ liệu từ JSON server và tiến hành so sánh
+function fetchUserAndCompare() {
+    fetch('http://localhost:3000/user')
+        .then(response => response.json())
+        .then(user => {
+            // So sánh dữ liệu mới với dữ liệu trước đó
+            if (user.email == document.getElementById('loginEmail').innerHTML) {
+                console.log(user.passwork);
 
-//             // Lưu trữ dữ liệu mới như dữ liệu trước đó
-//             previousUser = user;
-//         })
-//         .catch(error => {
-//             console.error('Lỗi:', error);
-//         });
-// }
+            } else {
+                console.log('Dữ liệu đã thay đổi.');
+                // Thực hiện các hành động khác nếu dữ liệu thay đổi
+            }
 
-// // Gọi hàm fetchDataAndCompare để lấy dữ liệu và so sánh
-// fetchUserAndCompare();
+            // Lưu trữ dữ liệu mới như dữ liệu trước đó
+            previousUser = user;
+        })
+        .catch(error => {
+            console.error('Lỗi:', error);
+        });
+}
+
+// Gọi hàm fetchDataAndCompare để lấy dữ liệu và so sánh
+fetchUserAndCompare();
 
 
 
