@@ -319,12 +319,24 @@ h6,.col-lg-4.col-md-6{
 
 /* responsive */
 @media screen and (max-width: 415px) {
+    .container_body_aboutus{
+        display: none;
+    }
     .title-welcome-hotel-yawn_yawn {
         text-align: center;
         font-size: 60px;
     }
     .title-explore_our_rooms{
         font-size: 40px;
+    }
+    #matocss{
+        display: none;
+    }
+    #notied{
+        display: none;
+    }
+    #anone{
+        display: none;
     }
 }
 
