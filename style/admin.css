@@ -161,3 +161,15 @@ body {
 .hide{
   display: none;
 }
+/* modal */
+.auth-form__gender{
+  margin: 0;
+  margin-left: 30px;
+}
+.auth-form__date{
+  margin-left: 30px;
+}
+.auth-form__date , .auth-form__gender{
+  width: 80%;
+
+}
