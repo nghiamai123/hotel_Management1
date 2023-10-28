@@ -25,7 +25,7 @@ fetch(basecards)
                 </div>
             </div>
             <div class="col-5 text-end">
-                <p id="tongcoban">${tongpriceroom(data.price)}</p>
+                <p id="tongcoban" style="opacity:0;">${tongpriceroom(data.price)}</p>
             </div>
         </div>
         </div>
@@ -38,6 +38,7 @@ fetch(basecards)
     </div>`} `
 })
 
+//tính tổng tiền của cách phòng gộp thành 1;
 localStorage.setItem("tongpricerooms", JSON.stringify(0));
 function tongpriceroom(price){
     let num = JSON.parse(localStorage.getItem("tongpricerooms"));
@@ -112,7 +113,7 @@ function payment() {
     var country = document.getElementById("infirst2").value;
     var chin = document.getElementById("datepicker1").value;
     var chout = document.getElementById("datepicker2").value;
-    var totalprice = JSON.parse(localStorage.getItem("tongpricerooms"));;
+    var totalprice = JSON.parse(localStorage.getItem("tong"));
     // bắt lỗi và lấy thông tin cho history
     console.log(typecard);
     if (typecard == ""){
@@ -151,7 +152,21 @@ const updateUser = async (newData) => {
     });
 
     if (response.ok) {
-        console.log(newData);
+        for (var i = 1; i <= namer.length; i++ ){
+            fetch(`http://localhost:3000/orders/${i}`, {
+            method: 'DELETE'
+        })
+            .then(response => {
+            if (response.ok) {
+                console.log(`Đối tượng đã được xóa thành công.`);
+            } else {
+                console.error(`Lỗi xóa đối tượng:`, response.statusText);
+            }
+            })
+            .catch(error => {
+            console.error(`Lỗi kết nối khi xóa đối tượng:`, error);
+            }); 
+        }
     } else {
         console.error('Lỗi khi cập nhật dữ liệu người dùng!');
     }
@@ -175,19 +190,6 @@ const newData = {
     status: confirm("You pay it?")
 };
     updateUser(newData); // Cập nhật dữ liệu người dùng
-    fetch(`http://localhost:3000/orders/1`, {
-    method: 'DELETE'
-})
-    .then(response => {
-    if (response.ok) {
-        console.log(`Đối tượng đã được xóa thành công.`);
-    } else {
-        console.error(`Lỗi xóa đối tượng:`, response.statusText);
-    }
-    })
-    .catch(error => {
-    console.error(`Lỗi kết nối khi xóa đối tượng:`, error);
-    }); 
 }
 //
 

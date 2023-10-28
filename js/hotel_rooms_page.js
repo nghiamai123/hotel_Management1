@@ -1,6 +1,6 @@
 const baserooms = "http://localhost:3000/rooms";
-for(let i = 0; i < 1; i++){
-  ++i
+// for(let i = 0; i < 1; i++){
+  // ++i
 fetch(baserooms)
 .then((res) => res.json())
 .then((data)=> {
@@ -45,7 +45,7 @@ fetch(baserooms)
     })
     document.getElementById("pp").innerHTML = `${a.join("")}`
 })
-}
+// }
 // giữ hiển thị icon 
 fetch(baserooms)
   .then((res) => res.json())
@@ -159,4 +159,17 @@ function shareViaEmail() {
     // Mở trình đánh thư điện tử mặc định với URL mailto
     window.location.href = mailtoUrl;
 }
- 
+
+
+// cập nhật số lượng room trong giỏ hàng
+var notied = 0;
+const basecards = "http://localhost:3000/orders";
+fetch(basecards)
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(e => {
+        console.log(e.id)
+        notied = e.id;
+      })
+      document.getElementById("notied").innerHTML = "+" + notied;
+    })
