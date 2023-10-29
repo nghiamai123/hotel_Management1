@@ -1,0 +1,175 @@
+/* CSS styling */
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+/* title h1 */
+.title{
+    margin: 50px 0;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    background:linear-gradient(135deg,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966,#000000,#ef6e93,#f2379b,#FF2966,#030303,#f687a7,#f2379b,#FF2966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradient_Booking 12s ease-in-out infinite;
+}
+@keyframes gradient_Booking {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 2% 50%;
+    }
+}   
+/* end */
+/* THANH NAV */
+  .nav-item{
+    background-color: rgb(252, 70, 101);
+  }
+  .nav-item .nav-link{
+    color: #000;
+  }
+/* END THANH NAV */
+/* button add new */
+.button-create {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
+    color: #FF2966;
+    fill: rgb(155, 153, 153);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    font-weight: 1000;
+    margin: 20px 0;
+  }
+  
+  .button-create span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button-create i{
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .button-create:hover {
+    background: #000;
+    
+  }
+  
+  .button-create:hover .i-wrapper {
+    transform: scale(1.25);
+    transition: .5s linear;
+  }
+  
+  .button-create:hover i {
+    transform: translateX(2.1em) scale(1.1);
+    fill: #ffffff;
+  }
+  
+  .button-create:hover span {
+    opacity: 0;
+    transition: .5s linear;
+  }
+  
+  .button-create:active {
+    transform: scale(0.95);
+  }
+
+/* button icon edit and delete */
+.button-icon {
+    /* position: relative; */
+    margin: 0;
+    width:35px;
+    height: 35px;
+    /* padding: 15px; */
+    outline: none;
+    background-color: #fff;
+    border: 1px solid rgba(246, 30, 91, 0.6);
+    border-radius: 10px;
+    z-index: 0;
+    overflow: hidden;
+    /* transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1); */
+  }
+  
+  .button-icon i {
+    color:#000000;
+  }
+  
+  .button-icon:hover {
+    animation: rotate624 0.7s ease-in-out both;
+    background-color: #FF2966;
+    
+  }
+  /*  */
+  
+  @keyframes rotate624 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+
+
+
+  /* label */
+  .label_edit{
+    margin-left: 30px;
+    color: #FF2966;
+  }
+  /* .btn-check{
+    background-color: white!important;
+  } */
+  .status-room{
+    background-color: white;
+  }
+  .btn-outline-success:hover{
+    background-color: rgb(95, 180, 95);
+  }
+  .btn-outline-danger:hover{
+    background-color: rgb(252, 88, 104);
+  }
+/* ẩn*/
+.hide{
+  display: none;
+}
+/* modal */
+.auth-form__gender{
+  margin: 0;
+  margin-left: 30px;
+}
+.auth-form__date{
+  margin-left: 30px;
+}
+.auth-form__date , .auth-form__gender{
+  width: 80%;
+
+}

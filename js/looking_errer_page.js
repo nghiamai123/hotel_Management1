@@ -88,6 +88,11 @@ function login(){
     .then(data => {
         var error = true
         data.forEach( e =>{
+            // kiểm tra tài khoản có phải admin không?
+            if (e.role == "admin") {
+                window.location.href = "admin.html";
+            }
+            
             if (e.email === loginData.email && e.password === loginData.password){
                 localStorage.setItem("listuser", JSON.stringify(e.id));
                 localStorage.setItem("avata", JSON.stringify(e.avata));
