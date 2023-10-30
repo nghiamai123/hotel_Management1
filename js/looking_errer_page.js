@@ -89,11 +89,10 @@ function login(){
         var error = true
         data.forEach( e =>{
             // kiểm tra tài khoản có phải admin không?
-            if (e.role == "admin") {
-                window.location.href = "admin.html";
-            }
-            
             if (e.email === loginData.email && e.password === loginData.password){
+                if (e.role === "admin") {
+                    window.location.href = "admin.html";
+                }
                 localStorage.setItem("listuser", JSON.stringify(e.id));
                 localStorage.setItem("avata", JSON.stringify(e.avata));
                 alert("Successful login");
@@ -180,5 +179,31 @@ function register() {
             alert("Password don't match retype your Password.");
             return;
         }
-    
+}
+
+// submit Contact Form
+function forgetpassword() { 
+    var email = document.getElementById("loginEmail").value;
+    fetch(listUser)
+        .then(res => res.json())
+        .then(data => {
+            if (data.email == email){
+                if (email == "") {
+                    alert("Please re-enter");
+                    return;
+                }
+                var templateParams = {
+                from_name: "Develop team of Yamm Yamm",
+                to_name : data.name,
+                message: "we are Notification for you because you forget your password. your pass...: " + data.password,
+                };
+
+                emailjs.send('service_6zlfa5v', 'template_p5z5okp', templateParams) //use your Service ID and Template ID
+                .then(function(response) {
+                    alert("Email has sent");
+                }, function(error) {
+                    alert("Email hasn't sent ");
+                });
+            }
+        })    
 }

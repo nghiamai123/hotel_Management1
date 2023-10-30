@@ -11,7 +11,7 @@ fetch(baserooms)
         <div class="room-item shadow rounded overflow-hidden">
           <div class="position-relative">
               <a href="/detail.html?id=${data1.id}">
-                  <img class="img-fluid" src="${data1.room_image[0]}" alt="">
+                <img class="img-fluid" src="${data1.room_image[0]}">
               </a>
           </div>
           <div class="p-4 mt-2">
@@ -159,7 +159,6 @@ function shareViaEmail() {
     // Mở trình đánh thư điện tử mặc định với URL mailto
     window.location.href = mailtoUrl;
 }
-
 
 // cập nhật số lượng room trong giỏ hàng
 var notied = 0;

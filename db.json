@@ -2,14 +2,30 @@
   "rooms": [
     {
       "id": 1,
-      "nameroom": "104",
-      "price": "70",
+      "like": "no",
       "type": [
         "2 bed",
         "2 bath",
         "wifi"
       ],
-      "status": "false"
+      "nameroom": "104",
+      "price": 70,
+      "status": "true",
+      "convenient": [
+        "air-conditioner",
+        "wifi"
+      ],
+      "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "evaluate": 5,
+      "reviews": "sakdlsadlk",
+      "room_image": [
+        "./assets/Room101.jpg",
+        "./assets/imgroom101b.jpg",
+        "./assets/imgroom1012.png",
+        "./assets/imgroom1013.png",
+        "./assets/imgroom1014.png",
+        "./assets/imgroom1015.png"
+      ]
     },
     {
       "id": 2,
@@ -1063,6 +1079,7 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "111",
+      "role": "custom",
       "id": 8
     },
     {

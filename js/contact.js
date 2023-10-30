@@ -64,7 +64,7 @@ fetch(listUser1)
       email:emailAddress
     };
     
-    emailjs.send('service_2xnx02q', 'template_cq8m0w3', templateParams) //use your Service ID and Template ID
+    emailjs.send('service_6iigjdw', 'template_cq8m0w3', templateParams) //use your Service ID and Template ID
       .then(function(response) {
          alert("Email has sent");
       }, function(error) {

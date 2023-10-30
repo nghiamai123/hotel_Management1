@@ -276,8 +276,7 @@ border: none;
 #notied {
     position: absolute;
     z-index: 9;
-    color: white;
-    right: 730px;
-    top: 20px;
+    right: 20%;
+    top: 20%;
     color: red;
 }
