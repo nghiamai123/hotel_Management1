@@ -28,8 +28,6 @@ fetchUserAndCompare();
 
 
 
-
-
 function submitContactForm() {
     var body = document.getElementById("textDescription").value;
 }
@@ -39,10 +37,10 @@ var templateParams = {
     email: "xuom.ho25@gmail.com",
     phoneNumber: "0364859604",
     content: 'Check this out!',
-    pass:1253
+
 };
 
-emailjs.send('service_bz8g1ad', 'template_qah3piu', templateParams) //use your Service ID and Template ID
+emailjs.send('service_6anh1st', 'template_wdbm8xj', templateParams) //use your Service ID and Template ID
     .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
     }, function (error) {
