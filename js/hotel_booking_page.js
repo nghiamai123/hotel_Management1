@@ -123,7 +123,7 @@ function payment() {
         return ;
     }
     else if (country == ""){
-        alert("You need enter email.");
+        alert("You need enter country.");
         return ;
     }
 // Kiểm tra trạng thái hiển thị của icon2

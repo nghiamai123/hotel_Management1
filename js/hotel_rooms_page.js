@@ -1,6 +1,5 @@
 const baserooms = "http://localhost:3000/rooms";
-// for(let i = 0; i < 1; i++){
-  // ++i
+
 fetch(baserooms)
 .then((res) => res.json())
 .then((data)=> {
@@ -45,7 +44,6 @@ fetch(baserooms)
     })
     document.getElementById("pp").innerHTML = `${a.join("")}`
 })
-// }
 // giữ hiển thị icon 
 fetch(baserooms)
   .then((res) => res.json())

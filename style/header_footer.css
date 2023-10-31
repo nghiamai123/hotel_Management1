@@ -268,15 +268,20 @@ border: none;
 
 #matocss {
     border-radius: 5px;
-    font-size: 50px !important;
+    font-size: 30px !important;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: 30%;
+    right: 28%;
 }
 
 #notied {
     position: absolute;
     z-index: 9;
-    right: 20%;
+    right: 29%;
     top: 20%;
     color: red;
+    border-radius: 30%;
+    padding: 4px;
+    background-color: #f9f5f7;
 }
