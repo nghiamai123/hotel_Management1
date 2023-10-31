@@ -22,7 +22,6 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <link rel="stylesheet" href="style/personal_information.css">
-
 </head>
 <script src="update.js"></script>
 
@@ -84,10 +83,10 @@
       <div class="logo nav_text"><a href="hotel_home_page.html"><img src="./assets/image 2.png" alt="logo" width="90px"></a></div>
       <div class="nav_text"><a href="hotel_home_page.html">HOME</a></div>
       <div class="nav_text"><a href="hotel_about_us_page.html">ABOUTS US</a></div>
-      <div class="nav_text"><a href="rooms.html">ROOM</a></div>
-      <div class="nav_text">
-        <input type="text" name="nav_input" id="nav_input" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seach">
-        <button class="material-symbols-outlined" id="search" style="color: #f45cad;">
+      <div class="nav_text"><a href="hotel_rooms_page.html">ROOMS</a></div>
+      <div class="nav_text nav_text_search">
+        <input type="text" name="nav_input" id="nav_input_search" style="outline: none; padding-left:20px;" placeholder="Search">
+        <button class="material-symbols-outlined" id="search" style="color: #ffffff; padding-bottom: 20px;" onclick="search()">
           search
         </button>
       </div>
@@ -205,7 +204,6 @@
           <input type="file" id="avatar-input" accept="image/*" style="display: none;"></input>
         </div>
         <!-- tạo input khác ẩn và gọi một hàm đến sử lý -->
-
         <h4>Identify Verification</h4>
         <p style="padding-left: 30px; padding-right:30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cum veritatis quaerat ut reprehenderit architecto ipsa quos similique eveniet voluptates. Iste facere cumque, voluptatibus cum ut aut ipsam similique eaque?</p>
         <h3 id="profile-user-name" style="padding-left: 30px;">User Name</h3>
@@ -229,14 +227,12 @@
         <!--  -->
         <p>All required user information can be save here.</p>
         <div class="profile-back-edit">
-          <button id="profile-back">Back</button>
+          <a href="profile_home_page.html"><button id="profile-back">Back</button></a>
           <button id="profile-edit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="@mdo">Edit</button>
         </div>
-
       </div>
     </div>
-
     </div>
   </div>
 
@@ -273,14 +269,14 @@
       </div>
 
       <!-- cột 2 -->
-      <div class="col-md-6 col-lg-4  justify-content-around align-content-end ">
+      <div class="col-md-6 col-lg-4  justify-content-around align-content-center ">
         <div>
           <i class="fa-solid fa-house"></i>
-          <a class="nav_text" href="hotel_home_page.html">Home</a>
+          <a class="nav_text_footer" href="hotel_home_page.html">Home</a>
         </div>
         <div>
           <i class="fa-solid fa-address-card"></i>
-          <a class="nav_text" href="hotel_about_us_page.html">About us</a>
+          <a class="nav_text_footer" href="hotel_about_us_page.html">About us</a>
         </div>
         <div>
           <i class="fa-solid fa-bed"></i>

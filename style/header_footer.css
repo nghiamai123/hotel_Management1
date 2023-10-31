@@ -187,6 +187,7 @@ i{
     margin-top: 10px;
 }
 
+<<<<<<< HEAD
 .col-md-6.col-lg-4 {
     display: flex;
     flex-direction: column;
@@ -264,3 +265,17 @@ i{
         font-size: 50px;
     }
   }
+=======
+#logo_nav{
+    width: 90px;
+}
+
+/* footer */
+.nav_text_footer:hover{
+    color: #FF296f; 
+}
+.footer_contact{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+>>>>>>> 3318e0373d066c1dfef9ad7d43dd1442938ca910
