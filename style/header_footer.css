@@ -258,6 +258,15 @@ i{
     .section-title.text-white.text-uppercase{
         margin-top: 30px;
     }
+    #matocss{
+        display: none;
+    }
+    #notied{
+        display: none;
+    }
+    #anone{
+        display: none;
+    }
   }
 
 /* contact */
@@ -282,6 +291,6 @@ border: none;
     top: 20%;
     color: red;
     border-radius: 30%;
-    padding: 4px;
+    padding: 1px 2px;
     background-color: #f9f5f7;
 }

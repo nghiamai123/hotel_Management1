@@ -21,11 +21,11 @@ fetch(basecards)
         <div class="row  d-flex justify-content-center align-items-center">
             <div class="col-7">
                 <div class="d-flex ">
-                    <p id="price">${data.price}</p>
+                    <p id="price">Price</p>
                 </div>
             </div>
             <div class="col-5 text-end">
-                <p id="tongcoban" style="opacity:0;">${tongpriceroom(data.price)}</p>
+                <p id="tongcoban">$${tongpriceroom(data.price)}</p>
             </div>
         </div>
         </div>
@@ -33,7 +33,7 @@ fetch(basecards)
     }})
     document.getElementById("cards").innerHTML = `${oders.join("") + `<div class="div-total-price d-flex justify-content-between align-content-center ">
     <p class="title-small">Total (USD)</p>
-    <p id="tong" class="price">$00</p>
+    <p id="tong" class="price">$${0}</p>
     </div>
     </div>`} `
 })
@@ -45,7 +45,7 @@ function tongpriceroom(price){
     let tong = parseInt(price) + parseInt(num);
     parseInt(tong);
     localStorage.setItem("tongpricerooms", JSON.stringify(tong));
-    return tong;
+    return parseInt(tong);
 }
 
 function calculateDateDifference() {
@@ -73,6 +73,7 @@ function calculateDateDifference() {
         tongelement.innerHTML = 3 + 10 + (dayDifference * parseInt(totalp));
         tongelement.innerHTML = (dayDifference * tongelement.innerHTML);
         localStorage.setItem("tong", JSON.stringify(tongelement.innerHTML));
+        "$" + tongelement.innerHTML;
     }
     else{
         alert("YOU NEED ENTER DAY TRUE");
@@ -97,8 +98,11 @@ fetch (listuser)
     .then(data => {
         data.forEach(Element => {
             if (Element.id == IDuser) {
-                document.getElementById("in").value = Element.name;
-                document.getElementById("InEm").value = Element.email;
+                var takelogin = JSON.parse(localStorage.getItem("currentlylogin"));
+                if (takelogin == true) {
+                    document.getElementById("in").value = Element.name;
+                    document.getElementById("InEm").value = Element.email;
+                }
             }
         })
     })

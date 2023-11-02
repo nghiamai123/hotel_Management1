@@ -157,16 +157,3 @@ function shareViaEmail() {
     // Mở trình đánh thư điện tử mặc định với URL mailto
     window.location.href = mailtoUrl;
 }
-
-// cập nhật số lượng room trong giỏ hàng
-var notied = 0;
-const basecards = "http://localhost:3000/orders";
-fetch(basecards)
-    .then(res => res.json())
-    .then(data => {
-      data.forEach(e => {
-        console.log(e.id)
-        notied = e.id;
-      })
-      document.getElementById("notied").innerHTML = "+" + notied;
-    })

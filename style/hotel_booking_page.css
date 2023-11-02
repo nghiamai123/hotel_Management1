@@ -334,4 +334,22 @@ i{
     .right-content{
         margin-top: 20px;
     }
+    #datepicker2 {
+        margin-left: 10px !important;
+    }
+}
+@media screen and (max-width: 1407px) { 
+    #describe{
+        display: none;
+    }
+    #hinh{
+        width: 100%;
+        height: 40%;
+    }
+}
+@media screen and (min-width: 1900px){
+    #datepicker2 {
+        position: relative;
+        right: 10px;
+    }
 }

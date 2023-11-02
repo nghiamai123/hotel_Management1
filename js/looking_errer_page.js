@@ -180,5 +180,15 @@ function register() {
             return;
         }
 }
-  
-  
+
+// cập nhật số lượng room trong giỏ hàng
+var notied = 0;
+const basecards = "http://localhost:3000/orders";
+fetch(basecards)
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(e => {
+        notied = e.id;
+    })
+    document.getElementById("notied").innerHTML = "+" + notied;
+})

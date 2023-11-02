@@ -14,7 +14,7 @@ fetch(baserooms)
   data.forEach(element => {
     if (roomId == element.id){
       document.getElementById("name_room_detail").innerHTML = element.nameroom;
-      document.getElementById("price_room_detail").innerHTML = element.price; // bỏ $/night;
+      document.getElementById("price_room_detail").innerHTML = element.price;
       document.getElementById("img1").src = element.room_image[1];
       document.getElementById("img2").src = element.room_image[2];
       document.getElementById("img3").src = element.room_image[3];
@@ -122,6 +122,12 @@ icon2.addEventListener("click", function() {
 });
 
 function addroom(roomId) {
+  var takelogin = JSON.parse(localStorage.getItem("currentlylogin"));
+  console.log(takelogin);
+  if (takelogin == false) {
+    alert("you need login to add room");
+    return;
+  }
   var IDuser = JSON.parse(localStorage.getItem("listuser"));
   var IDroom = roomId;
   var nameroom1 = document.getElementById("name_room_detail").innerHTML;

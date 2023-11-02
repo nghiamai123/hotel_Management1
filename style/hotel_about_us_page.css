@@ -121,3 +121,9 @@ h1{
         height: 100%;
     }
 }
+
+.row.col-lg-6.col-12{
+    font-size: 20px;
+    position: relative;
+    left: -25%;
+}
