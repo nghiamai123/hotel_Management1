@@ -1092,12 +1092,18 @@
       "gender": "Male",
       "role": "admin",
       "id": 9
+    },
+    {
+      "name": "Xuom",
+      "email": "eunwoo565@gmail.com",
+      "avata": "https://img4.thuthuatphanmem.vn/uploads/2020/08/27/anh-avatar-zalo-cute-nhat-cho-con-trai_052907656.jpg",
+      "phone": "0987654321",
+      "age": "",
+      "gender": "Male",
+      "password": "12345",
+      "id": 10
     }
   ],
-  "order": [
-    
-  ],
-  "orders": [
-    
-  ]
+  "order": [],
+  "orders": []
 }
