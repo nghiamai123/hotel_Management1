@@ -5,17 +5,17 @@ function forgetpassword() {
   fetch("http://localhost:3000/user")
     .then(res => res.json())
     .then(data => {
+      // Check if the email is empty
+      if (email1 === "") {
+        alert("Please re-enter");
+        return;
+      }
+      // tìm user trong dl
       var user = data.find(function(x) {
         return x.email === email1;
       });
       if (!user) {
         alert("User not found");
-        return;
-      }
-
-      // Check if the email is empty
-      if (email1 === "") {
-        alert("Please re-enter");
         return;
       }
       // Use a template literal for the message

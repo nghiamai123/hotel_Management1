@@ -1,7 +1,6 @@
 const listRooms = "http://localhost:3000/rooms";
 const listUser = "http://localhost:3000/user";
 var currentlylogin = false;
-let tang = 0;
 
 async function search() { 
     let checkroom = document.getElementById("nav_input_search").value;
@@ -183,8 +182,7 @@ function register() {
 
 // cập nhật số lượng room trong giỏ hàng
 var notied = 0;
-const basecards = "http://localhost:3000/orders";
-fetch(basecards)
+fetch("http://localhost:3000/orders")
     .then(res => res.json())
     .then(data => {
       data.forEach(e => {

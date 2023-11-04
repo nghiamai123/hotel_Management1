@@ -1105,13 +1105,5 @@
     }
   ],
   "order": [],
-  "orders": [
-    {
-      "IDuser": 9,
-      "IDroom": 1,
-      "nameroom": "104 - Suite Sapphire",
-      "price": 70,
-      "id": 1
-    }
-  ]
+  "orders": []
 }
