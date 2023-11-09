@@ -1,5 +1,3 @@
-
-
 function forgetpassword() {
   var email1 = document.getElementById("loginEmail").value;
   fetch("http://localhost:3000/user")

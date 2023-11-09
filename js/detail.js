@@ -5,6 +5,20 @@ const baserooms = "http://localhost:3000/rooms";
 var bookingUrl = `<a href="hotel_booking_page.html?id=${roomId}" id="book1"><button id="booking_now" class="button_booking">BOOKING NOW</button></a>`
 document.getElementById('booking-btn').innerHTML = bookingUrl
 
+fetch(baserooms)
+.then((res) => res.json())
+.then((data) => {
+    data.forEach(element => {
+        if (roomId == element.id){
+            if (element.Reserved == "yes"){
+                alert ("This ROOM HAS pepole BOOKING");
+                window.location.href = "../hotel_rooms_page.html";
+                return;
+            }
+        }
+    });
+})
+
 var addbag = `<span class="material-symbols-outlined" id="addbag" onclick="addroom(${roomId})">local_mall</span>`
 document.getElementById("addbag").innerHTML = addbag;
 

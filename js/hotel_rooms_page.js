@@ -76,7 +76,17 @@ fetch(baserooms)
     }) 
   })
 
-
+function check(){
+  console.log("haaaaaaaaaaaaaaa")
+  fetch(`http://localhost:3000/rooms/${roomId}`)
+  .then(res => res.json())
+  .then(data => {
+      if (data.Reserved == "yes") {
+          alert("Sorry, This room was booking. please visit Tomorrow")
+          return;
+      }
+  })
+}
 
 // chức năng yêu thích
 var icon1 = document.getElementById("icon_heart_detail");
@@ -157,3 +167,4 @@ function shareViaEmail() {
     // Mở trình đánh thư điện tử mặc định với URL mailto
     window.location.href = mailtoUrl;
 }
+

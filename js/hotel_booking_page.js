@@ -126,6 +126,29 @@ function payment() {
         alert("You need enter country.");
         return ;
     }
+    // cập nhật trạng thái phòng
+    const updateUser1 = async (detailId, newData1) => {
+        const url = `http://localhost:3000/rooms/${detailId}`;
+        try {
+          const response = await fetch(url, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newData1),
+          });
+      
+          if (response.ok) {
+            console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+          } else {
+            console.error('Lỗi khi cập nhật dữ liệu người dùng!');
+          }
+        } catch (error) {
+          console.error('Lỗi khi gửi yêu cầu:', error);
+        }
+      };
+      const newData1 = { Reserved: 'yes'};
+      updateUser1(detailId, newData1); // cập nhật DL phòng
 // Kiểm tra trạng thái hiển thị của icon2
 const updateUser = async (newData) => {
     const url = `http://localhost:3000/order`;
@@ -148,6 +171,7 @@ const updateUser = async (newData) => {
     }
 };
 const newData = {
+    idroom1: parseInt(detailId),
     user: IDuser,
     typecard: typecard,
     numbercard: numbercard,
@@ -162,5 +186,6 @@ const newData = {
     totalprice: totalprice,
     status: confirm("You pay it?")
 };
-    updateUser(newData); // Cập nhật dữ liệu người dùng 
+    updateUser(newData); // Cập nhật dữ liệu
+    window.location.href = "/../hotel_home_page.html";
 }

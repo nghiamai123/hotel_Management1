@@ -2,15 +2,15 @@
   "rooms": [
     {
       "id": 1,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
         "2 bath",
         "wifi"
       ],
-      "nameroom": "104 - Suite Sapphire",
+      "nameroom": "103 - Suite Sapphire",
       "price": 70,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -29,6 +29,7 @@
     },
     {
       "id": 2,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
@@ -37,7 +38,6 @@
       ],
       "nameroom": "104 - Suite Sapphire",
       "price": 70,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -56,6 +56,7 @@
     },
     {
       "id": 3,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
@@ -64,7 +65,6 @@
       ],
       "nameroom": "105 - Suite Sapphire",
       "price": 70,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -83,6 +83,7 @@
     },
     {
       "id": 4,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
@@ -91,7 +92,6 @@
       ],
       "nameroom": "106 - Suite Sapphire",
       "price": 70,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -110,6 +110,7 @@
     },
     {
       "id": 5,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
@@ -118,7 +119,6 @@
       ],
       "nameroom": "107 - Suite Sapphire",
       "price": 70,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -137,6 +137,7 @@
     },
     {
       "id": 6,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "4 bed",
@@ -145,7 +146,6 @@
       ],
       "nameroom": "108 - Suite Sapphire",
       "price": 450,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -164,6 +164,7 @@
     },
     {
       "id": 7,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "4 bed",
@@ -172,7 +173,6 @@
       ],
       "nameroom": "109 - Suite Sapphire",
       "price": 450,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -191,6 +191,7 @@
     },
     {
       "id": 8,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "4 bed",
@@ -199,7 +200,6 @@
       ],
       "nameroom": "1010 - Royal Oasis",
       "price": 450,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -218,6 +218,7 @@
     },
     {
       "id": 9,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "4 bed",
@@ -226,7 +227,6 @@
       ],
       "nameroom": "1011 - Royal Oasis",
       "price": 450,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -245,6 +245,7 @@
     },
     {
       "id": 10,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "4 bed",
@@ -253,7 +254,6 @@
       ],
       "nameroom": "1012 - Royal Oasis",
       "price": 450,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -272,6 +272,7 @@
     },
     {
       "id": 11,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "1 bed",
@@ -280,7 +281,6 @@
       ],
       "nameroom": "1014 - Royal Oasis",
       "price": 80,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -299,6 +299,7 @@
     },
     {
       "id": 12,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "1 bed",
@@ -307,7 +308,6 @@
       ],
       "nameroom": "1015 - Royal Oasis",
       "price": 80,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -326,6 +326,7 @@
     },
     {
       "id": 13,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "1 bed",
@@ -334,7 +335,6 @@
       ],
       "nameroom": "1016 - Royal Oasis",
       "price": 80,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -353,6 +353,7 @@
     },
     {
       "id": 14,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "1 bed",
@@ -361,7 +362,6 @@
       ],
       "nameroom": "1017 - Royal Oasis",
       "price": 80,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -380,6 +380,7 @@
     },
     {
       "id": 15,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "3 bed",
@@ -388,7 +389,6 @@
       ],
       "nameroom": "1018 - Royal Oasis",
       "price": 370,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -407,6 +407,7 @@
     },
     {
       "id": 16,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "3 bed",
@@ -415,7 +416,6 @@
       ],
       "nameroom": "1019 - Royal Oasis",
       "price": 370,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -434,6 +434,7 @@
     },
     {
       "id": 17,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "3 bed",
@@ -442,7 +443,6 @@
       ],
       "nameroom": "1020 - Royal Oasis",
       "price": 370,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -461,6 +461,7 @@
     },
     {
       "id": 18,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "3 bed",
@@ -469,7 +470,6 @@
       ],
       "nameroom": "1021 - Harmony Suite",
       "price": 370,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -488,6 +488,7 @@
     },
     {
       "id": 19,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "3 bed",
@@ -496,7 +497,6 @@
       ],
       "nameroom": "1022 - Harmony Suite",
       "price": 370,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -515,6 +515,7 @@
     },
     {
       "id": 20,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "3 bed",
@@ -523,7 +524,6 @@
       ],
       "nameroom": "1023 - Harmony Suite",
       "price": 370,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -542,6 +542,7 @@
     },
     {
       "id": 21,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
@@ -550,7 +551,6 @@
       ],
       "nameroom": "1024 - Harmony Suite",
       "price": 90,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -569,6 +569,7 @@
     },
     {
       "id": 22,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "1 bed",
@@ -577,7 +578,6 @@
       ],
       "nameroom": "1025 - Harmony Suite",
       "price": 80,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -596,6 +596,7 @@
     },
     {
       "id": 23,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "2 bed",
@@ -604,7 +605,6 @@
       ],
       "nameroom": "1026 - Harmony Suite",
       "price": 170,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -623,6 +623,7 @@
     },
     {
       "id": 24,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "10 bed",
@@ -631,7 +632,6 @@
       ],
       "nameroom": "1027 - Harmony Suite",
       "price": 970,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -650,6 +650,7 @@
     },
     {
       "id": 25,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -658,7 +659,6 @@
       ],
       "nameroom": "1028 - Harmony Suite",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -677,6 +677,7 @@
     },
     {
       "id": 26,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -685,7 +686,6 @@
       ],
       "nameroom": "1029 - Harmony Suite",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -704,6 +704,7 @@
     },
     {
       "id": 27,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -712,7 +713,6 @@
       ],
       "nameroom": "1030 - Harmony Suite",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -731,6 +731,7 @@
     },
     {
       "id": 28,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -739,7 +740,6 @@
       ],
       "nameroom": "1031 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -758,6 +758,7 @@
     },
     {
       "id": 29,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -766,7 +767,6 @@
       ],
       "nameroom": "1032 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -785,6 +785,7 @@
     },
     {
       "id": 30,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -793,7 +794,6 @@
       ],
       "nameroom": "1033 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -812,6 +812,7 @@
     },
     {
       "id": 31,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -820,7 +821,6 @@
       ],
       "nameroom": "1034 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -839,6 +839,7 @@
     },
     {
       "id": 32,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -847,7 +848,6 @@
       ],
       "nameroom": "1035 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -866,6 +866,7 @@
     },
     {
       "id": 33,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -874,7 +875,6 @@
       ],
       "nameroom": "1036 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -893,6 +893,7 @@
     },
     {
       "id": 34,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -901,7 +902,6 @@
       ],
       "nameroom": "1037 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -920,6 +920,7 @@
     },
     {
       "id": 35,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -928,7 +929,6 @@
       ],
       "nameroom": "1038 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -947,6 +947,7 @@
     },
     {
       "id": 36,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -955,7 +956,6 @@
       ],
       "nameroom": "1039 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -974,6 +974,7 @@
     },
     {
       "id": 37,
+      "Reserved": "no",
       "like": "no",
       "type": [
         "5 bed",
@@ -982,7 +983,6 @@
       ],
       "nameroom": "1040 - Zen Garden",
       "price": 700,
-      "status": "true",
       "convenient": [
         "air-conditioner",
         "wifi"
@@ -1009,6 +1009,7 @@
       "phone": "0326826518",
       "email": "xuom25@ho.com",
       "age": "19",
+      "role": "user",
       "gender": "Nữ"
     },
     {
@@ -1019,6 +1020,7 @@
       "phone": "0335749023",
       "email": "lam25@duong.com",
       "age": "19",
+      "role": "user",
       "gender": "Nữ"
     },
     {
@@ -1029,6 +1031,7 @@
       "phone": "03768635043",
       "email": "my25@tran.com",
       "age": "19",
+      "role": "user",
       "gender": "Nữ"
     },
     {
@@ -1039,6 +1042,7 @@
       "phone": "0320069749",
       "email": "nghia25@mai.com",
       "age": "20",
+      "role": "user",
       "gender": "Nam"
     },
     {
@@ -1049,6 +1053,7 @@
       "phone": "0346789209",
       "email": "hoang25@ho.com",
       "age": "23",
+      "role": "user",
       "gender": "Nam"
     },
     {
@@ -1059,6 +1064,7 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "222",
+      "role": "user",
       "id": 6
     },
     {
@@ -1069,6 +1075,7 @@
       "age": "2001-11-15",
       "gender": "Male",
       "password": "111222",
+      "role": "user",
       "id": 7
     },
     {
@@ -1079,7 +1086,7 @@
       "age": "2023-10-12",
       "gender": "Male",
       "password": "111",
-      "role": "custom",
+      "role": "user",
       "id": 8
     },
     {
@@ -1101,7 +1108,18 @@
       "age": "",
       "gender": "Male",
       "password": "12345",
+      "role": "user",
       "id": 10
+    },
+    {
+      "name": "thầy Đình number one",
+      "email": "dinh.com@gmail.com",
+      "avata": "https://img4.thuthuatphanmem.vn/uploads/2020/08/27/anh-avatar-zalo-cute-nhat-cho-con-trai_052907656.jpg",
+      "phone": "0987654377",
+      "age": "2023-10-12",
+      "gender": "Male",
+      "password": "123",
+      "id": 11
     }
   ],
   "order": [],

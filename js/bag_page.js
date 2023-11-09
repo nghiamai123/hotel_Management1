@@ -143,6 +143,37 @@ function payment() {
         alert("You need enter email.");
         return ;
     }
+     // cập nhật trạng thái phòng
+     fetch("http://localhost:3000/orders")
+    .then(res => res.json())
+    .then(data => {
+    data.map(function(data1) {
+      var detailId1 = data1.IDroom;
+      const newData1 = { Reserved: 'no' }; //chưa fix được thay đổi nếu người dùng xóa phòng // mặc định là yes
+      updateUser1(detailId1, newData1); // cập nhật DL phòng
+    });
+
+    async function updateUser1(detailId1, newData1) {
+      const url = `http://localhost:3000/rooms/${detailId1}`;
+      try {
+        const response = await fetch(url, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newData1),
+        });
+
+        if (response.ok) {
+          console.log('Dữ liệu người dùng đã được cập nhật thành công!');
+        } else {
+          console.error('Lỗi khi cập nhật dữ liệu người dùng!');
+        }
+      } catch (error) {
+        console.error('Lỗi khi gửi yêu cầu:', error);
+      }
+    }
+  });
 // Kiểm tra trạng thái hiển thị của icon2
 const updateUser = async (newData) => {
     const url = `http://localhost:3000/order`;
@@ -156,7 +187,7 @@ const updateUser = async (newData) => {
     });
 
     if (response.ok) {
-        for (var i = 1; i <= namer.length; i++ ){
+        for (var i = 1; i <= namer.length; i++){
             fetch(`http://localhost:3000/orders/${i}`, {
             method: 'DELETE'
         })
@@ -195,5 +226,5 @@ const newData = {
 };
     updateUser(newData); // Cập nhật dữ liệu người dùng
 }
-//
+
 

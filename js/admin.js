@@ -194,7 +194,7 @@ fetch(rooms)
                 <td>${data2.phone}</td>
                 <td>${data2.password}</td>
 
-                <td>none</td>
+                <td>${data2.role}</td>
                 <td>
                     <button class="button-icon">
                         <i class="fa fa-cogs" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#admin_edit_user" data-bs-whatever="@mdo" id="edit-user-${data2.id}"></i>
